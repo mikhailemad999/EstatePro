@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#c4c7c8", "surface-container": "#201f1f", "chart-accent": "#61afef", "on-primary-fixed-variant": "#454747", "primary-fixed": "#e2e2e2", "on-secondary-container": "#b6b5b5", "on-secondary-fixed-variant": "#464747", "status-rent": "#98c379", "tertiary-fixed": "#e5e2e1", "secondary-fixed": "#e3e2e2", "status-pending": "#ffbd2e", "border-hairline": "#444748", "tertiary-container": "#e5e2e1", "surface": "#141313", "inverse-surface": "#e6e1e1", "on-primary-fixed": "#1a1c1c", "primary": "#ffffff", "on-secondary-fixed": "#1b1c1c", "on-tertiary-fixed-variant": "#474746", "surface-card": "#1c1b1b", "surface-bright": "#3a3939", "on-primary": "#2f3131", "surface-variant": "#363434", "status-sale": "#ffffff", "error-container": "#93000a", "tertiary": "#ffffff", "surface-tint": "#c6c6c7", "surface-container-low": "#1c1b1b", "surface-lowest": "#0a0a0a", "surface-container-highest": "#363434", "surface-base": "#141313", "border-subtle": "rgba(255, 255, 255, 0.08)", "primary-container": "#e2e2e2", "on-surface": "#e6e1e1", "on-tertiary": "#313030", "secondary-container": "#464747", "on-primary-container": "#636565", "error": "#ffb4ab", "surface-overlay": "#2a2a2a", "inverse-primary": "#5d5f5f", "surface-dim": "#141313", "on-tertiary-fixed": "#1c1b1b", "surface-container-lowest": "#0f0e0e", "secondary": "#c7c6c6", "status-error": "#ff5f56", "status-verified": "#27c93f", "on-tertiary-container": "#656463", "primary-fixed-dim": "#c6c6c7", "secondary-fixed-dim": "#c7c6c6", "on-error": "#690005", "outline": "#8e9192", "surface-elevated": "#201f1f", "on-secondary": "#303031", "inverse-on-surface": "#323030", "background": "#141313", "outline-variant": "#444748", "surface-container-high": "#2b2a2a", "tertiary-fixed-dim": "#c8c6c5", "on-background": "#e6e1e1", "on-error-container": "#ffdad6"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"card-padding-sm": "1.25rem", "gutter-desktop": "2rem", "gutter-mobile": "1.25rem", "container-max": "75rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-lg": "2rem"}, "fontFamily": {"label-sm": ["Manrope"], "headline-sm": ["Manrope"], "display-xl": ["Noto Serif"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-lg": ["Manrope"], "headline-md": ["Noto Serif"], "display-xl-mobile": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-lg-mobile": ["Noto Serif"], "micro-meta": ["Manrope"]}, "fontSize": {"label-sm": ["0.75rem", {"lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600"}], "headline-sm": ["1.25rem", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}], "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}], "body-sm": ["0.875rem", {"lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400"}], "body-lg": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}], "body-md": ["1rem", {"lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400"}], "label-lg": ["0.875rem", {"lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["2rem", {"lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400"}], "display-xl-mobile": ["2.5rem", {"lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400"}], "headline-lg": ["2.5rem", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-lg-mobile": ["1.875rem", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400"}], "micro-meta": ["0.625rem", {"lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full"><div class="h-20 px-6 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary font-semibold">EstatePro</span><span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase">Private Brokerage CRM</span></div></div></div><div class="px-5 pb-4"><a class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(255,255,255,0.08)]" data-path="create-property" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Listing</span></a></div><div class="px-6 py-2"><span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Portfolio Management</span></div><nav class="flex-1 px-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold rounded-xl"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-properties" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span>My Properties</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="leads-crm-pipeline" href="#"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span>Leads CRM Pipeline</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="appointments-calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Appointments &amp; Calendar</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="client-messaging" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span>Client Messaging</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="commissions-financials" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span>Commissions &amp; Financials</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Analytics</span></a></nav><div class="p-4 mt-auto"><div class="bg-surface-card rounded-xl p-4"><div class="flex items-center gap-3 mb-3"><span class="material-symbols-outlined text-chart-accent text-[20px]">verified</span><span class="font-label-sm text-label-sm text-on-surface uppercase">Private Reserve</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Ultra-HNW institutional vault access active.</p><div class="mt-3 pt-3 flex items-center justify-between"><a class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span>Preferences</span></a><span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold">Tier 1 Node</span></div></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-6"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-outline text-[18px]">account_tree</span><div class="flex flex-col text-left"><span class="font-micro-meta text-micro-meta uppercase text-outline">Active Mandate</span><span class="font-label-sm text-label-sm text-primary tracking-wide">Sotheby's Private Portfolio / Geneva &amp; Tokyo</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-4 text-outline text-[18px]">search</span><input class="w-full pl-11 pr-4 py-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search ultra-luxury estates, buyer manifests, Escrow IDs..." type="text"/></div></div><div class="flex items-center gap-5"><button aria-label="Notifications" class="relative p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-error"></span></button><button aria-label="Global Vault" class="p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">lock</span></button><div class="h-8 w-[1px] bg-border-hairline/30"></div><div class="flex items-center gap-3"><div class="text-right hidden sm:flex sm:flex-col"><span class="font-label-sm text-label-sm text-primary font-semibold">Vance Sterling</span><span class="font-micro-meta text-micro-meta uppercase text-outline">Senior Private Advisor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 w-full pt-20 px-8 bg-surface"><div class="flex flex-col w-full pb-16 space-y-8">
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-status-verified"></span>
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Sovereign Protocol // Clearance Level: Overseer Tier-0</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Executive Platform Operations &amp; Telemetry</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">Real-time global asset reconciliation, cryptographic title validation, and sovereign institutional liquidity orchestration.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-chart-accent">database</span>
+<span class="font-micro-meta text-micro-meta uppercase text-on-surface">PostGIS Cluster: Synced</span>
+</div>
+<button class="px-4 py-2.5 rounded-xl bg-surface-container hover:bg-error-container text-error hover:text-on-error transition-all flex items-center gap-2 font-label-sm text-label-sm shadow-sm" onclick="emergencyFreezeModal()">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>Emergency Circuit Freeze</span>
+</button>
+<button class="px-4 py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-2 shadow-sm transition-transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export SEC / FinCEN Audit</span>
+</button>
+</div>
+</section>
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="p-5 rounded-xl bg-surface-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/5 blur-xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Gross Merchandise Value</span>
+<span class="px-2 py-0.5 rounded-full bg-status-verified/15 text-status-verified font-micro-meta text-micro-meta">+24.2% MoM</span>
+</div>
+<div class="my-3">
+<span class="font-display-xl text-[2rem] leading-none text-primary font-serif">$1.42B</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-outline">Under Custody</span>
+<span class="font-label-sm text-label-sm text-primary">Sovereign Vaulted</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Brokerage Nodes</span>
+<span class="px-2 py-0.5 rounded-full bg-status-pending/15 text-status-pending font-micro-meta text-micro-meta">6 Pending KYC</span>
+</div>
+<div class="my-3">
+<span class="font-display-xl text-[2rem] leading-none text-primary font-serif">84</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-outline">Institutional Hubs</span>
+<span class="font-label-sm text-label-sm text-status-verified">94.8% Active</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Total Estate Listings</span>
+<span class="px-2 py-0.5 rounded-full bg-error/15 text-error font-micro-meta text-micro-meta">14 Flagged</span>
+</div>
+<div class="my-3">
+<span class="font-display-xl text-[2rem] leading-none text-primary font-serif">1,842</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-outline">Avg Valuation</span>
+<span class="font-label-sm text-label-sm text-primary">$18.4M</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Platform ARR / Cut</span>
+<span class="px-2 py-0.5 rounded-full bg-chart-accent/15 text-chart-accent font-micro-meta text-micro-meta">MRR $1.55M</span>
+</div>
+<div class="my-3">
+<span class="font-display-xl text-[2rem] leading-none text-primary font-serif">$18.6M</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-outline">Escrow Fee (1.5%)</span>
+<span class="font-label-sm text-label-sm text-status-verified">+$420K 7d</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-card flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">System Integrity</span>
+<span class="px-2 py-0.5 rounded-full bg-status-verified/15 text-status-verified font-micro-meta text-micro-meta">0 CVEs</span>
+</div>
+<div class="my-3">
+<span class="font-display-xl text-[2rem] leading-none text-status-verified font-serif">99.98%</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm text-outline">Escrow Escapes</span>
+<span class="font-label-sm text-label-sm text-status-verified">Zero Vulnerabilities</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-8">
+<div class="xl:col-span-8 flex flex-col space-y-8">
+<section class="rounded-xl bg-surface-card p-6 shadow-sm flex flex-col space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Property Monograph Moderation Queue</h2>
+</div>
+<div class="flex items-center gap-1.5 p-1 rounded-xl bg-surface-container">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm">Pending Review (7)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Escrow Checks (3)</button>
+<button class="px-3 py-1.5 rounded-lg text-error hover:bg-surface-bright font-label-sm text-label-sm">Flagged (4)</button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Active (1.8K)</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline uppercase font-micro-meta text-micro-meta tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">Monograph &amp; Slug</th>
+<th class="py-3 px-4">Submitting Broker</th>
+<th class="py-3 px-4">Valuation</th>
+<th class="py-3 px-4">Due Diligence Hash</th>
+<th class="py-3 px-4">AI Risk Vector</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Platform Action</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y-0">
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Architectural photo of a minimalist modern Kyoto basalt sanctuary estate featuring dark stone water reflection pool surrounded by traditional Japanese cypress trees under twilight mist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboEuIa-02nMMIH0ARkRM3riUaNSPAr-ufMByj6QTgGp1lF3Klr4-I-ef5op74McnjmHKOKJ6XF_kbDiioMtxkLuvp5DIEuA1IYb_uTaCfCKO373UwNZabQ0NXMTXg_-Auyo3ky3natO6EQaPaIJu7yFM1nW3b8Nkn1hA98ikuk0IIhnmkk7HXaYha83URHjcvwW6gUL4mAHurGhn9NK4fVyYTjsNgUPbHRCdnWNHp7Ki-nSZ_bACBDg"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary truncate">The Kyoto Basalt Sanctuary</span>
+<span class="font-micro-meta text-micro-meta text-outline">kyoto-basalt-sanctuary // EP-8831</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Kenjiro Takahashi</span>
+<span class="font-micro-meta text-micro-meta text-secondary">Sotheby's Tokyo Node</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="font-headline-sm text-headline-sm font-serif text-primary">$34,200,000</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+<span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold">Verified // 0x9f1a...883b</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-micro-meta font-micro-meta">
+<span class="text-status-verified">0.02% (Ultra-Safe)</span>
+</div>
+<div class="w-24 h-1 rounded-full bg-surface-container">
+<div class="w-1 h-full bg-status-verified rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">lock_open</span>
+<span>VDR Vault</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm hover:opacity-90">Approve</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Brutalist luxury Mediterranean cliffside villa in Cap d Antibes with clean architectural concrete cantilevers overlooking deep azure sea waters at dusk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFdR1P_A8kWS7TTPzfUcuBEFcXmFclcSWnlbygC9YCLkxu_BQMLpyeriJeo21EegLf2DvUHWwiSLuxwozJy6hJtvMd8yekwQLaCO4FejKPVZQaoSARhSVM7Ktkao6YmMSD443eoW6eU1vJp4xLG-F8fT3DXmy2z_idrK1GXOHeKS8yMKNCJejqMibvmtIvNvx5E3iobVhA9PLoevw1dPB-ADnKBdW4jFTlYsU4PYuxAZE7fW-3boQzEA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary truncate">Villa L'Azur Cap d'Antibes</span>
+<span class="font-micro-meta text-micro-meta text-outline">villa-lazur-antibes // EP-4912</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Marcus Von Berg</span>
+<span class="font-micro-meta text-micro-meta text-secondary">Geneva Private Office</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="font-headline-sm text-headline-sm font-serif text-primary">€42,000,000</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-pending"></span>
+<span class="font-micro-meta text-micro-meta text-status-pending uppercase font-semibold">Missing LIDAR Cloud</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-micro-meta font-micro-meta">
+<span class="text-status-pending">4.12% (Incomplete)</span>
+</div>
+<div class="w-24 h-1 rounded-full bg-surface-container">
+<div class="w-6 h-full bg-status-pending rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm">Request Telemetry</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-bright text-on-surface font-label-sm text-label-sm hover:bg-surface-elevated">Audit Media</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high transition-colors group">
+<td class="py-4 px-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Monolithic obsidian glass mansion in Bel-Air with dramatic cantilevered infinity pool, dusk lighting, and sharp architectural illumination reflecting city lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45TM5jJeRqoXJ6hq9fBc7wcxcaS3L18y6C6fyCVzEOKuWlczFW5VyQ1EwclQGCU-4uS5vjyGcF5i_4T2D8hjmEmDOhLT6-sJ0GWU6qJB_WO594Fq7PhL6-ruWpuIN2byk4i-c7catN3KVVx73oD-yKjkCx6bcdUig41UFSQPSts7K-359Mo0tn28uWjZzAE5l2Dv5N7uQpHh4s0p9nnv4YL_JU3tspfqDj9NqqGQ7Np-zmUkQjFBAAw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-primary truncate">Bel-Air Horizon Monolith</span>
+<span class="font-micro-meta text-micro-meta text-status-error font-semibold">COLLISION: DUP_TITLE_EP-9921</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Cassian Cross</span>
+<span class="font-micro-meta text-micro-meta text-secondary">Beverly Hills Syndicate</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="font-headline-sm text-headline-sm font-serif text-primary">$68,500,000</span>
+</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-error"></span>
+<span class="font-micro-meta text-micro-meta text-status-error uppercase font-semibold">Title Conflict</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-micro-meta font-micro-meta">
+<span class="text-status-error">78/100 (Critical)</span>
+</div>
+<div class="w-24 h-1 rounded-full bg-surface-container">
+<div class="w-20 h-full bg-status-error rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-90">Escalate to Legal</button>
+<button class="px-2 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-status-error">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 rounded-xl bg-surface-card space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-chart-accent">currency_exchange</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Multi-Currency Escrow Flow</h3>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Real-Time Split</span>
+</div>
+<div class="space-y-3">
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-serif text-sm font-semibold text-primary">$</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">USD Tier Settled</span>
+<span class="font-micro-meta text-micro-meta text-outline">JPMorgan Custody Node</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg text-primary">$84,100,000</div>
+<div class="font-micro-meta text-micro-meta text-status-verified">+ $1,261,500 Fee (1.5%)</div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-serif text-sm font-semibold text-primary">€</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">EUR Tier Settled</span>
+<span class="font-micro-meta text-micro-meta text-outline">Banque Pictet Escrow</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg text-primary">€42,000,000</div>
+<div class="font-micro-meta text-micro-meta text-status-verified">+ €630,000 Fee (1.5%)</div>
+</div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center font-serif text-sm font-semibold text-primary">¥</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">JPY Institutional Settlement</span>
+<span class="font-micro-meta text-micro-meta text-outline">MUFG Institutional Trust</span>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-lg text-label-lg text-primary">¥5,180,000,000</div>
+<div class="font-micro-meta text-micro-meta text-status-verified">+ ¥77,700,000 Fee</div>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-micro-meta text-micro-meta uppercase">
+<span>Automated Daily Clearing: 23:59 UTC</span>
+<span class="text-primary font-semibold">Next Sweep in 4h 12m</span>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-surface-card space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">corporate_fare</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Agency Subscription Tiers</h3>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase text-status-verified">100% Billing SLA</span>
+</div>
+<div class="space-y-4">
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary">Sovereign Private Reserve Tier (42 Nodes)</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">$525,000/mo</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-primary h-full w-[65%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-micro-meta font-micro-meta text-outline">
+<span>$12,500/mo flat + White-glove concierges</span>
+<span>Tier Utilization: 98%</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary">Institutional Tier (88 Nodes)</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">$440,000/mo</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-chart-accent h-full w-[54%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-micro-meta font-micro-meta text-outline">
+<span>$5,000/mo flat + Spatial GIS API nodes</span>
+<span>Tier Utilization: 87%</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary">Starter Brokerage Nodes (142 Nodes)</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">$213,000/mo</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="bg-secondary-container h-full w-[28%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-micro-meta font-micro-meta text-outline">
+<span>$1,500/mo + Escrow transaction markup</span>
+<span>Tier Utilization: 62%</span>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Unbilled Placement Overages:</span>
+<span class="font-label-sm text-label-sm text-status-verified">+$372,400 Accrued</span>
+</div>
+</div>
+</section>
+</div>
+<div class="xl:col-span-4 flex flex-col space-y-6">
+<section class="p-6 rounded-xl bg-surface-card space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">shield</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Security Telemetry</h3>
+</div>
+<span class="flex items-center gap-1.5 font-micro-meta text-micro-meta uppercase text-status-verified">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified animate-ping"></span> Live Audit
+          </span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold">Hash Verified</span>
+<span class="font-micro-meta text-micro-meta text-outline">14 sec ago</span>
+</div>
+<p class="text-on-surface text-xs leading-relaxed">Title deed cryptographic ledger hash committed for Higashiyama Ward, Kyoto [Hash: 0x4a91...].</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta text-status-pending uppercase font-semibold">Privilege Escalation</span>
+<span class="font-micro-meta text-micro-meta text-outline">2 min ago</span>
+</div>
+<p class="text-on-surface text-xs leading-relaxed">Security Officer #04 temporarily elevated read-only vault access for Sotheby's Geneva audit.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta text-status-error uppercase font-semibold">Firewall Ingress Block</span>
+<span class="font-micro-meta text-micro-meta text-outline">6 min ago</span>
+</div>
+<p class="text-on-surface text-xs leading-relaxed">Malicious automated crawler blocked on VDR Gateway - Zurich Edge node (IP: 194.230.12.8).</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta text-chart-accent uppercase font-semibold">KYC Clearance</span>
+<span class="font-micro-meta text-micro-meta text-outline">19 min ago</span>
+</div>
+<p class="text-on-surface text-xs leading-relaxed">UHNW Entity "Montreux Capital Holding LLC" cleared Level-3 Institutional Sanction Scan.</p>
+</div>
+</div>
+</section>
+<section class="p-6 rounded-xl bg-surface-card space-y-5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">admin_panel_settings</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Platform Governance</h3>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Super-Admins: 4 Online</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">VS</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Vance Sterling</span>
+<span class="font-micro-meta text-micro-meta text-outline">Chief Overseer // Tokyo Hub</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-bold text-xs">EL</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Elena Rostova</span>
+<span class="font-micro-meta text-micro-meta text-outline">Lead Legal Auditor // Zurich</span>
+</div>
+</div>
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+</div>
+</div>
+<div class="pt-2 flex flex-col space-y-2">
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-bright text-on-surface font-label-sm text-label-sm flex items-center justify-between transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-pending">rule_settings</span>
+<span>Re-run Full AI Risk Diagnostics</span>
+</span>
+<span class="font-micro-meta text-micro-meta text-outline">v2.4.1</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-bright text-on-surface font-label-sm text-label-sm flex items-center justify-between transition-colors">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-chart-accent">tune</span>
+<span>Manage Global Commission Splits</span>
+</span>
+<span class="font-micro-meta text-micro-meta text-outline">1.50% Std</span>
+</button>
+</div>
+</section>
+<section class="p-6 rounded-xl bg-surface-card flex flex-col justify-between relative overflow-hidden">
+<div class="space-y-2">
+<span class="font-micro-meta text-micro-meta uppercase text-status-error tracking-wider font-semibold">Incident Readiness</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Regulatory Safe-Harbor Freeze</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Instantly pause all Escrow wire dispatches globally without affecting monograph read-only telemetry.</p>
+</div>
+<div class="mt-4 pt-4 flex items-center gap-3">
+<button class="flex-1 py-2.5 rounded-lg bg-surface-container text-error hover:bg-error-container hover:text-on-error font-label-sm text-label-sm transition-all text-center" onclick="emergencyFreezeModal()">
+            Arm Safety Locks
+          </button>
+</div>
+</section>
+</div>
+</div>
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-surface-lowest/80 backdrop-blur-md p-4" id="freezeModal">
+<div class="max-w-md w-full p-6 rounded-xl bg-surface-card space-y-4 shadow-xl">
+<div class="flex items-center gap-3 text-status-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Emergency Circuit Pause</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        This will freeze instantaneous fund release on 84 brokerage settlement smart routes across USD, EUR, and JPY nodes. All escrow states will be snapshotted.
+      </p>
+<div class="p-3 rounded-lg bg-surface-container font-micro-meta text-micro-meta text-outline uppercase">
+        Action requires MFA confirmation from 2 Super-Admin clearance keys.
+      </div>
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface font-label-sm text-label-sm" onclick="emergencyFreezeModal()">Abort</button>
+<button class="px-4 py-2 rounded-lg bg-error text-on-error font-label-sm text-label-sm" onclick="confirmFreezeAction()">Execute Protocol Freeze</button>
+</div>
+</div>
+</div>
+<script>
+    function emergencyFreezeModal() {
+      const modal = document.getElementById('freezeModal');
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function confirmFreezeAction() {
+      alert('Sovereign Protocol Lock Sequence Initialized. Dispatches placed in staging quarantine.');
+      emergencyFreezeModal();
+    }
+  </script>
+</div></main></div></body></html>

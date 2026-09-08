@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#e5e2e1", "secondary": "#c7c6c6", "inverse-primary": "#5d5f5f", "secondary-fixed": "#e3e2e2", "tertiary-fixed-dim": "#c8c6c5", "surface-tint": "#c6c6c7", "surface-lowest": "#0a0a0a", "status-sale": "#ffffff", "primary": "#ffffff", "tertiary": "#ffffff", "primary-container": "#e2e2e2", "on-tertiary-container": "#656463", "surface-elevated": "#201f1f", "on-error": "#690005", "primary-fixed-dim": "#c6c6c7", "surface-variant": "#363434", "on-tertiary-fixed": "#1c1b1b", "surface-container-high": "#2b2a2a", "border-subtle": "rgba(255, 255, 255, 0.08)", "on-secondary-fixed-variant": "#464747", "on-surface-variant": "#c4c7c8", "error-container": "#93000a", "on-surface": "#e6e1e1", "status-rent": "#98c379", "error": "#ffb4ab", "on-primary": "#2f3131", "inverse-surface": "#e6e1e1", "on-error-container": "#ffdad6", "surface-base": "#141313", "status-verified": "#27c93f", "on-background": "#e6e1e1", "surface": "#141313", "on-secondary-container": "#b6b5b5", "surface-container-lowest": "#0f0e0e", "surface-container": "#201f1f", "inverse-on-surface": "#323030", "surface-overlay": "#2a2a2a", "border-hairline": "#444748", "on-secondary": "#303031", "on-tertiary-fixed-variant": "#474746", "on-secondary-fixed": "#1b1c1c", "surface-container-highest": "#363434", "background": "#141313", "on-primary-fixed-variant": "#454747", "status-error": "#ff5f56", "primary-fixed": "#e2e2e2", "outline-variant": "#444748", "on-primary-fixed": "#1a1c1c", "surface-dim": "#141313", "secondary-container": "#464747", "status-pending": "#ffbd2e", "secondary-fixed-dim": "#c7c6c6", "chart-accent": "#61afef", "surface-container-low": "#1c1b1b", "surface-card": "#1c1b1b", "on-tertiary": "#313030", "surface-bright": "#3a3939", "outline": "#8e9192", "tertiary-fixed": "#e5e2e1", "on-primary-container": "#636565" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-desktop": "2rem", "container-max": "75rem", "card-padding-lg": "2rem", "gutter-mobile": "1.25rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-sm": "1.25rem" }, "fontFamily": { "display-xl-mobile": [ "Noto Serif" ], "label-lg": [ "Manrope" ], "micro-meta": [ "Manrope" ], "display-xl": [ "Noto Serif" ], "headline-lg": [ "Noto Serif" ], "headline-md": [ "Noto Serif" ], "headline-lg-mobile": [ "Noto Serif" ], "label-sm": [ "Manrope" ], "body-md": [ "Manrope" ], "body-sm": [ "Manrope" ], "body-lg": [ "Manrope" ], "headline-sm": [ "Manrope" ] }, "fontSize": { "display-xl-mobile": [ "2.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600" } ], "micro-meta": [ "0.625rem", { "lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600" } ], "display-xl": [ "4.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg": [ "2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2rem", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.875rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "1rem", { "lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><a class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase" data-path="explore" href="#">EstatePro</a><span class="hidden xl:inline-block font-micro-meta text-micro-meta uppercase text-secondary tracking-widest pl-2">Private Reserve</span></div><nav class="hidden lg:flex items-center gap-6 xl:gap-8" data-active-classes="text-primary font-bold"><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="buy" href="#">Buy</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="rent" href="#">Rent</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="commercial" href="#">Commercial</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="developments" href="#">Developments</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="mortgage" href="#">Mortgage</a></nav><div class="flex items-center gap-3 sm:gap-4"><div class="hidden md:flex items-center gap-2 font-label-sm text-label-sm text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">USD $</span><span class="text-outline">|</span><span class="hover:text-primary transition-colors cursor-pointer">EN</span></div><button aria-label="Saved Properties" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-1.5 right-1 w-4 h-4 rounded-full bg-surface-container-high text-[9px] font-bold text-primary flex items-center justify-center">3</span></button><a class="hidden sm:inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-transparent hover:bg-surface-elevated text-secondary-fixed hover:text-primary transition-all" data-path="list-property" href="#">List Property</a><a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors" data-path="portal-access" href="#">Sign In</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Dossier Meta Ribbon -->
+<section class="w-full bg-surface-lowest py-3.5 px-gutter-mobile lg:px-gutter-desktop shadow-sm">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-secondary">
+<div class="flex flex-wrap items-center gap-2 font-label-sm text-label-sm">
+<a class="text-on-surface-variant hover:text-primary transition-colors" data-path="developments" href="#">Developments</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant">Japan &amp; Asia-Pacific</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-medium tracking-wide">Kyoto Sanctuary Enclave</span>
+<span class="ml-2 px-2 py-0.5 rounded bg-surface-container font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">REF: #DEV-KYOTO-8812</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-micro-meta uppercase tracking-widest">
+<div class="flex items-center gap-2 text-status-verified bg-surface-container-low px-3 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-status-verified animate-pulse"></span>
+<span>Phase 1 Allocation • 74% Capital Committed • Handover Q3 2026</span>
+</div>
+<div class="hidden lg:flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-[15px] text-tertiary">architecture</span>
+<span>Lead: Kengo Kuma &amp; Associates</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Hero Sanctuary Header -->
+<section class="relative w-full bg-surface-container-lowest overflow-hidden py-16 lg:py-24">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+<div class="max-w-3xl space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">
+<span class="material-symbols-outlined text-[14px]">nature_people</span>
+<span>Kyoto Lakefront • Protected Higashiyama Foothills</span>
+</div>
+<h1 class="font-display-xl text-display-xl text-primary tracking-tight font-light">
+            The Kengo Kuma <br/><span class="italic text-secondary font-serif">Pavilion Enclave</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+            A radical synthesis of charred cedar, local basalt stone, and lakefront biophilic pavilions. Commissioned directly under UNESCO buffer protections, delivering twelve bespoke architectural pavilions and eighteen sky penthouses.
+          </p>
+</div>
+<!-- Master Telemetry Badges & Direct Actions -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 min-w-[280px]">
+<a class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-all" href="#masterplan">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+<span>Explore 3D Masterplan</span>
+</a>
+<button class="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full bg-surface-container hover:bg-surface-elevated text-primary font-label-sm text-label-sm uppercase tracking-wider transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+<span>Book Private Heli Inspection</span>
+</button>
+<a class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-6 rounded-full bg-transparent hover:bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Master Dossier (42-Page PDF)</span>
+</a>
+</div>
+</div>
+<!-- Architectural Hero Imagery Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+<div class="lg:col-span-8 relative group overflow-hidden rounded-xl bg-surface-card min-h-[460px] lg:min-h-[560px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Expansive panoramic sunset rendering of The Kengo Kuma Pavilion Enclave in Kyoto lakefront, featuring cantilevered charred yakisugi wood roofs, expansive glass facades reflecting serene dark waters, surrounded by Japanese black pines, mist, and deep obsidian architectural stone." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4q9BiZL4wx1xopMb7q23u5JZc7iqtrF-NlorZ9vjyBWqIzdC0IpuaO654ejT1oOniqcfqEG8pggJSgLGB574ZmMuiapb97IEmOHYfycLxNEvG2nKyHcJRcjnOCHHNNznk1e-1uz1BeNWthSZ0EKZAQpnQEozp9aumoYBWYTB7puhq65XRDyFV6mTvhDSoFI-inj1VvLHqwcQgrYwY27oYcU2q8j_Z9RRm6N_mu24qoLeJg3PvGBP3qA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest via-surface-lowest/20 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Elevation Render View • 01-A</span>
+<h3 class="font-headline-md text-headline-md text-primary">Western Lakefront Promontory</h3>
+<p class="font-body-sm text-body-sm text-secondary">Private thermal onsen spring integration with Lake Biwa riparian zone</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded bg-surface-lowest/90 font-micro-meta text-micro-meta uppercase tracking-widest text-primary backdrop-blur-md">8K Volumetric BIM Model</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="relative group overflow-hidden rounded-xl bg-surface-card flex-1 min-h-[240px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Intimate interior detail of a Kyoto luxury pavilion showing artisanal hinoki timber slatted screens, low profile minimalist furniture, raked zen rock garden visible through frameless architectural glass, ambient warm lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIhjj_2EyNFyccjzMQGfdudTbyVm8euwkPiuiBTt0YW_MyYbZ0x-UadtqrZ6UxJG2sGUHZdn0rAg8djcze7N-htq1h5fqp39rey9ALOGSTWVFyJVHRGl6fOp0wiV0DM8o2r4AqEJ1prW42qps0VlRG2urzdf5t1yUizDKyrS84P5mMiJSrV60eIujhjLbv05xc0oFUK6DaHbntrLeSGaC9QFdY96urDkcxvwdeAIBF3JtJN29T_lDQ_Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Material Palette</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Hinoki Slats &amp; Hon-Gawara Clay</h4>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded-xl bg-surface-card flex-1 min-h-[240px]">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Subterranean private stone onsen pool carved into black volcanic basalt rock, steam floating over steaming geothermal mineral water, minimal brass architectural fittings, candle-lit tranquil Kyoto atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzllTYDqPppVnNi5hAGvrm4Zv4W5lT7_ZFvBRNMT1ikUs3k5EO9muVb1-qapSEDt3LF7-_Jon99_DGnd5haBtPgJOzjJEcCI4iei5U-lQVaqN0jA-3Ft89EczrWfoqigtiV9DMw2GYkgVmjngkIBSkcZrBs19FVTg6Xk1cKuE2iG8TUOTHyP8KLxPa6O0-_SCDpyyWZH4xF-WqxCvmbaSzTAysyY9hkOS9r4lquN2u33j1xGSbVRpB7A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Sanctuary Amenity</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Private Geothermal Spring (600m)</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Institutional Master Metric Strip -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-px bg-surface-variant/40 mt-8 rounded-xl overflow-hidden shadow-sm">
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Total Site Footprint</span>
+<div class="mt-2">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light">48.5</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed ml-1">Hectares</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">UNESCO Buffer Protected</span>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Private Residences</span>
+<div class="mt-2">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light">30</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed ml-1">Estates</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">12 Pavilions / 18 Sky Penthouses</span>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Price Spectrum</span>
+<div class="mt-2">
+<span class="font-headline-lg text-headline-lg text-primary font-light">$22.5M</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed ml-1">- $65M</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">USD • Sovereign Allocation</span>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Projected 10-Yr Yield</span>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-display-xl-mobile text-display-xl-mobile text-status-verified font-light">7.8%</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">Net IRR</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Luxury Hospitality Pool Option</span>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between col-span-2 md:col-span-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Escrow Custodian</span>
+<div class="mt-2">
+<span class="font-headline-sm text-headline-sm text-primary">SMBC • UBS</span>
+<span class="block font-micro-meta text-micro-meta uppercase tracking-wider text-secondary mt-0.5">Zurich &amp; Tokyo Multi-Sig</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-1">Full FINMA / FSA Compliance</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Masterplan Zoning & Volumetric Explorer -->
+<section class="w-full bg-surface-base py-16 lg:py-24" id="masterplan">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="space-y-2">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Interactive Cartography</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-light">Master Zoning &amp; Spatial CAD</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+            Navigate the 3 primary architectural zones. Select an enclave zone to inspect spatial orientation, sun exposure, and unit allocation status.
+          </p>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-1.5 rounded-full">
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-primary text-on-primary transition-all" id="zone-btn-all">All Enclave</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-all" id="zone-btn-a">Zone A: Basalt</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-all" id="zone-btn-b">Zone B: Hinoki</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-all" id="zone-btn-spa">Spa &amp; Pavilion</button>
+</div>
+</div>
+<!-- Vector CAD Architectural Master Map -->
+<div class="relative w-full rounded-xl bg-surface-lowest overflow-hidden shadow-xl p-6 lg:p-10">
+<!-- Ambient Grid Graphic Background -->
+<div class="absolute inset-0 bg-[radial-gradient(#201f1f_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Interactive Schematic Map Canvas -->
+<div class="lg:col-span-8 bg-surface-container-lowest/80 rounded-xl p-6 backdrop-blur-sm relative">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-status-verified"></span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-primary">Active GIS Telemetry • Lake Biwa Meridian</span>
+</div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Scale 1:500 • GIS-WGS84</div>
+</div>
+<svg class="w-full h-auto" preserveaspectratio="xMidYMid meet" viewbox="0 0 800 480">
+<defs>
+<lineargradient id="lakeGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#141313"></stop>
+<stop offset="100%" stop-color="#201f1f"></stop>
+</lineargradient>
+<pattern height="40" id="gridSub" patternunits="userSpaceOnUse" width="40">
+<path class="text-surface-variant/40" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<!-- Waterline Contour -->
+<rect fill="url(#lakeGrad)" height="480" width="800"></rect>
+<rect fill="url(#gridSub)" height="480" width="800"></rect>
+<!-- Lake Waterform Arc -->
+<path d="M 0,260 C 240,240 400,320 800,280 L 800,480 L 0,480 Z" fill="#0f0e0e"></path>
+<text class="font-micro-meta" fill="#8e9192" font-size="11" letter-spacing="3" x="50" y="440">LAKE BIWA RIPARIAN SANCTUARY BUFFER</text>
+<!-- Forest Contour Lines -->
+<path d="M 40,80 C 180,40 320,120 760,60" fill="none" stroke="#2b2a2a" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M 60,140 C 260,110 480,180 780,110" fill="none" stroke="#2b2a2a" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Zone A: The Basalt Residences -->
+<g class="cursor-pointer group" id="map-zone-a">
+<polygon class="transition-all group-hover:fill-surface-bright" fill="#201f1f" points="120,120 310,100 340,220 150,240"></polygon>
+<!-- Pavilions plotted inside Zone A -->
+<rect class="group-hover:fill-primary transition-colors" fill="#c6c6c7" height="26" width="34" x="140" y="140"></rect>
+<rect class="group-hover:fill-primary transition-colors" fill="#c6c6c7" height="26" width="34" x="190" y="130"></rect>
+<rect fill="#ffbd2e" height="26" width="34" x="240" y="125"></rect>
+<rect fill="#27c93f" height="26" width="34" x="160" y="180"></rect>
+<rect fill="#c6c6c7" height="26" width="34" x="210" y="175"></rect>
+<rect fill="#27c93f" height="26" width="34" x="260" y="170"></rect>
+<circle cx="120" cy="120" fill="#ffffff" r="4"></circle>
+<text class="font-label-sm" fill="#ffffff" font-size="11" font-weight="600" letter-spacing="1" x="140" y="230">ZONE A • THE BASALT VILLAS</text>
+</g>
+<!-- Zone B: The Hinoki Waterfront Sky Penthouses -->
+<g class="cursor-pointer group" id="map-zone-b">
+<polygon class="transition-all group-hover:fill-surface-bright" fill="#201f1f" points="410,130 680,90 730,230 460,270"></polygon>
+<!-- Penthouses footprints -->
+<rect fill="#c6c6c7" height="30" width="45" x="440" y="150"></rect>
+<rect fill="#27c93f" height="30" width="45" x="500" y="140"></rect>
+<rect fill="#ffbd2e" height="30" width="45" x="560" y="130"></rect>
+<rect fill="#c6c6c7" height="30" width="45" x="620" y="120"></rect>
+<rect fill="#27c93f" height="30" width="45" x="470" y="200"></rect>
+<rect fill="#c6c6c7" height="30" width="45" x="530" y="190"></rect>
+<rect fill="#27c93f" height="30" width="45" x="590" y="180"></rect>
+<circle cx="410" cy="130" fill="#ffffff" r="4"></circle>
+<text class="font-label-sm" fill="#ffffff" font-size="11" font-weight="600" letter-spacing="1" x="440" y="260">ZONE B • HINOKI PENTHOUSES</text>
+</g>
+<!-- Communal Zen Wellness Pavilion & Pier -->
+<g class="cursor-pointer group" id="map-zone-spa">
+<circle class="group-hover:fill-surface-bright transition-colors" cx="380" cy="330" fill="#2b2a2a" r="45"></circle>
+<rect fill="#ffffff" height="40" width="40" x="360" y="310"></rect>
+<line stroke="#ffffff" stroke-width="3" x1="380" x2="380" y1="375" y2="425"></line>
+<rect fill="#e2e2e2" height="15" width="30" x="365" y="420"></rect>
+<text class="font-micro-meta" fill="#e5e2e1" font-size="9" letter-spacing="1.5" x="310" y="300">ZEN SPA • PRIVATE WATER JETTY</text>
+</g>
+<!-- Helipad Marker -->
+<g class="cursor-pointer">
+<circle cx="730" cy="360" fill="#1c1b1b" r="28" stroke="#ffffff" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<text fill="#ffffff" font-family="Manrope" font-size="16" font-weight="700" x="724" y="366">H</text>
+<text fill="#8e9192" font-size="8" letter-spacing="1" x="690" y="405">PRIVATE HELIPAD (ICAO)</text>
+</g>
+</svg>
+<!-- Map Legend -->
+<div class="mt-4 pt-4 flex flex-wrap items-center gap-6 text-xs text-secondary">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-status-verified rounded-sm"></span>
+<span>Available (8)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-status-pending rounded-sm"></span>
+<span>Reserved / Escrow (14)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-secondary-container rounded-sm"></span>
+<span>Sovereign Acquired (8)</span>
+</div>
+<div class="flex items-center gap-2 ml-auto text-on-surface">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Click Zone to Inspect Details</span>
+</div>
+</div>
+</div>
+<!-- Zone Telemetry Inspector Panel -->
+<div class="lg:col-span-4 bg-surface-card rounded-xl p-8 flex flex-col justify-between shadow-lg min-h-[440px]">
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Selected Zone Focus</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-micro-meta text-micro-meta uppercase text-status-verified tracking-widest">Active Masterplan</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Zone A: The Basalt Villas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                  Twelve ground-hugging pavilions sculpted into volcanic stone terraces. Designed by Kengo Kuma with unbroken line-of-sight to Lake Biwa and subterranean private cedar onsens.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-4 py-4 bg-surface-container-low p-4 rounded-lg">
+<div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Avg. Footprint</div>
+<div class="font-headline-sm text-headline-sm text-primary mt-1">7,420 sq ft</div>
+<div class="text-xs text-on-surface-variant">690 m² GFA</div>
+</div>
+<div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Availability</div>
+<div class="font-headline-sm text-headline-sm text-status-verified mt-1">3 Pavilions</div>
+<div class="text-xs text-on-surface-variant">9 Committed</div>
+</div>
+</div>
+<ul class="space-y-2 text-xs text-secondary">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>Direct riparian water rights &amp; private deepwater boat mooring</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>Geothermal geothermal heat exchangers pre-installed</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span>Discrete subterranean triple-bay secure EV vault</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 mt-6 flex gap-3">
+<a class="flex-1 text-center py-2.5 px-4 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors" href="#unit-matrix">
+                View Unit Inventory
+              </a>
+<button class="p-2.5 rounded-full bg-surface-container hover:bg-surface-elevated text-primary transition-colors" title="Download CAD Package">
+<span class="material-symbols-outlined text-[20px]">file_present</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Sovereign Unit Inventory Matrix -->
+<section class="w-full bg-surface py-16 lg:py-24" id="unit-matrix">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+<div>
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Enclave Inventory Matrix</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-light">Allocations &amp; Sovereign Residences</h2>
+</div>
+<!-- Inventory Tab Filters -->
+<div class="flex flex-wrap items-center gap-2 bg-surface-container-low p-1.5 rounded-full">
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-primary text-on-primary shadow-sm">All Residences (30)</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors">Available (8)</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors">Under Escrow (14)</button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:text-primary transition-colors">Acquired (8)</button>
+</div>
+</div>
+<!-- Inventory Table Card -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm uppercase text-secondary tracking-wider">
+<th class="py-4 px-6">Residence Code &amp; Name</th>
+<th class="py-4 px-6">Typology</th>
+<th class="py-4 px-6">Enclosed Area</th>
+<th class="py-4 px-6">Terrace / Garden</th>
+<th class="py-4 px-6">Hydrothermal Specs</th>
+<th class="py-4 px-6">Valuation (USD)</th>
+<th class="py-4 px-6">Status</th>
+<th class="py-4 px-6 text-right">Escrow Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/30 font-body-sm text-body-sm">
+<!-- Unit Row 1 -->
+<tr class="hover:bg-surface-elevated/40 transition-colors">
+<td class="py-5 px-6">
+<div class="font-label-lg text-label-lg text-primary">#PAV-04 • The Cascade Pavilion</div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Lakefront Promontory West • Zone A</div>
+</td>
+<td class="py-5 px-6 text-on-surface">5-Bed Villa Masterplan</td>
+<td class="py-5 px-6">
+<span class="text-primary font-medium">8,150 sq ft</span>
+<span class="block text-xs text-secondary">757 m²</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-primary">3,400 sq ft</span>
+<span class="block text-xs text-secondary">Engawa Verandah</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px] text-chart-accent">hot_tub</span>
+                    Geothermal Onsen + Lap Pool
+                  </span>
+</td>
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">$34,500,000</div>
+<div class="text-[11px] text-secondary">Milestone Tranches Active</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-verified/10 text-status-verified font-micro-meta text-micro-meta uppercase tracking-widest font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span> Available
+                  </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="py-2 px-4 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors">
+                    Lock Deposit
+                  </button>
+</td>
+</tr>
+<!-- Unit Row 2 -->
+<tr class="hover:bg-surface-elevated/40 transition-colors">
+<td class="py-5 px-6">
+<div class="font-label-lg text-label-lg text-primary">#PENT-02 • The Monolith Sky Residence</div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Highest Peak • Zone B</div>
+</td>
+<td class="py-5 px-6 text-on-surface">Triplex Sky Penthouse</td>
+<td class="py-5 px-6">
+<span class="text-primary font-medium">11,200 sq ft</span>
+<span class="block text-xs text-secondary">1,040 m²</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-primary">4,800 sq ft</span>
+<span class="block text-xs text-secondary">Rooftop Sky Garden</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px] text-chart-accent">pool</span>
+                    Sky Infinity Onsen 360°
+                  </span>
+</td>
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">$62,000,000</div>
+<div class="text-[11px] text-secondary">Private Sovereign Tier</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-verified/10 text-status-verified font-micro-meta text-micro-meta uppercase tracking-widest font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span> Available
+                  </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="py-2 px-4 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors">
+                    Lock Deposit
+                  </button>
+</td>
+</tr>
+<!-- Unit Row 3 -->
+<tr class="hover:bg-surface-elevated/40 transition-colors">
+<td class="py-5 px-6">
+<div class="font-label-lg text-label-lg text-primary">#PAV-07 • The Hinoki Water Pavilion</div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Riparian Sanctuary • Zone A</div>
+</td>
+<td class="py-5 px-6 text-on-surface">4-Bed Villa Masterplan</td>
+<td class="py-5 px-6">
+<span class="text-primary font-medium">6,800 sq ft</span>
+<span class="block text-xs text-secondary">631 m²</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-primary">2,200 sq ft</span>
+<span class="block text-xs text-secondary">Lake-Overhang Deck</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px] text-chart-accent">hot_tub</span>
+                    Natural Geothermal Well
+                  </span>
+</td>
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">$28,000,000</div>
+<div class="text-[11px] text-secondary">Stage 2 Milestone</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-status-pending/10 text-status-pending font-micro-meta text-micro-meta uppercase tracking-widest font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-pending"></span> In Escrow (London)
+                  </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="py-2 px-4 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider cursor-not-allowed opacity-60" disabled="">
+                    Reserved
+                  </button>
+</td>
+</tr>
+<!-- Unit Row 4 -->
+<tr class="hover:bg-surface-elevated/40 transition-colors">
+<td class="py-5 px-6">
+<div class="font-label-lg text-label-lg text-primary">#PAV-01 • The Founder Estate Pavilion</div>
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Private Forest Peninsula</div>
+</td>
+<td class="py-5 px-6 text-on-surface">6-Bed Signature Compound</td>
+<td class="py-5 px-6">
+<span class="text-primary font-medium">13,400 sq ft</span>
+<span class="block text-xs text-secondary">1,245 m²</span>
+</td>
+<td class="py-5 px-6">
+<span class="text-primary">8,500 sq ft</span>
+<span class="block text-xs text-secondary">Private Zen Gardens</span>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-xs text-secondary-fixed">
+<span class="material-symbols-outlined text-[14px] text-chart-accent">spa</span>
+                    Full Hydrothermal Wing
+                  </span>
+</td>
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">$65,000,000</div>
+<div class="text-[11px] text-secondary">Institutional Transfer</div>
+</td>
+<td class="py-5 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-secondary-fixed font-micro-meta text-micro-meta uppercase tracking-widest font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Closed / Sovereign
+                  </span>
+</td>
+<td class="py-5 px-6 text-right">
+<button class="py-2 px-4 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider cursor-not-allowed opacity-40" disabled="">
+                    Settled
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-secondary">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+<span>Allocations are subject to FINMA &amp; Bank of Japan KYC/AML protocols prior to cryptographic deed issuance.</span>
+</div>
+<div class="flex items-center gap-2">
+<a class="text-primary hover:underline uppercase font-micro-meta tracking-wider" href="#">Download Complete Inventory Spec (.XLSX)</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tailored Sovereign Capital Milestone Roadmap -->
+<section class="w-full bg-surface-container-lowest py-16 lg:py-24">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+<div>
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Structured Capital Deployment</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-light">Institutional Milestone Schedule</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-2">
+            Payment allocations are unlocked in 4 audited tranches, released only upon third-party architectural engineering sign-off by Arup International.
+          </p>
+</div>
+<div class="bg-surface-card px-5 py-3 rounded-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-status-verified text-[28px]">account_balance</span>
+<div>
+<div class="font-label-sm text-label-sm text-primary uppercase tracking-wide">Multi-Sig Escrow Custody</div>
+<div class="text-xs text-secondary">Sumitomo Mitsui Trust • UBS Geneva Sovereign Vault</div>
+</div>
+</div>
+</div>
+<!-- Roadmap Tranche Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tranche 1 -->
+<div class="bg-surface-card p-6 rounded-xl relative overflow-hidden flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-status-verified">Stage 01 • 100% Verified</span>
+<span class="material-symbols-outlined text-status-verified text-[18px]">check_circle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Mandate &amp; Groundbreaking</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Initial site dedication, UNESCO buffer permits clearing, and deep-soil foundation pilings completed.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low p-3 rounded">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-light">10%</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Completed Q1 2024</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-status-verified h-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- Tranche 2 -->
+<div class="bg-surface-card p-6 rounded-xl relative overflow-hidden flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-status-pending">Stage 02 • Active Phase</span>
+<span class="material-symbols-outlined text-status-pending text-[18px]">pending</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Geothermal Core &amp; Basalt Frame</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Drilling 600m geothermal boreholes, cast-in-place structural basalt framework, and lakefront retaining walls.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low p-3 rounded">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-light">25%</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-status-pending">Active Q4 2024</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-status-pending h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<!-- Tranche 3 -->
+<div class="bg-surface-card p-6 rounded-xl relative overflow-hidden flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Stage 03 • Scheduled</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Glass Enclosure &amp; Hinoki Millwork</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Triple-glazed frameless low-iron glass facades and master artisanal hinoki wood joinery integration.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low p-3 rounded">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-light">35%</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Target Q2 2025</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[0%]"></div>
+</div>
+</div>
+</div>
+<!-- Tranche 4 -->
+<div class="bg-surface-card p-6 rounded-xl relative overflow-hidden flex flex-col justify-between">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Stage 04 • Settlement</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">vpn_key</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Handover &amp; Cryptographic Title</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Definitive final inspection, concierge onboarding, and cryptographic deed transfer with sovereign land registry.
+            </p>
+</div>
+<div class="mt-8 pt-4 bg-surface-container-low p-3 rounded">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-light">30%</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Handover Q3 2026</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[0%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Communal Amenities & Craft Infrastructure -->
+<section class="w-full bg-surface py-16 lg:py-24">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="mb-12">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Curated Life Infrastructure</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-light">Communal &amp; Sovereign Privileges</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-2">
+          Estate privileges curated exclusively for residents, executed with museum-grade precision and institutional security protocols.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Amenity 1 -->
+<div class="bg-surface-card rounded-xl overflow-hidden group flex flex-col justify-between">
+<div>
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Subterranean geothermal onsen spring carved into black basalt stone, rising natural mineral steam, subtle architectural uplighting from beneath water, dark moody Japanese aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBV4mgWA_Pju-xYKFZepoKSMuFSL_3hBAjM6d3z-YTJErr_7DPrIFpxOpJReQRZWp0q4GLIpsEwZbgeIu5et0m0Gtw1RMPwmOBR5pqyYKdTO3maLQiwqBB5r2-j1_s3x933yseBxxtp17nm8om6iGf1VlRv9vz5n1jqJD_r-b35TQW-7dsosz8Xj_2dRJbOLpWQ4FU7paWNANNy0R5A593M_87dU7m40xUfhh2NA7kSKjPGXvQw32GMBQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent"></div>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">hot_tub</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">Hydrothermal Borehole</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">600m Geothermal Onsen</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                Direct tapping of ancient thermal aquifers with therapeutic mineral composition, filtered naturally through volcanic strata.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Temperature: 41.5°C Stabilized
+          </div>
+</div>
+<!-- Amenity 2 -->
+<div class="bg-surface-card rounded-xl overflow-hidden group flex flex-col justify-between">
+<div>
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Traditional contemporary Japanese ceremonial tea house designed by Kengo Kuma, delicate slatted wooden roof overhang, view over raked gravel and moss zen garden with Lake Biwa background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCO8sBXza6t_uzolwz_jnYbhWODwFoLZpTJjRaf8rFImQvoxb1J4oof-AQB7oXjQec733TpnvZVkm5Dgl-VlAIpz66aCJFml4nSmhvzu3C4B7KdwcNAC7XRsoY6epiIN6nikzhTrjuEuPG00gz-eNfAteHqAysYaELgatl1jZIDuibPNXOYhgwpv4fIkhPuU1-zCYlHwDT-xAFUhwOuDDp_KARKa3YoPMUn67Vt5r8-vxW6OOosyFAK-Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent"></div>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">Cultural Heritage</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Kuma Ceremonial Pavilion</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                Private pavilion for traditional tea ceremonies, curated meditation chambers, and moss gardens designed by Kyoto master arborists.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Urasenke Master in Residence
+          </div>
+</div>
+<!-- Amenity 3 -->
+<div class="bg-surface-card rounded-xl overflow-hidden group flex flex-col justify-between">
+<div>
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="High-end private executive helicopter resting on a minimalist dark stone helipad overlooking misty lake in Kyoto at dusk, precision landing lights glowing softly." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDL9tlCMgqtel2Evo2aBzZe9nnt9TlgzMNGATDlt5Os534vonTeEqv4jvalM-nnfBGu-yxg2ibk9ogJ_0rVLlaQDmD_D4NaFn_hw9KpKESLSe4TBDOlEnOzWKEbwUj2xrnF62MPs0LaUS6p9NdOxjHTtK7pkhOZ1OaEtIzbledrwUI1rbjCP6qZOP5GZfaJ_s80vo4-eDM0dEEfAkGBnuuUai5WD8ejDmB3p4F2nQyzpo3uTYOjp0Twyw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent"></div>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">flight</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">Aviation Transit</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Private Certified Helipad</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                ICAO Annex 14 compliant helipad providing 12-minute rapid charters to Osaka Kansai International (KIX) and Tokyo Haneda.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Night VFR Capable • 24/7 Clearance
+          </div>
+</div>
+<!-- Amenity 4 -->
+<div class="bg-surface-card rounded-xl overflow-hidden group flex flex-col justify-between">
+<div>
+<div class="h-48 w-full relative overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Ultra-secure subterranean wine and fine art vault, biometric titanium door open revealing glass climate-controlled lockers with rare Grand Cru bottles and modern canvas lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXg2rbzM_lyAw8mMfIC4S8_0jP_2n0M3_0GGKAufRo3j4di_jjQtU-vrmv1S_QDQfstUP996cceIK9PSLQn34XIyHp2C0OrErnXUXW2KUWhfLama3MrKAsqdqYISH2Nn9TlFKJBBI-goUSieayc-NpRjA0vKVIiUjiUORyoGLmsCqYLwubLv0oCWgCZT1irHQWgPnSbx3_9MixDlCSECT2WMcW3lWBJDxf8hhKHE7Mg52Cw5aVOSNfeA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card to-transparent"></div>
+</div>
+<div class="p-6 space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">Asset Custody</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Class-4 Vault &amp; Cellar</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                Underground climate and humidity-regulated lockers with biometric Iris scanning for multi-million dollar art and Grand Cru vintages.
+              </p>
+</div>
+</div>
+<div class="px-6 pb-6 pt-2 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Lloyd's Spec 70% RH / 13°C
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Developer, Architectural Master & Lead Advisory Profile -->
+<section class="w-full bg-surface-container-lowest py-16 lg:py-24">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Profile Column -->
+<div class="lg:col-span-7 space-y-8">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Lead Architect &amp; Syndicate</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-light mt-1">Kengo Kuma &amp; Associates</h2>
+<div class="font-body-md text-body-md text-secondary mt-1">In Joint Venture with Sovereign Heritage Developments AG (Zurich)</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Internationally celebrated for reimagining natural Japanese materials in high-density modernist forms, Kengo Kuma brings over 35 years of civic and private residential mastery to the Kyoto Lakefront enclave. Every timber battens spacing, stone joint, and garden reflection has been simulated in computational aerodynamics to honor the ecological memory of Biwako.
+          </p>
+<!-- Verification Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+<div class="bg-surface-card p-4 rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-status-verified">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">FINMA Compliant</span>
+</div>
+<div class="text-xs text-secondary">Swiss Escrow Custody Structure</div>
+</div>
+<div class="bg-surface-card p-4 rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-status-verified">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">UNESCO Buffer</span>
+</div>
+<div class="text-xs text-secondary">Cultural Heritage Certified</div>
+</div>
+<div class="bg-surface-card p-4 rounded-lg space-y-1">
+<div class="flex items-center gap-1.5 text-status-verified">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">LEED Platinum</span>
+</div>
+<div class="text-xs text-secondary">Net-Zero Geothermal Matrix</div>
+</div>
+</div>
+</div>
+<!-- Direct Sovereign Concierge Action Widget -->
+<div class="lg:col-span-5 bg-surface-card p-8 rounded-xl shadow-xl space-y-6">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Private Office Advisory</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Request Private Allocation</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+              Direct access to our senior partner in Zurich and Tokyo for bespoke contract execution, tax mitigation, and title transfer.
+            </p>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Confidential inquiry dispatched to Sovereign Heritage Private Office.');">
+<div>
+<label class="block font-micro-meta text-micro-meta uppercase tracking-widest text-secondary mb-1.5">Family Office / Principal Name</label>
+<input class="w-full px-4 py-3 rounded bg-surface-container font-body-sm text-body-sm text-primary placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Lord / Baron / Principal" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-micro-meta text-micro-meta uppercase tracking-widest text-secondary mb-1.5">Jurisdiction</label>
+<input class="w-full px-4 py-3 rounded bg-surface-container font-body-sm text-body-sm text-primary placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Switzerland / Japan / UK" required="" type="text"/>
+</div>
+<div>
+<label class="block font-micro-meta text-micro-meta uppercase tracking-widest text-secondary mb-1.5">Residence Interest</label>
+<select class="w-full px-4 py-3 rounded bg-surface-container font-body-sm text-body-sm text-primary focus:outline-none focus:ring-1 focus:ring-primary">
+<option>Zone A Pavilion ($22M - $35M)</option>
+<option>Zone B Penthouse ($45M - $65M)</option>
+<option>Full Compound Syndicate</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-micro-meta text-micro-meta uppercase tracking-widest text-secondary mb-1.5">Institutional Email / Signal ID</label>
+<input class="w-full px-4 py-3 rounded bg-surface-container font-body-sm text-body-sm text-primary placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="partner@familyoffice.ch" required="" type="email"/>
+</div>
+<div class="flex items-center gap-2 pt-1 text-xs text-secondary">
+<input class="rounded bg-surface-container text-primary focus:ring-0" id="nda-box" required="" type="checkbox"/>
+<label for="nda-box">Require Bilateral Non-Disclosure Agreement (FINMA NDA)</label>
+</div>
+<button class="w-full py-3.5 px-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-all" type="submit">
+              Initiate Sovereign Briefing
+            </button>
+</form>
+<div class="pt-4 flex items-center justify-between text-[11px] text-secondary">
+<span>Direct Desk: +41 22 819 0040</span>
+<span>Direct Tokyo: +81 3 5550 8812</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive Zone Filter toggles for Masterplan Explorer
+  const zoneAll = document.getElementById('zone-btn-all');
+  const zoneA = document.getElementById('zone-btn-a');
+  const zoneB = document.getElementById('zone-btn-b');
+  const zoneSpa = document.getElementById('zone-btn-spa');
+
+  const mapZoneA = document.getElementById('map-zone-a');
+  const mapZoneB = document.getElementById('map-zone-b');
+  const mapZoneSpa = document.getElementById('map-zone-spa');
+
+  function resetButtons() {
+    [zoneAll, zoneA, zoneB, zoneSpa].forEach(btn => {
+      if (btn) {
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        btn.classList.add('text-secondary');
+      }
+    });
+  }
+
+  function highlightZone(activeBtn, targetElement) {
+    resetButtons();
+    if (activeBtn) {
+      activeBtn.classList.add('bg-primary', 'text-on-primary');
+      activeBtn.classList.remove('text-secondary');
+    }
+  }
+
+  if (zoneAll) zoneAll.addEventListener('click', () => highlightZone(zoneAll, null));
+  if (zoneA) zoneA.addEventListener('click', () => highlightZone(zoneA, mapZoneA));
+  if (zoneB) zoneB.addEventListener('click', () => highlightZone(zoneB, mapZoneB));
+  if (zoneSpa) zoneSpa.addEventListener('click', () => highlightZone(zoneSpa, mapZoneSpa));
+
+  if (mapZoneA) mapZoneA.addEventListener('click', () => highlightZone(zoneA, mapZoneA));
+  if (mapZoneB) mapZoneB.addEventListener('click', () => highlightZone(zoneB, mapZoneB));
+  if (mapZoneSpa) mapZoneSpa.addEventListener('click', () => highlightZone(zoneSpa, mapZoneSpa));
+</script></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop py-section-gap"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"><div class="lg:col-span-2 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-tight">EstatePro</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Architectural residences, master developments, and institutional telemetry for ultra-prime real estate holdings globally.</p></div><div class="mt-8"><div class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Curated Portfolio Network</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">London • New York • Zurich • Tokyo • Dubai</p></div></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Explore</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="buy" href="#">Penthouses &amp; Mansions</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Architectural Landmarks</a></li><li><a class="hover:text-primary transition-colors" data-path="commercial" href="#">Commercial Capital</a></li><li><a class="hover:text-primary transition-colors" data-path="rent" href="#">Private Leases</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Curated Collections</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Solutions</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="agents" href="#">Premier Broker Suite</a></li><li><a class="hover:text-primary transition-colors" data-path="overview" href="#">Asset Management SaaS</a></li><li><a class="hover:text-primary transition-colors" data-path="list-property" href="#">Private Seller Vault</a></li><li><a class="hover:text-primary transition-colors" data-path="mortgage" href="#">Institutional Financing</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Developer Syndication</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Trust &amp; Legal</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Discretion Protocol</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Escrow &amp; Compliance</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Terms of Confidentiality</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Regulatory Filings</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Security Infrastructure</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Intelligence</div><p class="font-body-sm text-body-sm text-on-surface-variant">Receive the quarterly confidential monograph on global prime assets.</p><div class="flex flex-col gap-2 pt-2"><input class="w-full px-3 py-2.5 rounded bg-surface-container-low font-body-sm text-body-sm text-primary placeholder-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Institutional email address" type="email"/><button class="w-full py-2.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Subscribe</button></div></div></div><div class="mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-secondary"><p>© 2025 EstatePro Luxury Real Estate SaaS. All rights reserved.</p><div class="flex items-center gap-6 font-micro-meta text-micro-meta tracking-widest uppercase"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>GIS Telemetry Live</span><span>SOC2 Certified</span><span>ISO 27001</span></div></div></div></footer></body></html>

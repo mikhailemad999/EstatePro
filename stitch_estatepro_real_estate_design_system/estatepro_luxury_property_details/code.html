@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-tertiary-fixed": "#1c1b1b",
+          "chart-accent": "#61afef",
+          "on-primary-fixed-variant": "#454747",
+          "surface-container-lowest": "#0f0e0e",
+          "surface": "#141313",
+          "primary": "#ffffff",
+          "inverse-surface": "#e6e1e1",
+          "surface-dim": "#141313",
+          "status-error": "#ff5f56",
+          "on-secondary-fixed": "#1b1c1c",
+          "secondary-container": "#464747",
+          "surface-container-low": "#1c1b1b",
+          "on-surface": "#e6e1e1",
+          "surface-variant": "#363434",
+          "status-pending": "#ffbd2e",
+          "surface-card": "#1c1b1b",
+          "primary-fixed-dim": "#c6c6c7",
+          "secondary-fixed": "#e3e2e2",
+          "on-tertiary-container": "#656463",
+          "error-container": "#93000a",
+          "surface-container-highest": "#363434",
+          "inverse-on-surface": "#323030",
+          "surface-elevated": "#201f1f",
+          "primary-container": "#e2e2e2",
+          "on-tertiary-fixed-variant": "#474746",
+          "background": "#141313",
+          "on-background": "#e6e1e1",
+          "surface-tint": "#c6c6c7",
+          "surface-base": "#141313",
+          "on-tertiary": "#313030",
+          "tertiary-fixed": "#e5e2e1",
+          "status-verified": "#27c93f",
+          "secondary": "#c7c6c6",
+          "surface-lowest": "#0a0a0a",
+          "on-surface-variant": "#c4c7c8",
+          "on-primary-fixed": "#1a1c1c",
+          "inverse-primary": "#5d5f5f",
+          "tertiary-fixed-dim": "#c8c6c5",
+          "surface-container-high": "#2b2a2a",
+          "on-primary": "#2f3131",
+          "on-secondary": "#303031",
+          "on-error": "#690005",
+          "on-error-container": "#ffdad6",
+          "surface-bright": "#3a3939",
+          "secondary-fixed-dim": "#c7c6c6",
+          "outline-variant": "#444748",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#464747",
+          "border-subtle": "rgba(255, 255, 255, 0.08)",
+          "surface-container": "#201f1f",
+          "primary-fixed": "#e2e2e2",
+          "tertiary": "#ffffff",
+          "on-secondary-container": "#b6b5b5",
+          "outline": "#8e9192",
+          "on-primary-container": "#636565",
+          "border-hairline": "#444748",
+          "tertiary-container": "#e5e2e1",
+          "status-rent": "#98c379",
+          "surface-overlay": "#2a2a2a",
+          "status-sale": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "card-padding-lg": "2rem",
+          "section-gap": "7.5rem",
+          "card-padding-sm": "1.25rem",
+          "gutter-desktop": "2rem",
+          "container-max": "75rem",
+          "gutter-mobile": "1.25rem",
+          "base": "0.5rem"
+        },
+        "fontFamily": {
+          "label-lg": [
+            "Manrope"
+          ],
+          "body-sm": [
+            "Manrope"
+          ],
+          "body-lg": [
+            "Manrope"
+          ],
+          "micro-meta": [
+            "Manrope"
+          ],
+          "display-xl": [
+            "Noto Serif"
+          ],
+          "headline-md": [
+            "Noto Serif"
+          ],
+          "headline-sm": [
+            "Manrope"
+          ],
+          "headline-lg": [
+            "Noto Serif"
+          ],
+          "body-md": [
+            "Manrope"
+          ],
+          "label-sm": [
+            "Manrope"
+          ],
+          "display-xl-mobile": [
+            "Noto Serif"
+          ],
+          "headline-lg-mobile": [
+            "Noto Serif"
+          ]
+        },
+        "fontSize": {
+          "label-lg": [
+            "0.875rem",
+            {
+              "lineHeight": "1.4",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-sm": [
+            "0.875rem",
+            {
+              "lineHeight": "1.5",
+              "letterSpacing": "normal",
+              "fontWeight": "400"
+            }
+          ],
+          "body-lg": [
+            "1.125rem",
+            {
+              "lineHeight": "1.6",
+              "letterSpacing": "0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "micro-meta": [
+            "0.625rem",
+            {
+              "lineHeight": "1.3",
+              "letterSpacing": "0.15em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-xl": [
+            "4.5rem",
+            {
+              "lineHeight": "1.1",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "2rem",
+            {
+              "lineHeight": "1.3",
+              "letterSpacing": "normal",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "1.25rem",
+            {
+              "lineHeight": "1.4",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "2.5rem",
+            {
+              "lineHeight": "1.2",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "body-md": [
+            "1rem",
+            {
+              "lineHeight": "1.6",
+              "letterSpacing": "normal",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "0.75rem",
+            {
+              "lineHeight": "1.4",
+              "letterSpacing": "0.08em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-xl-mobile": [
+            "2.5rem",
+            {
+              "lineHeight": "1.15",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "1.875rem",
+            {
+              "lineHeight": "1.25",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-base"><div class="flex items-center gap-card-padding-sm"><a class="flex items-center gap-base group" data-path="buy" href="#"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase">EstatePro</span></a></div><nav class="hidden xl:flex items-center gap-card-padding-sm" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="buy" href="#">Buy</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="rent" href="#">Rent</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="commercial" href="#">Commercial</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="developments" href="#">Developments</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="mortgage" href="#">Mortgage</a></nav><div class="flex items-center gap-base"><div class="hidden sm:flex items-center gap-base"><button class="px-base py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high hover:text-on-surface transition-colors uppercase" type="button">USD ($)</button><button class="px-base py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high hover:text-on-surface transition-colors uppercase" type="button">EN</button></div><a class="px-base lg:px-card-padding-sm py-base rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" data-path="list-property" href="#">List Property</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Breadcrumb & Top Intelligence Metadata -->
+<div class="w-full bg-surface-lowest py-4">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex flex-wrap items-center justify-between gap-3 text-on-surface-variant font-micro-meta text-micro-meta tracking-widest uppercase">
+<div class="flex items-center gap-2 flex-wrap">
+<a class="hover:text-primary transition-colors" href="#">Properties</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Japan</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Kyoto</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">The Sugi Pavilion at Higashiyama</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          CONCIERGE CIPHER #9942
+        </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm">
+          REF: EP-KY-8821
+        </span>
+</div>
+</div>
+</div>
+<!-- Hero Editorial Media Gallery -->
+<section class="w-full max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop pt-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-3 h-auto lg:h-[620px]">
+<!-- Primary Architectural Frame -->
+<div class="lg:col-span-7 relative group overflow-hidden rounded-lg bg-surface-container-low shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out min-h-[380px] lg:min-h-full" data-alt="Editorial architectural photograph of The Sugi Pavilion in Higashiyama Kyoto at twilight. Masterfully designed modern pavilion featuring charred yakisugi cedar cladding, expansive minimalist acoustic glass panels reflecting an illuminated dry rock zen garden, soft recessed amber lighting, and the misty hills of Kyoto in the deep midnight background. High design, Kinfolk style architectural publication quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmh_ckqEZn7tdXXZiRLftCEtLD4pdqikeBhPuR3xo0KOK3flcsiCYTAziRT8hBrtj8kNOYm_467j1BMg3eIBj45TgpH-bEkF8SQnUAieMSv4sdYU5r7f5i7Kga-H0WBxjSQqgkOnJR3t1RZGpkTlr4I7HX8IOEOnHurQL_8Fa0WBMHWlyw0ol_pVhsh8q25j0g_ZRT6-oI3WbDAW5rsAvUCtZAQcuMT7zeAMr8LkPOIqZSWOxqX8qw_A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest/90 via-surface-lowest/20 to-transparent pointer-events-none"></div>
+<div class="absolute top-4 left-4 flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 shadow-md">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified animate-pulse"></span>
+            Verified Sovereign Asset
+          </span>
+<span class="px-3 py-1 rounded-full bg-surface-container-highest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm">
+            Architectural Masterpiece
+          </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+<div>
+<span class="font-micro-meta text-micro-meta text-primary/80 uppercase tracking-widest block">Main Facade</span>
+<p class="font-headline-sm text-headline-sm text-primary">Cantilevered Hinoki &amp; Yakisugi Gallery</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-lowest/70 backdrop-blur-sm px-2.5 py-1 rounded">
+            Plate 01 / 24
+          </span>
+</div>
+</div>
+<!-- Secondary Photo Matrix -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-3 h-full">
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[170px]" data-alt="Minimalist luxury interior of Kyoto residence living pavilion, polished dark Honshu granite floors, bespoke low-profile washi paper light fixtures, floor-to-ceiling glass looking onto bamboo forest, pristine contemporary aesthetics with warm natural wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJHPN_54Q5hykUdsvVlgL6G2JkVQApGEODMDx-eBEBCRK4Ikelya3a1twOe9xlzLOhgrgGkOpZ2bkAN-kk1g9e4IAZOojjiegOgwn0SUcROhzRAsplWFUk-NMxcluv_PAg_maodEVoX-R_X4JeQt0jBtO9oSXBTepIYxP_nEDQI7mNUlI9jtISDZoaGY_zpmT52lwSXlBda6J_rg12ytr0Dg_Et0aVQE5RI7KAi9dyqlmnnMacfyfjsg"/>
+<div class="absolute inset-0 bg-surface-lowest/20 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute bottom-2.5 left-2.5 font-micro-meta text-micro-meta bg-surface-lowest/80 px-2 py-0.5 rounded text-on-surface tracking-wider">
+            LIVING SANCTUARY
+          </span>
+</div>
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[170px]" data-alt="Private outdoor black slate infinity onsen natural thermal hot spring bath in Kyoto with steam rising quietly into cold autumn air, surrounded by moss-covered stones, sculpted maple trees, and dark charred cedar walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiid2kkMPk7TKYS3evSIdkq5hdOEPf0H5oULS7clR4uPn3zwOKmrIVHbtYIQohC2vbD1aAlxp1kYD8Qjq2Zh9PYoETec8YKfedj5TU8hJJZn-LL3CnnqUj5-ZZx8L2CbdbYU6dvImVAMqbms-ysGR9ucSQ3H6nq5X44P2nbG5ap5kerAibW0Zrvzyi7V8c5Y-FKk8LlZ5N2YQYVGXlZd8q7VERbe-xKcjSRjfI7hXm4QaBs0h2eul0vA"/>
+<div class="absolute inset-0 bg-surface-lowest/20 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute bottom-2.5 left-2.5 font-micro-meta text-micro-meta bg-surface-lowest/80 px-2 py-0.5 rounded text-on-surface tracking-wider">
+            THERMAL ONSEN
+          </span>
+</div>
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[170px]" data-alt="Traditional yet hyper-modern Japanese tea ceremony chashitsu room with tatami mats, raw acoustic cedar joinery without nails, tokonoma alcove, dramatic slit window showing solitary pine tree in courtyard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY55JJN8N6d1DY7l_jOZvmn4ZPJ-RXA89xrxZaw4afM-Y4raePq1YSA7QhGmAhHWsmVELaOTguYMFGJlpesMe4g5yH9FbyMtU_DaG_ZgsFVHbJyjE_EPh2a1Wq_vUVoqSSLXnRVZgEqMpPPEiN4uJyJaWnx4nmM_nV-Dodhpi7H1rk_APc_uuW57U_bnfv_i7GcAraJgO5nnrWUvgAFo-DzS1WTkGFq9O7KW7u3ulnJi09ZIANBDZENw"/>
+<div class="absolute inset-0 bg-surface-lowest/20 group-hover:bg-transparent transition-colors"></div>
+<span class="absolute bottom-2.5 left-2.5 font-micro-meta text-micro-meta bg-surface-lowest/80 px-2 py-0.5 rounded text-on-surface tracking-wider">
+            TEA CHASHITSU
+          </span>
+</div>
+<div class="relative group overflow-hidden rounded-lg bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[170px]" data-alt="Subterranean private wine cellar and tasting lounge, backlit raw volcanic stone walls, climate-controlled brass and dark glass displays holding vintage rare spirits, minimal architectural downlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJV4ZPLlNTH6N0vl_J5t-pQr3i1_kcwtoOxPXJJachfTHhJgfnq5kGky4DEAcYhGHQOgQGscUuInhd8GpLNUscvXGtU43KQsoOmBUh42TQc-nuR6PvpL-7OfhCF20qtHQxreLJSJxuYQjX8nt_5UuuqxxiZ2tHikTtZbwnm8ZkappjunUcQ34dsRMvC0FYYtiWAZBMdhBi83F1HP2HopSCN9XMLs6Fb8HF3_0dPFY1ZLQtLJyhnJbmRg"/>
+<div class="absolute inset-0 bg-surface-lowest/20 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute inset-0 bg-surface-lowest/60 flex items-center justify-center p-3 text-center group-hover:bg-surface-lowest/40 transition-colors">
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+              +19 Media Assets
+            </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Media Gallery Command Controls -->
+<div class="flex flex-wrap items-center justify-between gap-3 mt-4 pt-4 pb-2">
+<div class="flex items-center gap-2 flex-wrap">
+<button class="px-4 py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">collections</span>
+          View 24 High-Res Photos
+        </button>
+<button class="px-4 py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+          Interactive 3D Virtual Tour
+        </button>
+<button class="px-4 py-2.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+          Architectural Walkthrough (4K)
+        </button>
+</div>
+<button class="px-4 py-2.5 rounded bg-surface-elevated hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-2 transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+        Download Confidential Dossier (PDF 48MB)
+      </button>
+</div>
+</section>
+<!-- Core Property Header & Valuation -->
+<section class="w-full max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop mt-8">
+<div class="p-card-padding-sm lg:p-card-padding-lg rounded-xl bg-surface-card shadow-lg flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div class="space-y-3">
+<div class="flex items-center gap-2 text-status-verified font-micro-meta text-micro-meta tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          Verified Sovereign Property Title • Higashiyama District Heritage Zone
+        </div>
+<h1 class="font-display-xl text-headline-lg lg:text-display-xl text-primary leading-tight">
+          The Sugi Pavilion at Higashiyama
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">pin_drop</span>
+          Higashiyama Ward, Kyoto Prefecture 605-0862, Japan
+        </p>
+</div>
+<div class="flex flex-col items-start lg:items-end space-y-4 pt-4 lg:pt-0">
+<div class="text-left lg:text-right">
+<div class="text-on-surface-variant font-micro-meta text-micro-meta tracking-widest uppercase">
+            Acquisition Value
+          </div>
+<div class="font-display-xl text-headline-lg lg:text-display-xl text-primary">
+            $28,500,000
+          </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-2 mt-1">
+<span>€26,200,000</span>
+<span class="text-outline-variant">•</span>
+<span>¥4,280,000,000</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">$3,025 / sq ft</span>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<button class="px-3.5 py-2 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">bookmark</span>
+            Save Estate
+          </button>
+<button class="px-3.5 py-2 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">share</span>
+            Encrypted Link
+          </button>
+<button class="px-3.5 py-2 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+            Compare
+          </button>
+<button class="px-3.5 py-2 rounded bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[16px]">shield_person</span>
+            Request NDA
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Architectural Specifications Bar -->
+<section class="w-full max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop mt-4">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 p-card-padding-sm rounded-xl bg-surface-container-lowest shadow-md">
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Bedrooms</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">En-suite Suites</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Bathrooms</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">6.5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Thermal Baths</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Interior Area</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">9,420</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">sq ft (875 m²)</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Estate Parcel</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">22,000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">sq ft (0.505 ac)</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Year Built</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-sm text-headline-sm text-primary">2023</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Completed</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest block mb-1">Architect</span>
+<div class="font-headline-sm text-headline-sm text-primary truncate" title="Kengo Kuma Associates">
+          K. Kuma
+        </div>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase">Studio Tokyo</span>
+</div>
+</div>
+</section>
+<!-- Main Asymmetric Layout: 65% Architectural Intelligence / 35% Private Wealth Concierge -->
+<section class="w-full max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop mt-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Deep Asset Narrative (7 cols) -->
+<div class="lg:col-span-8 space-y-12">
+<!-- Architectural Narrative -->
+<article class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex items-center justify-between pb-3">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Design Philosophy</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">Tactile Minimalism Meets Historic Sanctuary</h2>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm">
+              Arch Monograph No. 41
+            </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            Perched along the historic forested ridges of Higashiyama, <span class="text-primary font-semibold">The Sugi Pavilion</span> represents an uncompromising intersection between 400-year-old Japanese temple carpentry and 21st-century seismic structural engineering. Designed directly under the stewardship of Kengo Kuma &amp; Associates, the residence is built around an ancient Japanese cedar (<em class="text-primary">Cryptomeria japonica</em>) grove, oriented precisely toward the serene western panorama of Kyoto's skyline and distant mountain ranges.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every structural bay uses handcrafted Yakisugi (charred timber) external panels, seasoned over five seasons to withstand Kyoto’s seasonal humidity cycles without synthetic lacquers. Structural thresholds are carved from monolithic slabs of Honshu blue granite, seamlessly merging interior heated flooring with moss gardens curated by a 14th-generation Kyoto landscape master.
+          </p>
+<!-- Core Materials Palette -->
+<div class="pt-4">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-primary block mb-3">Architectural Materiality</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">texture</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Carbonized Yakisugi Cedar</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flame-tempered 45mm cedar siding offering natural pest resilience, acoustics, and matte charcoal patina.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">layers</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Honshu Flamed Granite</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct mountain-cut basaltic stone, continuous thermal radiant slab integrated throughout both primary pavilions.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">window</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Triple Acoustic Glazing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Low-iron structural German glass panels with micro-cavity argon insulation and zero-frame pocket track mechanisms.</p>
+</div>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">eco</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Geothermal Earth Loop</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Closed-loop 120m thermal well tapping geothermal groundwater for silent sub-slab climate moderation year-round.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Curated Amenities Grid -->
+<div class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex items-center justify-between pb-3">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Curated Infrastructure</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Rare Estate Amenities</h3>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase text-status-verified tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>
+              All Verified Active
+            </span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">hot_tub</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Natural Thermal Onsen</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mineral spring piped 450m</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">spa</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Chashitsu Tea Room</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Authentic 8-tatami module</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">wine_bar</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Subterranean Vault</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1,400 Bottle climate cellar</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">garage_home</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Climate-Regulated Garage</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">4 Supercar bays with EV DC</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">fingerprint</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Biometric Sovereign Entry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Retina + fingerprint vault lock</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-container flex flex-col justify-between h-36">
+<span class="material-symbols-outlined text-primary text-[28px]">flight_takeoff</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Helipad Agreement</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5-min transfer from private field</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Architectural Floor Plans -->
+<div class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Spatial Blueprints</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Architectural Floor Plans</h3>
+</div>
+<!-- Plan Level Switcher -->
+<div class="inline-flex p-1 rounded-lg bg-surface-container" id="floor-switcher">
+<button class="floor-btn px-3.5 py-1.5 rounded font-label-sm text-label-sm text-primary bg-surface-container-high transition-all" data-target="ground" onclick="switchFloor('ground')">
+                Ground Sanctuary
+              </button>
+<button class="floor-btn px-3.5 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" data-target="upper" onclick="switchFloor('upper')">
+                Upper Observatory
+              </button>
+<button class="floor-btn px-3.5 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" data-target="sub" onclick="switchFloor('sub')">
+                Subterranean Pavilion
+              </button>
+</div>
+</div>
+<!-- Floor Plan Interactive Preview Frame -->
+<div class="relative w-full rounded-lg bg-surface-container-lowest p-6 flex flex-col items-center justify-center min-h-[360px] overflow-hidden">
+<!-- Simulated Architectural Blueprint Schematic with inline SVG -->
+<div class="w-full flex items-center justify-center py-4" id="plan-display">
+<svg class="w-full max-w-[620px] text-primary/80 stroke-current fill-none" viewbox="0 0 700 320">
+<!-- Ground Sanctuary Schematic -->
+<g class="transition-opacity duration-300" id="ground-plan">
+<rect fill="rgba(255,255,255,0.01)" height="240" stroke="currentColor" stroke-width="1.5" width="600" x="50" y="40"></rect>
+<!-- Courtyard Zen Garden -->
+<rect height="160" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1" width="180" x="260" y="80"></rect>
+<text fill="#8e9192" font-family="Manrope" font-size="11" letter-spacing="2" text-anchor="middle" x="350" y="165">COURTYARD ZEN GARDEN</text>
+<!-- Primary Living Pavilion -->
+<rect height="200" stroke="currentColor" stroke-width="1" width="170" x="70" y="60"></rect>
+<text fill="#ffffff" font-family="Manrope" font-size="12" font-weight="600" text-anchor="middle" x="155" y="155">GRAND LIVING PAVILION</text>
+<text fill="#8e9192" font-family="Manrope" font-size="9" text-anchor="middle" x="155" y="175">3,420 SQ FT</text>
+<!-- Dining & Chef Kitchen -->
+<rect height="95" stroke="currentColor" stroke-width="1" width="170" x="460" y="60"></rect>
+<text fill="#ffffff" font-family="Manrope" font-size="11" text-anchor="middle" x="545" y="105">WASHOKU KITCHEN &amp; CELLAR</text>
+<!-- Onsen Wing -->
+<rect height="95" stroke="currentColor" stroke-width="1" width="170" x="460" y="165"></rect>
+<text fill="#ffffff" font-family="Manrope" font-size="11" text-anchor="middle" x="545" y="215">THERMAL ONSEN &amp; SPA</text>
+<!-- Dimension lines -->
+<line stroke="#444748" stroke-width="0.75" x1="50" x2="650" y1="20" y2="20"></line>
+<text fill="#8e9192" font-family="Manrope" font-size="9" text-anchor="middle" x="350" y="15">42.8 METERS</text>
+</g>
+</svg>
+</div>
+<!-- Floor Meta Information -->
+<div class="w-full flex items-center justify-between border-t border-border-subtle pt-3 text-on-surface-variant font-micro-meta text-micro-meta tracking-widest uppercase">
+<span id="plan-spec">LEVEL 01 • 5,120 SQ FT INTERIOR • 3 SUITES + ONEN SPA</span>
+<a class="text-primary hover:underline flex items-center gap-1 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span> High-Res CAD (DWG / PDF)
+              </a>
+</div>
+</div>
+</div>
+<!-- Sovereign Documents & Due Diligence -->
+<div class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Institutional Governance</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Sovereign Asset Dossier &amp; Due Diligence</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Full compliance archives have been certified by EstatePro Legal Advisory AG (Zurich) in collaboration with Nishimura &amp; Asahi (Tokyo). Files below contain unredacted deeds, title ownership chains, and seismic survey monographs.
+          </p>
+<div class="space-y-2.5">
+<div class="p-3.5 rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-verified text-[22px]">description</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Kyoto Legal Bureau Sovereign Title Deed Registry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Freehold absolute tenure • Clean title • PDF (14.2 MB)</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-elevated hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Unlock (NDA)
+              </button>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-verified text-[22px]">architecture</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Seismic Resilience Certificate &amp; Structural Monograph</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Exceeds JMA Level 7 earthquake safety • PDF (28.4 MB)</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-elevated hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Unlock (NDA)
+              </button>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-verified text-[22px]">nature_people</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Higashiyama Environmental &amp; Historical Heritage Clearance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full municipal zoning compliance • PDF (8.7 MB)</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded bg-surface-elevated hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span> Unlock (NDA)
+              </button>
+</div>
+</div>
+</div>
+<!-- Private Wealth Mortgage & Capital Yield Calculator Preview -->
+<div class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Private Wealth Treasury</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Capital Financing Simulation</h3>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+              Tier 1 Private Bank Terms
+            </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Down Payment (20%)</span>
+<span class="text-primary font-semibold">$5,700,000</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-high h-1.5 rounded appearance-none cursor-pointer" max="60" min="10" type="range" value="20"/>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Private Wealth Facility Rate</span>
+<span class="text-primary font-semibold">3.85% (USD Jumbo Fixed)</span>
+</div>
+<input class="w-full accent-primary bg-surface-container-high h-1.5 rounded appearance-none cursor-pointer" max="70" min="20" type="range" value="38"/>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Facility Amortization Horizon</span>
+<span class="text-primary font-semibold">30 Years</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1">
+<button class="py-1.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary">15 Yrs</button>
+<button class="py-1.5 rounded bg-primary font-label-sm text-label-sm text-on-primary font-semibold">30 Yrs</button>
+<button class="py-1.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-primary">Interest Only</button>
+</div>
+</div>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-lowest space-y-4">
+<div class="space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase text-on-surface-variant tracking-wider">Estimated Monthly Debt Service</span>
+<div class="font-display-xl text-headline-lg text-primary">$106,850</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Excluding sovereign estate tax &amp; private concierge maintenance</span>
+</div>
+<div class="space-y-2 pt-2 border-t border-border-subtle">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Principal &amp; Interest</span>
+<span class="text-primary font-medium">$106,850</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Est. Annual Property Tax</span>
+<span class="text-primary font-medium">$142,500 / yr</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Yield Projection (Bespoke Let)</span>
+<span class="text-status-verified font-medium">4.2% Net Target</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded bg-surface-elevated hover:bg-surface-bright text-primary font-label-sm text-label-sm flex items-center justify-center gap-2 transition-all">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+                Custom Structured Debt Term Sheet
+              </button>
+</div>
+</div>
+</div>
+<!-- Neighborhood Intelligence & GIS Demographics -->
+<div class="p-card-padding-lg rounded-xl bg-surface-card shadow-lg space-y-6">
+<div class="flex items-center justify-between pb-2">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">GIS Micro-Location</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Higashiyama Ward Intelligence</h3>
+</div>
+<span class="px-3 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+              Walk Score: 92 • Private Sovereign
+            </span>
+</div>
+<!-- Interactive GIS Map Placeholder with data-location -->
+<div class="w-full h-72 rounded-lg bg-cover bg-center relative shadow-inner overflow-hidden flex items-end p-4" data-location="Higashiyama, Kyoto, Japan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0ZNPm7vdSuq59nxMzwilCvrFbLkOYtyLNMYH3dJpTzn0GtRmQt2UrQ_zMQUsFEmNgATtOeCGbRAAynYlE6OO2we7Y8hqluL0rHs_FUBTRogg1RBMf4lkqfwwZTqIYAPxstvM45ZvCzlRNSNJQO9DlxocRuBiX3mAub3cruXSWBFJm6ZyNU1P287Dv9bFW9dwkK9J15k1Zac_7PgtS1fteoWFCDSpHYm-B_98QZfjV1ooWV5rIJsW_tQ')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest via-surface-lowest/40 to-transparent"></div>
+<div class="relative z-10 flex items-center justify-between w-full">
+<div class="bg-surface-card/90 backdrop-blur-md p-3 rounded-lg">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-primary block">Private Aviation &amp; Heliports</span>
+<span class="font-label-sm text-label-sm text-on-surface">KIX Osaka: 72 min via private express • Kyoto Heliport: 14 min</span>
+</div>
+<a class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-md" href="#">
+                Open Cartographic Layer
+              </a>
+</div>
+</div>
+<!-- Neighborhood Amenities List -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3.5 rounded bg-surface-container">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg mb-1">
+<span class="material-symbols-outlined text-[18px]">restaurant</span>
+                Michelin Dining
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                11 3-Star Michelin establishments within 4.5km, including Kikunoi Honten (6 min).
+              </p>
+</div>
+<div class="p-3.5 rounded bg-surface-container">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg mb-1">
+<span class="material-symbols-outlined text-[18px]">school</span>
+                Private Academies
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Kyoto International School &amp; Doshisha International Academy access routes.
+              </p>
+</div>
+<div class="p-3.5 rounded bg-surface-container">
+<div class="flex items-center gap-2 text-primary font-label-lg text-label-lg mb-1">
+<span class="material-symbols-outlined text-[18px]">nature</span>
+                Heritage Index
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Zone 1 UNESCO Buffer Protection. Permanent green zoning prohibits adjacent high-rises.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Sticky Concierge & Exclusive Broker (4 cols) -->
+<aside class="lg:col-span-4 sticky top-24 space-y-6">
+<!-- Broker Portfolio Card -->
+<div class="p-card-padding-sm lg:p-card-padding-lg rounded-xl bg-surface-card shadow-2xl space-y-6">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover shadow-md" data-alt="Editorial headshot of distinguished luxury real estate broker Kenjiro Takahashi in Mayfair Kyoto dark bespoke suit with subtle lapel pin, neutral background, serene expression, highly refined corporate portrait photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBknV81CWKYKJNrrf30tA24dzsCINkeug-HYWbJYMVynmkOf5Q4kplk3pququ80ffFvmJ14aNbgseE7xASpvOWiJCFAgs7tU20KhbRc1-LZfThRZJGLxy29HYAUrL7wsaIiG3cIMuuMWF05wTiro8lVHvAwMjubCd306uyvuDu332kP3TzXGCt--qXwHms8gjfQFKpkze1YSr8L6EOXpIIOkUs1LeAl-e0t0kAmotGc3vETtac8vVuUw"/>
+<div>
+<div class="flex items-center gap-1.5">
+<h4 class="font-headline-sm text-headline-sm text-primary">Kenjiro Takahashi</h4>
+<span class="material-symbols-outlined text-status-verified text-[18px]" title="EstatePro Certified Master Broker">verified</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Managing Partner, Asia-Pacific</p>
+<span class="font-micro-meta text-micro-meta text-primary/80 uppercase tracking-widest block mt-0.5">EstatePro Private Client Group</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-lowest space-y-2">
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Private Transaction Volume</span>
+<span class="text-primary font-medium">$840M+ Lifetime</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Avg. Discretion Response</span>
+<span class="text-status-verified font-medium">&lt; 15 Minutes</span>
+</div>
+<div class="flex justify-between font-body-sm text-body-sm">
+<span class="text-on-surface-variant">Languages</span>
+<span class="text-primary font-medium">Japanese, English, French</span>
+</div>
+</div>
+<!-- Quick Action Contact Channels -->
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+              Encrypted Call
+            </button>
+<button class="py-2.5 px-3 rounded bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">call</span>
+              Direct Phone
+            </button>
+</div>
+<!-- Confidential VIP Private Viewing Request Form -->
+<form class="space-y-3.5 pt-2" onsubmit="event.preventDefault(); alert('Private concierge viewing request encrypted and transmitted.');">
+<div class="space-y-1">
+<label class="font-micro-meta text-micro-meta uppercase tracking-wider text-on-surface-variant">Prospective Principal Name</label>
+<input class="w-full px-3 py-2 rounded bg-surface-container text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-all" placeholder="Lord / Lady / Dr. / Mr." type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-micro-meta text-micro-meta uppercase tracking-wider text-on-surface-variant">Confidential Contact (Email or Signal)</label>
+<input class="w-full px-3 py-2 rounded bg-surface-container text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-all" placeholder="principal@familyoffice.ch" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="space-y-1">
+<label class="font-micro-meta text-micro-meta uppercase tracking-wider text-on-surface-variant">Preferred Viewing</label>
+<input class="w-full px-2 py-2 rounded bg-surface-container text-primary font-body-sm text-body-sm focus:outline-none transition-all" type="date" value="2025-06-15"/>
+</div>
+<div class="space-y-1">
+<label class="font-micro-meta text-micro-meta uppercase tracking-wider text-on-surface-variant">Viewing Type</label>
+<select class="w-full px-2 py-2 rounded bg-surface-container text-primary font-body-sm text-body-sm focus:outline-none transition-all">
+<option>Physical On-Site</option>
+<option>Private VR HoloLens</option>
+<option>Representative Walk</option>
+</select>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-micro-meta text-micro-meta uppercase tracking-wider text-on-surface-variant">Discretion Instructions / Notes</label>
+<textarea class="w-full px-3 py-2 rounded bg-surface-container text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-high transition-all" placeholder="Private chauffeur or helipad logistics..." rows="2"></textarea>
+</div>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant">
+<input checked="" class="accent-primary" id="nda-agree" type="checkbox"/>
+<label class="font-micro-meta text-micro-meta" for="nda-agree">Strict Swiss Discretion Protocol and Non-Disclosure applies</label>
+</div>
+<button class="w-full py-3.5 rounded bg-primary hover:bg-secondary-fixed text-on-primary font-label-lg text-label-lg uppercase tracking-wider font-semibold transition-all shadow-lg flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+              Request Private Sanctuary Tour
+            </button>
+</form>
+<div class="text-center pt-1">
+<span class="font-micro-meta text-micro-meta text-on-surface-variant">Direct Concierge Hotline: +81 (0) 75 921 4400</span>
+</div>
+</div>
+<!-- Institutional Due Diligence Callout Box -->
+<div class="p-5 rounded-xl bg-surface-container-lowest space-y-3">
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            Sovereign Escrow Assurance
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            EstatePro safeguards buyer capital via multi-sig institutional escrow across Bank of Tokyo-Mitsubishi UFJ and UBS Geneva.
+          </p>
+</div>
+</aside>
+</div>
+</section>
+<!-- Curated Similar Architectural Estates Carousel -->
+<section class="w-full max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop mt-section-gap">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">Curated Cohort</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">Similar Architectural Estates</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:text-on-surface-variant transition-colors flex items-center gap-1.5" href="#">
+        Explore Entire Sovereign Collection
+        <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group rounded-xl bg-surface-card overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modernist concrete and wood luxury villa overlooking Mount Fuji in Hakone Japan at sunrise, reflection in mirror pool, editorial minimalist architecture photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjB7ILkTQurOfWjcxcp5JlbaQqNkTvM-J1vxugY8zjGJj6RJ3aFwiwqmShtcfS5c1ED2nW-Inhr-mLSKYx9q5pB65hRQumZdx-3nAA2Oav2B8WhGlXlNCM0AETV2-4YcB5j-nRYAl1yXjB8V5GJw0tY68Mkq-SsN_mA1UO9roijlNdBymRTVPdlE24mb3ZyZer13c2xMydsgwA1pDxM5rIOL0Y9HSgmlJUXEok6_yTLFeIiy-xGmorxA"/>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta uppercase tracking-wider">
+              Hakone National Park
+            </span>
+</div>
+<span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm">
+            $21,800,000
+          </span>
+</div>
+<div class="p-card-padding-sm space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-fixed-dim transition-colors">
+            The Hakone Obsidian Retreat
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hakone, Kanagawa Prefecture • Tadao Ando Studio Influence</p>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>4 Beds • 5 Baths</span>
+<span>8,150 Sq Ft</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group rounded-xl bg-surface-card overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Ultra-luxury clifftop modern sanctuary estate in Kamakura Japan with panoramic ocean views of Sagami Bay, cantilevered infinity pool, black steel framing and teak wood decking, sunset mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD22LFv9zu33Bg65xwVdEbuaLf891Gx-I6wnscyJrndjuUqWR6dBpMYZBNODyp5TrMRQdiRXJZhR6fSRSv_vihL9bbn1dYGNp0vvmI4KMHLb2a_vJfDS6zvTfGUpC_S62z-eMfqlV3DFG8VV2aIh64RzHuZzV-VLFzhdDcpUPXZXmjCNHlOvE_CIZQGu4ENWb4FuaYViWCoPPzvSXZ--04MkNfeVhCTqaakIpu0sSM1KL1tmi8Fygu9cw"/>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta uppercase tracking-wider">
+              Kamakura Coast
+            </span>
+</div>
+<span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm">
+            $34,500,000
+          </span>
+</div>
+<div class="p-card-padding-sm space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-fixed-dim transition-colors">
+            Villa Sagami Overlook
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kamakura, Kanagawa Prefecture • Shigeru Ban Associates</p>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>6 Beds • 8 Baths</span>
+<span>11,200 Sq Ft</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group rounded-xl bg-surface-card overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Private luxury penthouse sanctuary in Minato-ku Tokyo overlooking Tokyo Tower at dusk, glass cantilever terrace, double height ceilings, dark granite and bronze finishes, moody editorial interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZHQqtfz3JyXSYoy90yjNm2U3sEYC9vG30N5hQhcQ9s_tEkfnu569cI98fJ5_uqC74y59B9gqEEjhqOm0WjP3UC0G9VxPcmaD29Szn1GKbAhMGzfU_NGnBSjeadFt8x52o6gs7eJ0mWhac2qcAueyMvY4xgu69ZmaldrEF7lDjBW3tVR4F--00XsoZBn4V4pvcY3ECw1ilPVuyTYR4MDfmx0o4yjDhw2THPcSHLUusDehxxCw_eHbNmA"/>
+<div class="absolute top-3 left-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta uppercase tracking-wider">
+              Minato, Tokyo
+            </span>
+</div>
+<span class="absolute bottom-3 right-3 px-2.5 py-1 rounded bg-surface-lowest/80 backdrop-blur-md text-primary font-label-sm text-label-sm">
+            $31,200,000
+          </span>
+</div>
+<div class="p-card-padding-sm space-y-2">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-fixed-dim transition-colors">
+            The Toranomon Horizon Sky-Villa
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Toranomon Hills, Tokyo • Sou Fujimoto Design</p>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>4 Beds • 5.5 Baths</span>
+<span>7,840 Sq Ft</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Client Behavior Script -->
+<script>
+    function switchFloor(floor) {
+      const switcher = document.getElementById('floor-switcher');
+      const buttons = switcher.querySelectorAll('.floor-btn');
+      const spec = document.getElementById('plan-spec');
+      
+      buttons.forEach(btn => {
+        if(btn.getAttribute('data-target') === floor) {
+          btn.className = 'floor-btn px-3.5 py-1.5 rounded font-label-sm text-label-sm text-primary bg-surface-container-high transition-all';
+        } else {
+          btn.className = 'floor-btn px-3.5 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all';
+        }
+      });
+
+      if (floor === 'ground') {
+        spec.innerHTML = 'LEVEL 01 &bull; 5,120 SQ FT INTERIOR &bull; 3 SUITES + ONSEN SPA';
+      } else if (floor === 'upper') {
+        spec.innerHTML = 'LEVEL 02 &bull; 2,850 SQ FT INTERIOR &bull; MASTER OBSERVATORY + CHASHITSU';
+      } else if (floor === 'sub') {
+        spec.innerHTML = 'SUB-LEVEL &bull; 1,450 SQ FT INTERIOR &bull; 1,400 BOTTLE VAULT + 4-CAR GALLERY';
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest mt-section-gap"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop py-section-gap"><div class="grid grid-cols-1 md:grid-cols-5 gap-card-padding-lg mb-section-gap"><div class="md:col-span-2 space-y-base"><div class="flex items-center gap-base"><img alt="EstatePro Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><span class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase">EstatePro</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Architectural precision for discerning investors, private wealth offices, and premier developers of global landmark properties.</p></div><div class="space-y-base"><h4 class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Portfolio</h4><ul class="space-y-base font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="buy" href="#">Prime Residential</a></li><li><a class="hover:text-on-surface transition-colors" data-path="commercial" href="#">Commercial Assets</a></li><li><a class="hover:text-on-surface transition-colors" data-path="developments" href="#">Flagship Developments</a></li><li><a class="hover:text-on-surface transition-colors" data-path="rent" href="#">Luxury Lettings</a></li></ul></div><div class="space-y-base"><h4 class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Intelligence</h4><ul class="space-y-base font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors" data-path="mortgage" href="#">Capital &amp; Yields</a></li><li><a class="hover:text-on-surface transition-colors" data-path="agents" href="#">Private Advisory</a></li><li><a class="hover:text-on-surface transition-colors" data-path="list-property" href="#">Asset Submission</a></li><li><a class="hover:text-on-surface transition-colors" data-path="terms" href="#">Governance</a></li></ul></div><div class="space-y-base"><h4 class="font-label-sm text-label-sm uppercase text-primary tracking-widest">Offices</h4><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Mayfair, London<br/>Tribeca, New York<br/>DIFC, Dubai<br/>Ginza, Tokyo</p></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-base text-on-surface-variant font-micro-meta text-micro-meta uppercase tracking-widest"><div>© 2025 EstatePro Global Realty AG. All rights reserved.</div><div class="flex items-center gap-card-padding-sm"><a class="hover:text-on-surface transition-colors" data-path="privacy" href="#">Discretion &amp; Privacy</a><a class="hover:text-on-surface transition-colors" data-path="terms" href="#">Institutional Terms</a></div></div></div></footer></body></html>

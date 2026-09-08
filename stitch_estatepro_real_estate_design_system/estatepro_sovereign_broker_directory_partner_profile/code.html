@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#e5e2e1", "secondary": "#c7c6c6", "inverse-primary": "#5d5f5f", "secondary-fixed": "#e3e2e2", "tertiary-fixed-dim": "#c8c6c5", "surface-tint": "#c6c6c7", "surface-lowest": "#0a0a0a", "status-sale": "#ffffff", "primary": "#ffffff", "tertiary": "#ffffff", "primary-container": "#e2e2e2", "on-tertiary-container": "#656463", "surface-elevated": "#201f1f", "on-error": "#690005", "primary-fixed-dim": "#c6c6c7", "surface-variant": "#363434", "on-tertiary-fixed": "#1c1b1b", "surface-container-high": "#2b2a2a", "border-subtle": "rgba(255, 255, 255, 0.08)", "on-secondary-fixed-variant": "#464747", "on-surface-variant": "#c4c7c8", "error-container": "#93000a", "on-surface": "#e6e1e1", "status-rent": "#98c379", "error": "#ffb4ab", "on-primary": "#2f3131", "inverse-surface": "#e6e1e1", "on-error-container": "#ffdad6", "surface-base": "#141313", "status-verified": "#27c93f", "on-background": "#e6e1e1", "surface": "#141313", "on-secondary-container": "#b6b5b5", "surface-container-lowest": "#0f0e0e", "surface-container": "#201f1f", "inverse-on-surface": "#323030", "surface-overlay": "#2a2a2a", "border-hairline": "#444748", "on-secondary": "#303031", "on-tertiary-fixed-variant": "#474746", "on-secondary-fixed": "#1b1c1c", "surface-container-highest": "#363434", "background": "#141313", "on-primary-fixed-variant": "#454747", "status-error": "#ff5f56", "primary-fixed": "#e2e2e2", "outline-variant": "#444748", "on-primary-fixed": "#1a1c1c", "surface-dim": "#141313", "secondary-container": "#464747", "status-pending": "#ffbd2e", "secondary-fixed-dim": "#c7c6c6", "chart-accent": "#61afef", "surface-container-low": "#1c1b1b", "surface-card": "#1c1b1b", "on-tertiary": "#313030", "surface-bright": "#3a3939", "outline": "#8e9192", "tertiary-fixed": "#e5e2e1", "on-primary-container": "#636565" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-desktop": "2rem", "container-max": "75rem", "card-padding-lg": "2rem", "gutter-mobile": "1.25rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-sm": "1.25rem" }, "fontFamily": { "display-xl-mobile": [ "Noto Serif" ], "label-lg": [ "Manrope" ], "micro-meta": [ "Manrope" ], "display-xl": [ "Noto Serif" ], "headline-lg": [ "Noto Serif" ], "headline-md": [ "Noto Serif" ], "headline-lg-mobile": [ "Noto Serif" ], "label-sm": [ "Manrope" ], "body-md": [ "Manrope" ], "body-sm": [ "Manrope" ], "body-lg": [ "Manrope" ], "headline-sm": [ "Manrope" ] }, "fontSize": { "display-xl-mobile": [ "2.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600" } ], "micro-meta": [ "0.625rem", { "lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600" } ], "display-xl": [ "4.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg": [ "2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2rem", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.875rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "1rem", { "lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><a class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase" data-path="explore" href="#">EstatePro</a><span class="hidden xl:inline-block font-micro-meta text-micro-meta uppercase text-secondary tracking-widest pl-2">Private Reserve</span></div><nav class="hidden lg:flex items-center gap-6 xl:gap-8" data-active-classes="text-primary font-bold"><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="buy" href="#">Buy</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="rent" href="#">Rent</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="commercial" href="#">Commercial</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="developments" href="#">Developments</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="mortgage" href="#">Mortgage</a></nav><div class="flex items-center gap-3 sm:gap-4"><div class="hidden md:flex items-center gap-2 font-label-sm text-label-sm text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">USD $</span><span class="text-outline">|</span><span class="hover:text-primary transition-colors cursor-pointer">EN</span></div><button aria-label="Saved Properties" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-1.5 right-1 w-4 h-4 rounded-full bg-surface-container-high text-[9px] font-bold text-primary flex items-center justify-center">3</span></button><a class="hidden sm:inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-transparent hover:bg-surface-elevated text-secondary-fixed hover:text-primary transition-all" data-path="list-property" href="#">List Property</a><a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors" data-path="portal-access" href="#">Sign In</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP CONTEXT / BREADCRUMB & ACCREDITATION BANNER -->
+<section class="w-full bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop pt-8 pb-10">
+<!-- Upper Metas & Breadcrumbs -->
+<div class="flex flex-wrap items-center justify-between gap-4 pb-6">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" data-path="explore" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px] text-secondary">chevron_right</span>
+<span class="text-secondary">Private Advisory</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">chevron_right</span>
+<span class="text-primary font-semibold">Sovereign Broker Network</span>
+</nav>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-primary">Tier-1 Fiduciary Accreditation • 48 Global Desks</span>
+</div>
+</div>
+<!-- Hero Header Text Block -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8 space-y-4">
+<span class="font-micro-meta text-micro-meta uppercase tracking-[0.25em] text-secondary">Institutional Representation Protocol</span>
+<h1 class="font-headline-lg text-headline-lg lg:font-display-xl lg:text-display-xl text-primary font-normal tracking-tight">
+            Sovereign Broker Directory <br class="hidden md:inline"/>
+<span class="italic font-light text-secondary-fixed">and Elite Advisory Desks</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+            Discreet institutional representation and bilateral mandate brokering for ultra-prime architectural estates, private islands, and historic landmarks across Zurich, London, Tokyo, New York, and Dubai.
+          </p>
+</div>
+<div class="lg:col-span-4 flex lg:justify-end">
+<div class="p-4 rounded-xl bg-surface-container-low shadow-xl w-full max-w-xs space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-secondary">Encrypted Routing</span>
+<span class="font-micro-meta text-micro-meta text-status-verified font-bold uppercase">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Direct connection through sovereign relays. Client identity cryptographically masked until dual-fiduciary signoff.
+            </p>
+<div class="flex items-center gap-2 text-primary font-label-sm text-label-sm pt-1">
+<span class="material-symbols-outlined text-[16px] text-status-verified">lock</span>
+<span>SHA-512 End-to-End Handshake</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Telemetry Ribbon -->
+<div class="mt-12 pt-8 grid grid-cols-2 md:grid-cols-4 gap-6 bg-surface-card rounded-xl p-6 shadow-md">
+<div class="space-y-1">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Total Asset Volume Handled</div>
+<div class="font-headline-md text-headline-md text-primary font-normal">$14.8B<span class="text-secondary font-light text-headline-sm">+</span></div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-status-verified">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+$2.1B YoY Velocity</span>
+</div>
+</div>
+<div class="space-y-1">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Active Sovereign Brokers</div>
+<div class="font-headline-md text-headline-md text-primary font-normal">142</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Accredited Fiduciary Partners</div>
+</div>
+<div class="space-y-1">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Settlement Velocity</div>
+<div class="font-headline-md text-headline-md text-primary font-normal">42 <span class="text-secondary text-headline-sm font-light">Days</span></div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Escrow to Title Conveyance</div>
+</div>
+<div class="space-y-1">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Fiduciary Clearance</div>
+<div class="font-headline-md text-headline-md text-primary font-normal">100%</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-status-verified">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>FINMA &amp; FCA Fully Audited</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FILTER & DESK SELECTION TOOLBAR -->
+<section class="w-full bg-surface-container py-6 sticky top-20 z-30 shadow-md">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-4">
+<!-- Primary Controls Row -->
+<div class="flex flex-col lg:flex-row gap-4 items-center justify-between">
+<!-- Search Command Field -->
+<div class="relative w-full lg:w-96">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-lg bg-surface-container-low text-primary placeholder-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-elevated transition-colors shadow-inner" placeholder="Search by advisor name, syndicate, or license..." type="text"/>
+</div>
+<!-- Regional Desks Filter Navigation -->
+<div class="flex items-center gap-1.5 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none">
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-primary text-on-primary whitespace-nowrap transition-all shadow-sm">
+            All Desks (48)
+          </button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low text-secondary hover:text-primary hover:bg-surface-elevated whitespace-nowrap transition-all">
+            Western Europe &amp; Alps (18)
+          </button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low text-secondary hover:text-primary hover:bg-surface-elevated whitespace-nowrap transition-all">
+            East Asia &amp; Japan (12)
+          </button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low text-secondary hover:text-primary hover:bg-surface-elevated whitespace-nowrap transition-all">
+            North America (11)
+          </button>
+<button class="px-4 py-2 rounded-full font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low text-secondary hover:text-primary hover:bg-surface-elevated whitespace-nowrap transition-all">
+            Middle East &amp; GCC (7)
+          </button>
+</div>
+</div>
+<!-- Secondary Specialization Tag Filters -->
+<div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-wider mr-1">Mandate Domain:</span>
+<button class="px-3 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm hover:bg-surface-bright transition-colors">
+            Ultra-Prime Mansions
+          </button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-secondary font-label-sm text-label-sm hover:text-primary hover:bg-surface-elevated transition-colors">
+            Off-Market Land Registry
+          </button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-secondary font-label-sm text-label-sm hover:text-primary hover:bg-surface-elevated transition-colors">
+            Heritage Restoration
+          </button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-secondary font-label-sm text-label-sm hover:text-primary hover:bg-surface-elevated transition-colors">
+            Multimodal Land/Air
+          </button>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-wider">Settlement Currency:</span>
+<select class="bg-surface-container-low text-primary font-label-sm text-label-sm rounded px-3 py-1 focus:outline-none cursor-pointer">
+<option>All Currencies (Multi-SPV)</option>
+<option>USD ($)</option>
+<option>CHF (Fr.)</option>
+<option>EUR (€)</option>
+<option>GBP (£)</option>
+<option>JPY (¥)</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- FEATURED SOVEREIGN PARTNER SHOWCASE (DEEP DOSSIER) -->
+<section class="w-full py-16 bg-surface-lowest">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<div class="flex items-center justify-between mb-8">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-[0.2em] text-status-verified flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+            Partner Dossier of Highest Standing
+          </span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1 font-normal">Sovereign Managing Partner</h2>
+</div>
+<div class="hidden sm:flex items-center gap-2">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">FINMA ID: #CH-7789-V</span>
+<span class="text-secondary">•</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">GENEVA &amp; TOKYO DESKS</span>
+</div>
+</div>
+<!-- Showcase Dossier Bento Container -->
+<div class="rounded-xl bg-surface-card shadow-2xl p-6 lg:p-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Column 1: Portrait & Direct Contact Credentials -->
+<div class="lg:col-span-4 flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="relative w-full aspect-[4/5] rounded-lg overflow-hidden bg-surface-container-high shadow-lg">
+<img class="w-full h-full object-cover object-top" data-alt="Editorial portrait of Vance Sterling, a senior Swiss private real estate fiduciary in his early fifties wearing a bespoke tailored charcoal Savile Row three-piece suit. He is standing in front of an architectural dark basalt stone wall with muted amber gallery illumination, holding a minimal titanium document folio. Ultra-sharp luxury monochrome aesthetic with cinematic quiet confidence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6XlP8NwErb7fsRhvLZRrvJrFvc47QsCDSKQT6E9WORp15Xgq4uiy6Hzza0tqPKVfiVUK4xQyNxRqvwatTBPX0mlF-oxwPS2uSsv64QDvqJGoUOEoRKTqi4Mu2NxHx890W8sPrvSqFjrKbhq-IMzFox1zTq_-RzJUqtzw2tC-VxZVE5Jy9FQbCu46iRLclKlyhRko85joALXXRV1AMsRmV-VQbOj6MJUviE16g0zAputKmEq3q9g8hQ"/>
+<div class="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-surface-lowest/90 backdrop-blur-md shadow-md flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-primary">Vance Sterling</div>
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Geneva &amp; Tokyo Syndicate</div>
+</div>
+<span class="material-symbols-outlined text-status-verified text-[22px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<!-- Quick Badges -->
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">24 Yrs Fiduciary Practice</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">Forbes Global Top 5</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-status-verified font-label-sm text-label-sm">FINMA Tier-1 Verified</span>
+</div>
+</div>
+<!-- Direct Actions -->
+<div class="space-y-2.5 pt-2">
+<button class="w-full py-3 px-6 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-colors shadow-md flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+                Request Bilateral Representation
+              </button>
+<button class="w-full py-3 px-6 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">key</span>
+                Schedule Encrypted Audio Briefing
+              </button>
+</div>
+</div>
+<!-- Column 2: Deep Dossier Telemetry & Mandates -->
+<div class="lg:col-span-8 flex flex-col justify-between space-y-8">
+<!-- Bio & Narrative -->
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Fiduciary Portfolio Profile</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span> Active Mandates Live (14)
+                </span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-normal leading-tight">
+                Senior Managing Partner &amp; Head of Sovereign Mandates
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Advising royal dynasties, sovereign wealth syndicates, and institutional family principals on unlisted acquisition strategies. Pioneer of the Swiss Basalt Dual-Trust framework ensuring complete anonymity, cross-border multi-asset liquidity, and neutral jurisdiction conveyance.
+              </p>
+</div>
+<!-- Key Metric Counters -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-5 rounded-lg bg-surface-container-low shadow-inner">
+<div class="space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-secondary">YTD Closed Volume</span>
+<div class="font-headline-md text-headline-md text-primary">$840M <span class="text-body-sm text-secondary">USD</span></div>
+<div class="font-micro-meta text-micro-meta text-secondary">Across 9 Bilateral Closures</div>
+</div>
+<div class="space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-secondary">Discretion Rating</span>
+<div class="font-headline-md text-headline-md text-status-verified">99.8%</div>
+<div class="font-micro-meta text-micro-meta text-secondary">Zero Non-Authorized Disclosures</div>
+</div>
+<div class="space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-secondary">Active Mandates Under Care</span>
+<div class="font-headline-md text-headline-md text-primary">14 <span class="text-body-sm text-secondary">Estates</span></div>
+<div class="font-micro-meta text-micro-meta text-secondary">Aggregated Value: $1.92B</div>
+</div>
+</div>
+<!-- Core Competencies Badges -->
+<div class="space-y-3">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Specialized Architectural &amp; Legal Competencies</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="p-3 rounded bg-surface-container-high space-y-1">
+<div class="font-label-sm text-label-sm font-semibold text-primary">Cross-Border SPV Structuring</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Liechtenstein &amp; Geneva dual-entity blind holdings.</p>
+</div>
+<div class="p-3 rounded bg-surface-container-high space-y-1">
+<div class="font-label-sm text-label-sm font-semibold text-primary">Multi-Currency Escrow</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">CHF, USD, Gold-backed and institutional settlement.</p>
+</div>
+<div class="p-3 rounded bg-surface-container-high space-y-1">
+<div class="font-label-sm text-label-sm font-semibold text-primary">Diplomatic Conveyancing</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Extraterritorial zoning &amp; sovereign enclave transfers.</p>
+</div>
+</div>
+</div>
+<!-- Flagship Mandate Highlights -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Notable Confidential Mandates</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" href="#">
+                  View Full Active Portfolio (14) <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3 rounded bg-surface-container-low shadow-sm">
+<div class="font-micro-meta text-micro-meta text-status-rent uppercase">Kyoto, Japan</div>
+<div class="font-label-sm text-label-sm font-semibold text-primary mt-1">The Obsidian Basalt Sanctuary</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">¥14.2B ($98M)</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low shadow-sm">
+<div class="font-micro-meta text-micro-meta text-status-rent uppercase">Cap d’Antibes, France</div>
+<div class="font-label-sm text-label-sm font-semibold text-primary mt-1">Villa L’Azur Peninsula</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">€145M Private Tender</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low shadow-sm">
+<div class="font-micro-meta text-micro-meta text-status-rent uppercase">London, Mayfair</div>
+<div class="font-label-sm text-label-sm font-semibold text-primary mt-1">Belgravia Diplomatic Quad</div>
+<div class="font-body-sm text-body-sm text-secondary mt-0.5">£115M Sovereign Transfer</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ELITE SOVEREIGN ADVISORS GRID -->
+<section class="w-full py-16 bg-surface">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop">
+<!-- Section Title & Meta -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+<div class="space-y-2">
+<span class="font-micro-meta text-micro-meta uppercase tracking-[0.2em] text-secondary">Global Desk Representatives</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal">Accredited Sovereign Partners</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Each partner commands independent fiduciary discretion, localized syndicate relationships, and diplomatic clearance for high-value title conveyance.
+        </p>
+</div>
+<!-- 6-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Hélène de Courcelles -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Monochrome luxury portrait of Hélène de Courcelles, a distinguished Swiss female private banker and estate broker with hair elegantly tied back, wearing a minimalist black cashmere turtleneck and platinum lapel pin in an alpine architectural glass office overlooking Lake Zurich." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDem4jkByR55Yt8NAfkYN-jEeopi6vaEqVTNNzJhklRfIRS6kZDYY25CLS0N68LTiANPvSrv1D9dbkWFgN3mZGDL3yapdHvdT4o8N82UDFI_EqxA_GVQ7qOwf36jeaCGXuGQpeoojiIYwZ-lNujlwR8QaSeRebEAa4Aw3zj1od9OcSGRu43NDu7e9TXQaJ_ZEO7CMyW1Ypc7sTJhueGigDF3-rdMSRZX5nzggojx2EWPa6huQu19_yy_A"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: Zurich / Geneva</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Hélène de Courcelles</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Global Logistics &amp; Private Aviation</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  $620M Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Swiss Alpine Chalets &amp; Multimodal Logistics</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: English, French, German, Italian</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">8 Listings</strong></span>
+<span class="text-status-verified font-medium">FINMA Certified</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Kenji Takahashi -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Portrait of Kenji Takahashi, an intellectual Japanese estate fiduciary in dark contemporary Japanese tailored linen, standing in front of a raw polished cedar wood partition in an omotesando architecture studio with indirect warm downlighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSsbIN5twoK--I9UFBi-ezWgAVn0nc4Vf-MyDGsJ9pRr8hXHg3PhHGMKkP-I5vs-56jcggs1Qhg3tmDlX6-AjQbc64-SyFp6v5rFe7JS-cNK5VBKNg6oil0lJNzpfXDB5ao75QD4IPr0ts7VaQUiTKkAfw-2wnf3vKhVt80dQE5xTN4Ij5ARJmYqmXHwGpAVgwy04Q0cZyq06lODnM0Kilt4kbsGPdOL4eZXlZaaI7whsvJW65_JfSkw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: Tokyo / Kyoto</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Kenji Takahashi</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Principal Fiduciary Custodian</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  ¥74B ($510M) Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Sukiya Architecture &amp; Geothermal Lands</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: Japanese, English, Mandarin</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">11 Listings</strong></span>
+<span class="text-status-verified font-medium">MLIT Sovereign Rep</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Lord Alistair Sterling-Grey -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Editorial black and white photographic portrait of Lord Alistair Sterling-Grey in a double-breasted charcoal bespoke wool suit, standing in an ornate Mayfair private library with dark mahogany woodwork and leather-bound institutional archives in soft ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVkpc8G_v6Oomvtcu0U8Nm4LTSbL5xx5HRP-cZDVWOYAX44qot3Hp7gHcDec_rKghBmzQ1qrJVolN86XBDgSYpBjxxj_McS0w5q4SzbRkD-DrpvX8Vd3AwQnFLfujMZgZ3aJxHqSirG68sbXnp1q3JHnErbtJyXt9DF-bKt3FLINv2CUsA0eDv2ITjqVEgPQ8m4PmnQkxLGW4Zs-zQo1K2Kr0BzOgC-MwlmzvxqqFMLl-JIIikbTWt4g"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: London, Mayfair</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Lord Sterling-Grey</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Crown Lands &amp; Conveyance</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  £480M ($610M) Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Grade-I Listed Estates &amp; Eaton Sq Penthouses</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: English, French</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">6 Listings</strong></span>
+<span class="text-status-verified font-medium">RICS Fellow &amp; FCA</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Camille de Montmirail -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of Camille de Montmirail, an elite French female private syndicate director with modern architectural glasses and an elegant midnight blue blazer, overlooking the dusk harbor of Monaco from a minimalist glass terrace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3lB0hi75W8JGVHphAYABe8IY3y6PtSuGSWA6ydh9iumQt6KTcJSKc9G8YB3ICUnk4Lut5dDdpRn3as0kntMY3arWA3I-GEACLgiLwApcTkFe5VmAO-x6RD5eMMOPVmcJ8LPGhQBmEsTBf23sfypVV8UHpg2rg7iHQBsVBSIvnFdOza683JDhQZWLNTBpseQPunN5gqlr7UuK28vK4-DyBhiiUAm4MviNHUy17TQfao2HQvddyuVtHsg"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: Monaco / Paris</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Camille de Montmirail</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Riviera Trophy Syndicate Lead</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  €510M ($550M) Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Cap d'Antibes Waterfronts &amp; Belle Époque</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: French, English, Russian, Italian</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">9 Listings</strong></span>
+<span class="text-status-verified font-medium">Monaco Fiduciary Reg.</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 5: Marcus Vance -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Sharp portrait of Marcus Vance, an imposing American real estate security director in a tailored dark graphite suit and dark tie, standing in front of an ultra-modern Manhattan glass curtain wall at twilight with skyline reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrBxdW3vbvFszkRg_KLx3M7hV6jWB7t6Mi2v4jweKv8QkPEVlD8v2g8hMIE1OT7YBhdY8QYC8HBs9IzHhmHw0Vlc4MiYZSdSoZEFF4VFfv0n6gcoD-jKpQhWItz7Z9BOWE_GChqmaMkEZSZ6B0ULUcdX_VCibBTBVUNikzjmo7YcZ7jjboUF8as7zr2O60pN5gHKzVVmnIlsyKjVtlNdmZn2hMB2wILLeRc7zJC8IIsGgkooLujK_mqw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: Washington / New York</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Marcus Vance</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Security &amp; Diplomatic Estates</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  $710M Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Embassy Quads &amp; Private Island Citadels</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: English, Spanish, Arabic</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">12 Listings</strong></span>
+<span class="text-status-verified font-medium">Diplomatic Security Clearance</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 6: Dr. Tariq Al-Mansoor -->
+<div class="rounded-xl bg-surface-card p-6 flex flex-col justify-between shadow-xl hover:-translate-y-1 transition-transform duration-300">
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 rounded-lg overflow-hidden shrink-0 bg-surface-container-high shadow-md">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of Dr. Tariq Al-Mansoor, a distinguished Middle Eastern investment syndicate principal wearing a bespoke dark navy tailored robe and subtle gold luxury watch, standing in a museum-grade travertine and black marble DIFC private gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyLSbm0av-ip-aPft-HOnlzH05UEYMoscKrSktX7vB--mk_6MeVDpUOph7CYzl08Kdn2Flc89UniDWebJUs1J1JJA_fRNp1m5LhilpFQ9kkf940pz7opFqKR-5_lo6s1TvguH75lvw0oI_PLMN2ES9I9Wkcfbi2c4LNVNMWF4ZHlpY7QhsueDzbEdLuUK2VwgYOE6Ywa_b0nt6uZ1eNhbYxAKz2qGB62sM_yiLlQq7IHMrg9a3Fffpaw"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-status-verified">Desk: Dubai DIFC / Abu Dhabi</span>
+<span class="material-symbols-outlined text-[18px] text-secondary hover:text-primary cursor-pointer">bookmark</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal mt-1 truncate">Dr. Tariq Al-Mansoor</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">GCC Private Family Office Delegate</p>
+<div class="mt-2 inline-flex items-center px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-primary">
+                  $950M Volume
+                </div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low space-y-1 text-sm">
+<div class="font-micro-meta text-micro-meta uppercase text-secondary">Primary Specialties</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">Sovereign Islands &amp; Gulf Trophy Penthouses</div>
+<div class="font-micro-meta text-micro-meta text-on-surface-variant pt-1">Languages: Arabic, English, French</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-hairline/20 space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary">Active Mandates: <strong class="text-primary">15 Listings</strong></span>
+<span class="text-status-verified font-medium">DFSA Category-1 Licensed</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded bg-surface-container-high hover:bg-surface-bright font-label-sm text-label-sm text-primary transition-colors text-center">
+                Inspect Dossier
+              </button>
+<button class="py-2.5 px-3 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm font-semibold transition-colors text-center">
+                Secure Link
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More / Full Roster Pagination CTA -->
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-lg bg-surface-container-low">
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Showing 6 of 142 Accredited Sovereign Desks across 48 jurisdictions.
+        </div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">
+            Previous
+          </button>
+<button class="px-4 py-2 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold transition-colors">
+            Next 6 Desks
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- FIDUCIARY ACCREDITATION & DUAL-AGENCY ETHICS CHARTER -->
+<section class="w-full py-20 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop space-y-12">
+<!-- Charter Header -->
+<div class="max-w-2xl space-y-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-primary">
+<span class="material-symbols-outlined text-[16px] text-status-verified">verified_user</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest">Sovereign Fiduciary Standard</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal">
+          The 4 Pillars of Bilateral Sovereign Representation
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          EstatePro mandates are governed by an immutable fiduciary covenant, rejecting retail brokerage practices in favor of institutional Swiss banking discretion.
+        </p>
+</div>
+<!-- 4 Pillars Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-xl bg-surface-card shadow-lg space-y-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">
+            01
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">Strict Bilateral NDA &amp; Ghost Masking</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            All asset telemetry, floor plans, and spatial coordinates are anonymized behind zero-knowledge proofs until institutional counterparties complete verification.
+          </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-card shadow-lg space-y-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">
+            02
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">Zero Dual-Agency Conflict of Interest</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Brokers are contractually bound to represent exclusively one party per mandate. Dual-representation commissions are strictly prohibited under the charter.
+          </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-card shadow-lg space-y-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">
+            03
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">Tier-1 Swiss Escrow Integration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Direct deposit rails through FINMA-regulated private banks in Zurich and Geneva, supporting physical gold settlement and cross-border currency pools.
+          </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-card shadow-lg space-y-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-bold">
+            04
+          </div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">Cryptographic Proof-of-Funds Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Automated verification protocols confirm institutional liquidity without exposing client bank balances, tax identifiers, or account topology.
+          </p>
+</div>
+</div>
+<!-- Institutional Broker Application CTA Banner -->
+<div class="p-8 lg:p-12 rounded-2xl bg-surface-card shadow-2xl relative overflow-hidden">
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="space-y-3 max-w-2xl">
+<span class="font-micro-meta text-micro-meta uppercase tracking-[0.2em] text-secondary">Accreditation Desk Admissions</span>
+<h3 class="font-headline-md text-headline-md text-primary font-normal">
+              Managing private client mandates above $25M USD?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Apply for EstatePro Sovereign Broker Accreditation. Gain unilateral access to unlisted off-market trophy assets, encrypted client rooms, and institutional syndicate settlement.
+            </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-8 py-3.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold transition-all shadow-md">
+              Apply for Sovereign Accreditation
+            </button>
+<button class="w-full sm:w-auto px-6 py-3.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-all">
+              Download Fiduciary Charter (PDF)
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop py-section-gap"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"><div class="lg:col-span-2 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-tight">EstatePro</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Architectural residences, master developments, and institutional telemetry for ultra-prime real estate holdings globally.</p></div><div class="mt-8"><div class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Curated Portfolio Network</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">London • New York • Zurich • Tokyo • Dubai</p></div></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Explore</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="buy" href="#">Penthouses &amp; Mansions</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Architectural Landmarks</a></li><li><a class="hover:text-primary transition-colors" data-path="commercial" href="#">Commercial Capital</a></li><li><a class="hover:text-primary transition-colors" data-path="rent" href="#">Private Leases</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Curated Collections</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Solutions</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="agents" href="#">Premier Broker Suite</a></li><li><a class="hover:text-primary transition-colors" data-path="overview" href="#">Asset Management SaaS</a></li><li><a class="hover:text-primary transition-colors" data-path="list-property" href="#">Private Seller Vault</a></li><li><a class="hover:text-primary transition-colors" data-path="mortgage" href="#">Institutional Financing</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Developer Syndication</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Trust &amp; Legal</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Discretion Protocol</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Escrow &amp; Compliance</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Terms of Confidentiality</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Regulatory Filings</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Security Infrastructure</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Intelligence</div><p class="font-body-sm text-body-sm text-on-surface-variant">Receive the quarterly confidential monograph on global prime assets.</p><div class="flex flex-col gap-2 pt-2"><input class="w-full px-3 py-2.5 rounded bg-surface-container-low font-body-sm text-body-sm text-primary placeholder-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Institutional email address" type="email"/><button class="w-full py-2.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Subscribe</button></div></div></div><div class="mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-secondary"><p>© 2025 EstatePro Luxury Real Estate SaaS. All rights reserved.</p><div class="flex items-center gap-6 font-micro-meta text-micro-meta tracking-widest uppercase"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>GIS Telemetry Live</span><span>SOC2 Certified</span><span>ISO 27001</span></div></div></div></footer></body></html>

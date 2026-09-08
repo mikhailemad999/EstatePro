@@ -1,0 +1,533 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Role {
+  GUEST
+  BUYER
+  TENANT
+  SELLER
+  LANDLORD
+  AGENT
+  AGENCY_ADMIN
+  DEVELOPER
+  PROPERTY_MANAGER
+  MORTGAGE_PARTNER
+  MODERATOR
+  SUPPORT_AGENT
+  FINANCE_ADMIN
+  SUPER_ADMIN
+}
+
+enum PropertyStatus {
+  DRAFT
+  PENDING_REVIEW
+  APPROVED
+  PUBLISHED
+  REJECTED
+  ARCHIVED
+  SOLD
+  RENTED
+  SUSPENDED
+}
+
+enum ListingType {
+  FOR_SALE
+  FOR_RENT
+  DAILY_RENTAL
+  COMMERCIAL_SALE
+  COMMERCIAL_RENT
+}
+
+enum LeadStage {
+  NEW
+  CONTACTED
+  QUALIFIED
+  VIEWING_SCHEDULED
+  VIEWING_COMPLETED
+  NEGOTIATION
+  OFFER_SUBMITTED
+  WON
+  LOST
+}
+
+enum AppointmentType {
+  PROPERTY_VIEWING
+  VIDEO_TOUR
+  PHONE_CONSULTATION
+  OFFICE_MEETING
+  VIP_AVIATION
+  SHOWROOM_VISIT
+}
+
+enum AppointmentStatus {
+  REQUESTED
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+  RESCHEDULED
+}
+
+enum EscrowStage {
+  ESCROW_INITIATED
+  AML_KYC_VERIFIED
+  TITLE_DEED_CLEARANCE
+  WIRE_TRANSFER_CONFIRMED
+  HANDOVER_COMPLETED
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  passwordHash  String?
+  name          String
+  role          Role           @default(BUYER)
+  phone         String?
+  avatar        String?        @db.Text
+  bio           String?        @db.Text
+  verified      Boolean        @default(false)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  agentProfile  AgentProfile?
+  agency        Agency?
+  developer     DeveloperProfile?
+  auditLogs     AuditLog[]
+  savedProperties SavedProperty[]
+  savedSearches   SavedSearch[]
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  entityType String
+  entityId   String?
+  details    String?  @db.Text
+  ipAddress  String?
+  createdAt  DateTime @default(now())
+
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
+
+model Agency {
+  id              String         @id @default(cuid())
+  name            String
+  slug            String         @unique
+  logo            String?        @db.Text
+  coverImage      String?        @db.Text
+  description     String?        @db.Text
+  phone           String?
+  email           String?
+  address         String?
+  country         String?
+  verified        Boolean        @default(false)
+  tier            String?        @default("Sovereign Member")
+  grossVolume     Float          @default(0)
+  userId          String?        @unique
+  createdAt       DateTime       @default(now())
+
+  user            User?          @relation(fields: [userId], references: [id])
+  agents          AgentProfile[]
+  properties      Property[]
+}
+
+model AgentProfile {
+  id               String        @id @default(cuid())
+  userId           String        @unique
+  agencyId         String?
+  licenseNumber    String?
+  title            String        @default("Senior Private Advisor")
+  experienceYears  Int           @default(5)
+  rating           Float         @default(4.9)
+  reviewCount      Int           @default(0)
+  grossMandateBook Float         @default(0)
+  activeMandates   Int           @default(0)
+  officeLocation   String?
+  specializations  String?
+  tierBadge        String        @default("Tier 1 Node")
+  createdAt        DateTime      @default(now())
+
+  user             User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  agency           Agency?       @relation(fields: [agencyId], references: [id], onDelete: SetNull)
+  properties       Property[]
+  leads            Lead[]
+  tasks            Task[]
+  appointments     Appointment[]
+}
+
+model DeveloperProfile {
+  id                     String               @id @default(cuid())
+  userId                 String               @unique
+  companyName            String
+  slug                   String               @unique
+  logo                   String?              @db.Text
+  description            String?              @db.Text
+  completedProjectsCount Int                  @default(0)
+  totalUnitsBuilt        Int                  @default(0)
+  createdAt              DateTime             @default(now())
+
+  user                   User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  developments           DevelopmentProject[]
+}
+
+model Property {
+  id                String            @id @default(cuid())
+  title             String
+  slug              String            @unique
+  refNumber         String            @unique
+  description       String            @db.Text
+  propertyType      String
+  listingType       ListingType       @default(FOR_SALE)
+  status            PropertyStatus    @default(PUBLISHED)
+  price             Float
+  currency          String            @default("USD")
+  pricePerSqm       Float?
+  negotiable        Boolean           @default(false)
+  serviceCharge     Float?
+  bedrooms          Int               @default(1)
+  bathrooms         Float             @default(1)
+  livingRooms       Int               @default(1)
+  kitchenCount      Int               @default(1)
+  floor             Int?
+  totalFloors       Int?
+  buildingYear      Int?
+  areaSqm           Float
+  landAreaSqm       Float?
+  parkingSpaces     Int               @default(1)
+  country           String
+  city              String
+  district          String?
+  address           String
+  latitude          Float?
+  longitude         Float?
+  postalCode        String?
+  featured          Boolean           @default(false)
+  verified          Boolean           @default(true)
+  viewsCount        Int               @default(0)
+  favoritesCount    Int               @default(0)
+  heroImage         String?           @db.Text
+  videoUrl          String?           @db.Text
+  virtualTourUrl    String?           @db.Text
+  agentId           String?
+  agencyId          String?
+  developerId       String?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  agent             AgentProfile?     @relation(fields: [agentId], references: [id], onDelete: SetNull)
+  agency            Agency?           @relation(fields: [agencyId], references: [id], onDelete: SetNull)
+  images            PropertyImage[]
+  floorPlans        PropertyFloorPlan[]
+  documents         PropertyDocument[]
+  amenities         PropertyAmenity[]
+  priceHistory      PropertyPriceHistory[]
+  savedBy           SavedProperty[]
+  appointments      Appointment[]
+  leads             Lead[]
+  escrow            EscrowTransaction?
+}
+
+model PropertyImage {
+  id         String   @id @default(cuid())
+  propertyId String
+  url        String   @db.Text
+  altText    String?
+  isMain     Boolean  @default(false)
+  order      Int      @default(0)
+
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+model PropertyFloorPlan {
+  id         String   @id @default(cuid())
+  propertyId String
+  title      String
+  floor      Int      @default(1)
+  areaSqm    Float?
+  imageUrl   String   @db.Text
+
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+model PropertyDocument {
+  id         String   @id @default(cuid())
+  propertyId String
+  title      String
+  fileType   String
+  fileUrl    String   @db.Text
+  isPrivate  Boolean  @default(true)
+
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+model PropertyAmenity {
+  id         String   @id @default(cuid())
+  propertyId String
+  name       String
+  category   String   @default("General")
+
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+model PropertyPriceHistory {
+  id         String   @id @default(cuid())
+  propertyId String
+  price      Float
+  changeDate DateTime @default(now())
+
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+}
+
+model DevelopmentProject {
+  id             String            @id @default(cuid())
+  title          String
+  slug           String            @unique
+  developerId    String
+  description    String            @db.Text
+  status         String            @default("Under Construction")
+  location       String
+  heroImage      String?           @db.Text
+  brochureUrl    String?           @db.Text
+  startingPrice  Float
+  completionDate String?
+  totalUnits     Int               @default(0)
+  availableUnits Int               @default(0)
+  createdAt      DateTime          @default(now())
+
+  developer      DeveloperProfile  @relation(fields: [developerId], references: [id], onDelete: Cascade)
+  buildings      Building[]
+  paymentPlans   PaymentPlan[]
+}
+
+model Building {
+  id            String             @id @default(cuid())
+  developmentId String
+  name          String
+  floors        Int                @default(10)
+  unitsCount    Int                @default(20)
+
+  development   DevelopmentProject @relation(fields: [developmentId], references: [id], onDelete: Cascade)
+  units         Unit[]
+}
+
+model Unit {
+  id         String   @id @default(cuid())
+  buildingId String
+  unitNumber String
+  type       String   @default("Penthouse")
+  floor      Int      @default(1)
+  areaSqm    Float
+  price      Float
+  status     String   @default("AVAILABLE")
+
+  building   Building @relation(fields: [buildingId], references: [id], onDelete: Cascade)
+}
+
+model PaymentPlan {
+  id                  String             @id @default(cuid())
+  developmentId       String
+  name                String
+  downPaymentPercent  Float              @default(20)
+  constructionPercent Float              @default(40)
+  handoverPercent     Float              @default(40)
+  tenureMonths        Int                @default(36)
+
+  development         DevelopmentProject @relation(fields: [developmentId], references: [id], onDelete: Cascade)
+}
+
+model Lead {
+  id              String         @id @default(cuid())
+  name            String
+  email           String
+  phone           String?
+  stage           LeadStage      @default(NEW)
+  score           Int            @default(85)
+  source          String         @default("Private Referral")
+  budget          Float          @default(10000000)
+  netWorth        String?        @default("> $50M")
+  notes           String?        @db.Text
+  assignedAgentId String?
+  propertyId      String?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  assignedAgent   AgentProfile?  @relation(fields: [assignedAgentId], references: [id], onDelete: SetNull)
+  property        Property?      @relation(fields: [propertyId], references: [id], onDelete: SetNull)
+  activities      LeadActivity[]
+  tasks           Task[]
+}
+
+model LeadActivity {
+  id        String   @id @default(cuid())
+  leadId    String
+  type      String
+  note      String   @db.Text
+  timestamp DateTime @default(now())
+
+  lead      Lead     @relation(fields: [leadId], references: [id], onDelete: Cascade)
+}
+
+model Task {
+  id        String        @id @default(cuid())
+  agentId   String
+  leadId    String?
+  title     String
+  dueDate   DateTime?
+  priority  String        @default("HIGH")
+  completed Boolean       @default(false)
+  createdAt DateTime      @default(now())
+
+  agent     AgentProfile  @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  lead      Lead?         @relation(fields: [leadId], references: [id], onDelete: SetNull)
+}
+
+model Appointment {
+  id           String            @id @default(cuid())
+  propertyId   String?
+  agentId      String?
+  clientName   String
+  clientEmail  String
+  clientPhone  String?
+  type         AppointmentType   @default(PROPERTY_VIEWING)
+  transferType String            @default("LUXURY_CHAUFFEUR")
+  date         DateTime
+  timeSlot     String
+  status       AppointmentStatus @default(REQUESTED)
+  notes        String?           @db.Text
+  createdAt    DateTime          @default(now())
+
+  property     Property?         @relation(fields: [propertyId], references: [id], onDelete: SetNull)
+  agent        AgentProfile?     @relation(fields: [agentId], references: [id], onDelete: SetNull)
+}
+
+model Conversation {
+  id         String    @id @default(cuid())
+  propertyId String?
+  title      String
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+
+  messages   Message[]
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  senderId       String?
+  senderName     String
+  senderRole     String       @default("Client")
+  content        String       @db.Text
+  isRead         Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+}
+
+model MortgageApplication {
+  id             String   @id @default(cuid())
+  propertyId     String?
+  applicantName  String
+  applicantEmail String
+  applicantPhone String?
+  loanAmount     Float
+  downPayment    Float
+  durationYears  Int      @default(25)
+  interestRate   Float    @default(4.25)
+  monthlyPayment Float
+  status         String   @default("PRE_APPROVED")
+  createdAt      DateTime @default(now())
+}
+
+model SavedProperty {
+  id         String   @id @default(cuid())
+  userId     String
+  propertyId String
+  createdAt  DateTime @default(now())
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  property   Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, propertyId])
+}
+
+model SavedSearch {
+  id             String   @id @default(cuid())
+  userId         String
+  name           String
+  queryParams    String   @db.Text
+  alertFrequency String   @default("INSTANT")
+  createdAt      DateTime @default(now())
+
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Review {
+  id                  String   @id @default(cuid())
+  targetType          String
+  targetId            String
+  reviewerName        String
+  rating              Float    @default(5.0)
+  comment             String   @db.Text
+  verifiedInteraction Boolean  @default(true)
+  createdAt           DateTime @default(now())
+}
+
+model Report {
+  id             String   @id @default(cuid())
+  targetType     String
+  targetId       String
+  reason         String
+  description    String   @db.Text
+  reporterEmail  String?
+  status         String   @default("UNDER_REVIEW")
+  moderatorNotes String?  @db.Text
+  createdAt      DateTime @default(now())
+}
+
+model MonographReport {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  category    String   @default("Prime Intelligence")
+  volume      String   @default("Volume IV")
+  subtitle    String?
+  summary     String   @db.Text
+  content     String   @db.LongText
+  coverImage  String?  @db.Text
+  pdfUrl      String?  @db.Text
+  publishedAt DateTime @default(now())
+}
+
+model EscrowTransaction {
+  id              String           @id @default(cuid())
+  propertyId      String           @unique
+  buyerName       String
+  sellerName      String
+  agentName       String
+  totalAmount     Float
+  earnestDeposit  Float
+  currentStage    EscrowStage      @default(ESCROW_INITIATED)
+  progressPercent Int              @default(25)
+  closingDate     DateTime?
+  createdAt       DateTime         @default(now())
+
+  property        Property         @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  documents       EscrowDocument[]
+}
+
+model EscrowDocument {
+  id        String            @id @default(cuid())
+  escrowId  String
+  title     String
+  status    String            @default("PENDING_SIGNATURE")
+  fileUrl   String            @db.Text
+  updatedAt DateTime          @default(now())
+
+  escrow    EscrowTransaction @relation(fields: [escrowId], references: [id], onDelete: Cascade)
+}

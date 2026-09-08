@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#c4c7c8", "surface-container": "#201f1f", "chart-accent": "#61afef", "on-primary-fixed-variant": "#454747", "primary-fixed": "#e2e2e2", "on-secondary-container": "#b6b5b5", "on-secondary-fixed-variant": "#464747", "status-rent": "#98c379", "tertiary-fixed": "#e5e2e1", "secondary-fixed": "#e3e2e2", "status-pending": "#ffbd2e", "border-hairline": "#444748", "tertiary-container": "#e5e2e1", "surface": "#141313", "inverse-surface": "#e6e1e1", "on-primary-fixed": "#1a1c1c", "primary": "#ffffff", "on-secondary-fixed": "#1b1c1c", "on-tertiary-fixed-variant": "#474746", "surface-card": "#1c1b1b", "surface-bright": "#3a3939", "on-primary": "#2f3131", "surface-variant": "#363434", "status-sale": "#ffffff", "error-container": "#93000a", "tertiary": "#ffffff", "surface-tint": "#c6c6c7", "surface-container-low": "#1c1b1b", "surface-lowest": "#0a0a0a", "surface-container-highest": "#363434", "surface-base": "#141313", "border-subtle": "rgba(255, 255, 255, 0.08)", "primary-container": "#e2e2e2", "on-surface": "#e6e1e1", "on-tertiary": "#313030", "secondary-container": "#464747", "on-primary-container": "#636565", "error": "#ffb4ab", "surface-overlay": "#2a2a2a", "inverse-primary": "#5d5f5f", "surface-dim": "#141313", "on-tertiary-fixed": "#1c1b1b", "surface-container-lowest": "#0f0e0e", "secondary": "#c7c6c6", "status-error": "#ff5f56", "status-verified": "#27c93f", "on-tertiary-container": "#656463", "primary-fixed-dim": "#c6c6c7", "secondary-fixed-dim": "#c7c6c6", "on-error": "#690005", "outline": "#8e9192", "surface-elevated": "#201f1f", "on-secondary": "#303031", "inverse-on-surface": "#323030", "background": "#141313", "outline-variant": "#444748", "surface-container-high": "#2b2a2a", "tertiary-fixed-dim": "#c8c6c5", "on-background": "#e6e1e1", "on-error-container": "#ffdad6"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"card-padding-sm": "1.25rem", "gutter-desktop": "2rem", "gutter-mobile": "1.25rem", "container-max": "75rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-lg": "2rem"}, "fontFamily": {"label-sm": ["Manrope"], "headline-sm": ["Manrope"], "display-xl": ["Noto Serif"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-lg": ["Manrope"], "headline-md": ["Noto Serif"], "display-xl-mobile": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-lg-mobile": ["Noto Serif"], "micro-meta": ["Manrope"]}, "fontSize": {"label-sm": ["0.75rem", {"lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600"}], "headline-sm": ["1.25rem", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}], "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}], "body-sm": ["0.875rem", {"lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400"}], "body-lg": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}], "body-md": ["1rem", {"lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400"}], "label-lg": ["0.875rem", {"lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["2rem", {"lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400"}], "display-xl-mobile": ["2.5rem", {"lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400"}], "headline-lg": ["2.5rem", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-lg-mobile": ["1.875rem", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400"}], "micro-meta": ["0.625rem", {"lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full"><div class="h-20 px-6 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary font-semibold">EstatePro</span><span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase">Private Brokerage CRM</span></div></div></div><div class="px-5 pb-4"><a class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(255,255,255,0.08)]" data-path="create-property" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Listing</span></a></div><div class="px-6 py-2"><span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Portfolio Management</span></div><nav class="flex-1 px-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold rounded-xl"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-properties" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span>My Properties</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="leads-crm-pipeline" href="#"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span>Leads CRM Pipeline</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="appointments-calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Appointments &amp; Calendar</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="client-messaging" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span>Client Messaging</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="commissions-financials" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span>Commissions &amp; Financials</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Analytics</span></a></nav><div class="p-4 mt-auto"><div class="bg-surface-card rounded-xl p-4"><div class="flex items-center gap-3 mb-3"><span class="material-symbols-outlined text-chart-accent text-[20px]">verified</span><span class="font-label-sm text-label-sm text-on-surface uppercase">Private Reserve</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Ultra-HNW institutional vault access active.</p><div class="mt-3 pt-3 flex items-center justify-between"><a class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span>Preferences</span></a><span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold">Tier 1 Node</span></div></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-6"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-outline text-[18px]">account_tree</span><div class="flex flex-col text-left"><span class="font-micro-meta text-micro-meta uppercase text-outline">Active Mandate</span><span class="font-label-sm text-label-sm text-primary tracking-wide">Sotheby's Private Portfolio / Geneva &amp; Tokyo</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-4 text-outline text-[18px]">search</span><input class="w-full pl-11 pr-4 py-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search ultra-luxury estates, buyer manifests, Escrow IDs..." type="text"/></div></div><div class="flex items-center gap-5"><button aria-label="Notifications" class="relative p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-error"></span></button><button aria-label="Global Vault" class="p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">lock</span></button><div class="h-8 w-[1px] bg-border-hairline/30"></div><div class="flex items-center gap-3"><div class="text-right hidden sm:flex sm:flex-col"><span class="font-label-sm text-label-sm text-primary font-semibold">Vance Sterling</span><span class="font-micro-meta text-micro-meta uppercase text-outline">Senior Private Advisor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 w-full pt-20 px-8 bg-surface"><div class="flex flex-col w-full pb-16">
+<!-- Stepper Architectural Monograph Bar -->
+<section class="w-full pb-8 pt-2">
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-micro-meta text-micro-meta uppercase tracking-widest">Protocol V4.18</span>
+<span class="text-outline font-micro-meta text-micro-meta tracking-wider">/</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Sovereign Asset Registration</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase tracking-widest">Vault Node Synced</span>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline">EST. REVIEW 4 MIN</span>
+</div>
+</div>
+<!-- Progressive Micro Stepper Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-7 gap-2">
+<!-- Step 1: Active -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-primary font-semibold">01</span>
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary truncate">Identity &amp; Specs</span>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant/70 uppercase truncate">In Progress</span>
+<div class="w-full h-0.5 rounded-full bg-primary mt-2"></div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">02</span>
+<span class="material-symbols-outlined text-[14px] text-outline">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Location &amp; GIS</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Geospatial Plot</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">03</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Valuation &amp; Yield</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Underwriting</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">04</span>
+<span class="material-symbols-outlined text-[14px] text-outline">domain</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Specs &amp; Materials</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Architectural</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">05</span>
+<span class="material-symbols-outlined text-[14px] text-outline">view_in_ar</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Media &amp; 3D Scan</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Photogrammetry</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+<!-- Step 6 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">06</span>
+<span class="material-symbols-outlined text-[14px] text-outline">shield</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Due Diligence</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Escrow Vault</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+<!-- Step 7 -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-lowest/60 shadow-sm opacity-80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-micro-meta text-micro-meta text-outline">07</span>
+<span class="material-symbols-outlined text-[14px] text-outline">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Review &amp; Sign</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase truncate">Discreet Release</span>
+<div class="w-full h-0.5 rounded-full bg-surface-variant mt-2"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Asymmetric Workspace Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Architectural Onboarding Form (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<!-- Top Title Bar with AI Monograph Trigger -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-xl bg-surface-container-low shadow-sm">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-micro-meta text-micro-meta text-chart-accent uppercase tracking-widest">Step 01 / Phase Alpha</span>
+<span class="font-micro-meta text-micro-meta text-outline">REF: EP-9942-PRV</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-primary tracking-tight">Create Sovereign Estate Listing</h1>
+</div>
+<button class="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-surface-container-high text-primary hover:bg-surface-bright transition-all shadow-sm group" id="aiAutofillBtn">
+<span class="material-symbols-outlined text-[18px] text-chart-accent group-hover:rotate-12 transition-transform">auto_awesome</span>
+<div class="flex flex-col text-left">
+<span class="font-label-sm text-label-sm tracking-wide">Auto-Generate Monograph</span>
+<span class="font-micro-meta text-micro-meta text-outline">Synthesizing Architectural Corpus</span>
+</div>
+</button>
+</div>
+<!-- Section 1: Property Identity -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-5">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">01. Property Identity &amp; Mandate</h2>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">Public &amp; Private Descriptors</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="sm:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant flex items-center justify-between">
+<span>Title of Estate / Monograph Name</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Required</span>
+</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none shadow-sm focus:bg-surface-container-high transition-colors" id="estateTitleInput" type="text" value="The Obsidian Cantilever Sanctuary"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Global Ref Number</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl bg-surface-container-highest/60 text-outline font-body-sm text-body-sm focus:outline-none cursor-not-allowed" readonly="" type="text" value="REF-EP-9942"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-outline">lock</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Listing Protocol Type</label>
+<div class="grid grid-cols-2 gap-2">
+<button class="listing-type-btn py-2.5 px-3 rounded-xl text-left font-label-sm text-label-sm bg-primary text-on-primary font-semibold flex items-center justify-between shadow-sm" type="button">
+<span>For Sale</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="listing-type-btn py-2.5 px-3 rounded-xl text-left font-label-sm text-label-sm bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-between" type="button">
+<span>Prime Rental</span>
+</button>
+<button class="listing-type-btn py-2.5 px-3 rounded-xl text-left font-label-sm text-label-sm bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-between" type="button">
+<span>Commercial</span>
+</button>
+<button class="listing-type-btn py-2.5 px-3 rounded-xl text-left font-label-sm text-label-sm bg-surface text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center justify-between" type="button">
+<span>Off-Market Syndicate</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Architectural Typology</label>
+<div class="flex flex-col gap-2">
+<select class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none shadow-sm" id="typologySelect">
+<option selected="">Architectural Cantilever Villa</option>
+<option>High-Alpine Historic Sanctuary</option>
+<option>Brutalist Waterfront Compound</option>
+<option>Minimalist Skyline Penthouse</option>
+<option>Private Island Domain</option>
+</select>
+<div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-surface-container">
+<span class="material-symbols-outlined text-[16px] text-chart-accent">security</span>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant">Discreet Non-Disclosure Registry will shield owner identity</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Financials & Pricing Architecture -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-5">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">02. Financial Architecture &amp; Valuation</h2>
+</div>
+<span class="font-micro-meta text-micro-meta text-status-verified uppercase tracking-wider">Multi-Currency Node</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="sm:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Target Acquisition Value</label>
+<div class="relative flex items-center">
+<span class="absolute left-4 text-primary font-headline-sm text-headline-sm">$</span>
+<input class="w-full pl-9 pr-4 py-3 rounded-xl bg-surface text-primary font-headline-sm text-headline-sm tracking-tight focus:outline-none shadow-sm" id="estatePriceInput" type="text" value="38,500,000"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Settle Currency</label>
+<select class="w-full px-4 py-3.5 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none shadow-sm">
+<option selected="">USD ($) - Tier 1</option>
+<option>CHF (Fr) - Swiss Franc</option>
+<option>EUR (€) - Eurozone</option>
+<option>GBP (£) - Sterling</option>
+<option>JPY (¥) - Tokyo Sovereign</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Unit Metric Rate</label>
+<div class="px-4 py-3 rounded-xl bg-surface text-on-surface flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-primary font-medium">$2,655 / sq ft</span>
+<span class="font-micro-meta text-micro-meta text-outline">AUTO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">HOA / Estate Servicing</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" type="text" value="$14,200 / quarter"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Yield Projection (Net)</label>
+<div class="px-4 py-3 rounded-xl bg-surface text-primary flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-status-rent font-semibold">4.82% Cap Rate</span>
+<span class="material-symbols-outlined text-[16px] text-status-rent">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Discretion Toggle Switch -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Private Brokerage Negotiation Allowance</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Allow discreet price guidance variance up to 5% without relisting</span>
+</div>
+<button class="w-12 h-6 rounded-full bg-primary relative p-0.5 transition-colors focus:outline-none" id="toggleAllowance">
+<span class="block w-5 h-5 rounded-full bg-surface transition-transform translate-x-6"></span>
+</button>
+</div>
+</div>
+<!-- Section 3: Spatial Architecture Specs -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-5">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">03. Spatial Metrics &amp; Studio Provenance</h2>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">Volumetric CAD Specs</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Enclosed Gross Area</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" id="areaInput" type="text" value="14,500"/>
+<span class="absolute right-3 top-3 text-[11px] font-micro-meta text-outline">SQ FT</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Terrain / Land Parcel</label>
+<div class="relative">
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" type="text" value="3.4"/>
+<span class="absolute right-3 top-3 text-[11px] font-micro-meta text-outline">ACRES</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Bedroom Suites</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" id="bedInput" type="number" value="6"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Bathrooms (Spa)</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" id="bathInput" type="number" value="9"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Commissioning Studio / Architect</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" id="architectInput" type="text" value="Kengo Kuma &amp; Associates + Olson Kundig"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Completion Date / Restoration</label>
+<input class="w-full px-4 py-3 rounded-xl bg-surface text-primary font-body-sm text-body-sm focus:outline-none" type="text" value="2024 / Newly Commissioned"/>
+</div>
+</div>
+</div>
+<!-- Section 4: Signature Materials & Amenities Tag Selector -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-5">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-3">
+<span class="w-1.5 h-4 bg-primary rounded-full"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">04. Signature Materials &amp; Institutional Perks</h2>
+</div>
+<span class="font-micro-meta text-micro-meta text-status-verified uppercase tracking-wider">Verified Elements</span>
+</div>
+<div class="flex flex-wrap gap-2.5">
+<!-- Tag Selected -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Carbonized Yakusugi Cedar</span>
+</button>
+<!-- Tag Selected -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Honshu Flamed Granite</span>
+</button>
+<!-- Tag Selected -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Subterranean Vault (Class 4)</span>
+</button>
+<!-- Tag Selected -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Thermal Geothermal Loop</span>
+</button>
+<!-- Tag Inactive -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">add</span>
+<span>Private Natural Onsen</span>
+</button>
+<!-- Tag Inactive -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">add</span>
+<span>Helipad (FAA / ICAO Rated)</span>
+</button>
+<!-- Tag Inactive -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">add</span>
+<span>Biometric Panic Citadel</span>
+</button>
+<!-- Tag Inactive -->
+<button class="tag-chip flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">add</span>
+<span>Sommelier Gallery (3,000 Bottles)</span>
+</button>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<input class="flex-1 px-4 py-2.5 rounded-xl bg-surface text-on-surface font-body-sm text-body-sm focus:outline-none" placeholder="Add custom raw material or architectural hallmark..." type="text"/>
+<button class="px-4 py-2.5 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm hover:bg-surface-bright transition-colors">
+            Add Element
+          </button>
+</div>
+</div>
+<!-- Action Navigation Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-xl bg-surface-container-low shadow-sm">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary font-label-sm text-label-sm px-4 py-2.5 rounded-xl transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save Encrypted Draft</span>
+</button>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="px-5 py-3 rounded-xl bg-surface-container text-on-surface hover:bg-surface-bright font-label-sm text-label-sm transition-colors" type="button">
+            Cancel
+          </button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-lg" type="button">
+<span>Proceed to GIS &amp; Location</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive Live Dossier Preview (5 cols sticky) -->
+<div class="lg:col-span-5 flex flex-col gap-6 sticky top-24">
+<!-- AI Dossier Quality Metric Card -->
+<div class="flex flex-col p-6 rounded-xl bg-surface-container-low shadow-sm gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-chart-accent text-[22px]">smart_toy</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">AI Dossier Readiness</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-status-verified/15 text-status-verified font-micro-meta text-micro-meta uppercase tracking-wider">High Liquidity</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-2">
+<span class="font-display-xl text-display-xl font-headline-md text-primary leading-none">92</span>
+<span class="font-headline-sm text-headline-sm text-outline">/ 100</span>
+</div>
+<div class="text-right">
+<span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold block">+14 PTS OPTIMIZED</span>
+<span class="font-micro-meta text-micro-meta text-outline">Benchmark: Ultra-Luxury G7</span>
+</div>
+</div>
+<!-- Metric Bar -->
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 92%;"></div>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container flex items-start gap-3">
+<span class="material-symbols-outlined text-status-pending text-[18px] shrink-0 mt-0.5">lightbulb</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Attach <span class="text-primary font-medium">Structural Seismic Certificate</span> and LiDAR point cloud scan to boost index to <span class="text-primary font-medium">98/100</span>.
+          </p>
+</div>
+</div>
+<!-- Live Client Dossier Preview Card -->
+<div class="flex flex-col rounded-xl bg-surface-card shadow-xl overflow-hidden">
+<!-- Preview Monograph Header Meta -->
+<div class="px-5 py-3.5 bg-surface-container-highest/60 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-pending animate-pulse"></span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface font-semibold">Live Monograph Preview</span>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">Institutional Mode</span>
+</div>
+<!-- Architectural Image Canvas -->
+<div class="relative w-full h-72 overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Monolithic obsidian cantilever villa perched on a rugged cliffside in Kyoto Japan. Minimalist dark architecture with honed black concrete, carbonized cedar cladding, warm ambient subterranean lights, Japanese bonsai pines, and mist rising from deep mountain valley in twilight. Shot with Leica 35mm architectural composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnqZc_5ssFnbI1Eq8_nuFYuUsNjPboaUaEcE-3fv7eTsydZpwM_bkMS307cIHZS-840SIrrdTdnK7bhsvKt-lPLd24n92PwDYoD32PavPkxyuwOKFaJVzQHWPTRxtAzer33gbvGKj_OBh3UkdcbMg6fh0B2e5PXkpgevSFbLEd2oKvTdkJ3iU-L3QHp5aynxBO6Q7jXTwiGyczrZQvGkLY52AWhej40padaZLMnnELbwfsrN11bTcwlw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-black/40"></div>
+<!-- Top Scrim Status Badges -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta uppercase tracking-widest">
+              DRAFT • PENDING REVIEW
+            </span>
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</span>
+<span class="w-8 h-8 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">share</span>
+</span>
+</div>
+</div>
+<!-- Bottom Title Overlay -->
+<div class="absolute bottom-4 left-5 right-5 flex flex-col">
+<span class="font-micro-meta text-micro-meta text-chart-accent uppercase tracking-widest mb-1">Geneva &amp; Kyoto Mandate</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-snug" id="previewTitle">The Obsidian Cantilever Sanctuary</h3>
+</div>
+</div>
+<!-- Architectural Monograph Specs Content -->
+<div class="p-6 flex flex-col gap-5">
+<div class="flex items-baseline justify-between pb-4">
+<div class="flex flex-col">
+<span class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">Offered At</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-primary font-normal" id="previewPrice">$38,500,000</span>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase">USD</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">Escrow Jurisdiction</span>
+<span class="font-label-sm text-label-sm text-on-surface block">Tokyo / Zurich Prime</span>
+</div>
+</div>
+<!-- Metric Row Grid -->
+<div class="grid grid-cols-4 gap-2 py-3 rounded-xl bg-surface-container-lowest/80 text-center">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold" id="previewBed">6</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Suites</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold" id="previewBath">9</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Baths</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold" id="previewArea">14.5k</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Sq Ft</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">3.4</span>
+<span class="font-micro-meta text-micro-meta text-outline uppercase">Acres</span>
+</div>
+</div>
+<!-- Studio Attribution & Description Snippet -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Lead Architect</span>
+<span class="font-label-sm text-label-sm text-primary" id="previewArchitect">Kengo Kuma + Olson Kundig</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed line-clamp-3">
+              Suspended over a dramatic basalt ravine, this sovereign residence represents an uncompromised dialogue between carbonized yakusugi cedar, flamed granite monoliths, and seamless cantilevered glass. Features complete subterranean security shielding.
+            </p>
+</div>
+<!-- Verified Badges Pills -->
+<div class="flex flex-wrap gap-1.5 pt-1">
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-micro-meta text-micro-meta tracking-wider">
+              YAKUSUGI CEDAR
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-micro-meta text-micro-meta tracking-wider">
+              FLAMED GRANITE
+            </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-micro-meta text-micro-meta tracking-wider">
+              SUBTERRANEAN VAULT
+            </span>
+</div>
+<!-- Mini GIS Location Plate Placeholder -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px] text-primary">pin_drop</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary">Higashiyama Ward, Kyoto</span>
+<span class="font-micro-meta text-micro-meta text-outline">35.0037° N, 135.7772° E</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface font-micro-meta text-micro-meta text-on-surface-variant uppercase">GIS Synced</span>
+</div>
+</div>
+<!-- Dossier Footer Control -->
+<div class="px-6 py-4 bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider">Audit Hash: #0x89F4...A1</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1">
+<span>Inspect Dossier PDF</span>
+<span class="material-symbols-outlined text-[14px]">north_east</span>
+</button>
+</div>
+</div>
+<!-- Private Note Card -->
+<div class="p-4 rounded-xl bg-surface-container-lowest/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-[20px]">shield_person</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Estate details will only be accessible to verified Tier 1 Accredited Sovereign Buyers via encrypted Escrow credentials.
+        </span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Real-time Preview synchronization
+  const titleInput = document.getElementById('estateTitleInput');
+  const priceInput = document.getElementById('estatePriceInput');
+  const bedInput = document.getElementById('bedInput');
+  const bathInput = document.getElementById('bathInput');
+  const areaInput = document.getElementById('areaInput');
+  const architectInput = document.getElementById('architectInput');
+
+  const previewTitle = document.getElementById('previewTitle');
+  const previewPrice = document.getElementById('previewPrice');
+  const previewBed = document.getElementById('previewBed');
+  const previewBath = document.getElementById('previewBath');
+  const previewArea = document.getElementById('previewArea');
+  const previewArchitect = document.getElementById('previewArchitect');
+
+  if(titleInput && previewTitle) {
+    titleInput.addEventListener('input', (e) => {
+      previewTitle.textContent = e.target.value || 'Untitled Sovereign Listing';
+    });
+  }
+
+  if(priceInput && previewPrice) {
+    priceInput.addEventListener('input', (e) => {
+      const val = e.target.value.replace(/[^0-9]/g, '');
+      if(val) {
+        previewPrice.textContent = '$' + Number(val).toLocaleString();
+      } else {
+        previewPrice.textContent = '$' + e.target.value;
+      }
+    });
+  }
+
+  if(bedInput && previewBed) {
+    bedInput.addEventListener('input', (e) => {
+      previewBed.textContent = e.target.value || '0';
+    });
+  }
+
+  if(bathInput && previewBath) {
+    bathInput.addEventListener('input', (e) => {
+      previewBath.textContent = e.target.value || '0';
+    });
+  }
+
+  if(areaInput && previewArea) {
+    areaInput.addEventListener('input', (e) => {
+      const num = parseFloat(e.target.value.replace(/,/g, ''));
+      if(!isNaN(num) && num > 1000) {
+        previewArea.textContent = (num / 1000).toFixed(1) + 'k';
+      } else {
+        previewArea.textContent = e.target.value;
+      }
+    });
+  }
+
+  if(architectInput && previewArchitect) {
+    architectInput.addEventListener('input', (e) => {
+      previewArchitect.textContent = e.target.value || 'Unassigned Studio';
+    });
+  }
+
+  // Tag chip interactive toggle
+  document.querySelectorAll('.tag-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const isSelected = chip.classList.contains('bg-primary');
+      if (isSelected) {
+        chip.classList.remove('bg-primary', 'text-on-primary');
+        chip.classList.add('bg-surface', 'text-on-surface-variant');
+        const icon = chip.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = 'add';
+          icon.classList.add('text-outline');
+        }
+      } else {
+        chip.classList.remove('bg-surface', 'text-on-surface-variant');
+        chip.classList.add('bg-primary', 'text-on-primary');
+        const icon = chip.querySelector('.material-symbols-outlined');
+        if (icon) {
+          icon.textContent = 'verified';
+          icon.classList.remove('text-outline');
+        }
+      }
+    });
+  });
+
+  // Listing type toggle
+  document.querySelectorAll('.listing-type-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.listing-type-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
+        b.classList.add('bg-surface', 'text-on-surface-variant');
+        const check = b.querySelector('.material-symbols-outlined');
+        if(check) check.remove();
+      });
+      btn.classList.remove('bg-surface', 'text-on-surface-variant');
+      btn.classList.add('bg-primary', 'text-on-primary', 'font-semibold');
+      const span = document.createElement('span');
+      span.className = 'material-symbols-outlined text-[16px]';
+      span.textContent = 'check';
+      btn.appendChild(span);
+    });
+  });
+
+  // AI Generator Micro-interaction
+  const aiBtn = document.getElementById('aiAutofillBtn');
+  if(aiBtn) {
+    aiBtn.addEventListener('click', () => {
+      aiBtn.classList.add('opacity-50', 'pointer-events-none');
+      const prevText = aiBtn.querySelector('.text-label-sm').textContent;
+      aiBtn.querySelector('.text-label-sm').textContent = 'Generating Monograph...';
+      setTimeout(() => {
+        aiBtn.classList.remove('opacity-50', 'pointer-events-none');
+        aiBtn.querySelector('.text-label-sm').textContent = 'Monograph Enhanced ✓';
+        if(titleInput) titleInput.value = 'The Obsidian Cantilever Sanctuary & Alpine Pavilion';
+        if(titleInput) titleInput.dispatchEvent(new Event('input'));
+      }, 1200);
+    });
+  }
+
+  // Allowance switch micro-toggle
+  const toggleAllowance = document.getElementById('toggleAllowance');
+  if(toggleAllowance) {
+    toggleAllowance.addEventListener('click', () => {
+      const knob = toggleAllowance.firstElementChild;
+      if(knob.classList.contains('translate-x-6')) {
+        knob.classList.remove('translate-x-6');
+        toggleAllowance.classList.remove('bg-primary');
+        toggleAllowance.classList.add('bg-surface-variant');
+      } else {
+        knob.classList.add('translate-x-6');
+        toggleAllowance.classList.add('bg-primary');
+        toggleAllowance.classList.remove('bg-surface-variant');
+      }
+    });
+  }
+</script></main></div></body></html>

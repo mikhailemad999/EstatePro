@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#c4c7c8", "surface-container": "#201f1f", "chart-accent": "#61afef", "on-primary-fixed-variant": "#454747", "primary-fixed": "#e2e2e2", "on-secondary-container": "#b6b5b5", "on-secondary-fixed-variant": "#464747", "status-rent": "#98c379", "tertiary-fixed": "#e5e2e1", "secondary-fixed": "#e3e2e2", "status-pending": "#ffbd2e", "border-hairline": "#444748", "tertiary-container": "#e5e2e1", "surface": "#141313", "inverse-surface": "#e6e1e1", "on-primary-fixed": "#1a1c1c", "primary": "#ffffff", "on-secondary-fixed": "#1b1c1c", "on-tertiary-fixed-variant": "#474746", "surface-card": "#1c1b1b", "surface-bright": "#3a3939", "on-primary": "#2f3131", "surface-variant": "#363434", "status-sale": "#ffffff", "error-container": "#93000a", "tertiary": "#ffffff", "surface-tint": "#c6c6c7", "surface-container-low": "#1c1b1b", "surface-lowest": "#0a0a0a", "surface-container-highest": "#363434", "surface-base": "#141313", "border-subtle": "rgba(255, 255, 255, 0.08)", "primary-container": "#e2e2e2", "on-surface": "#e6e1e1", "on-tertiary": "#313030", "secondary-container": "#464747", "on-primary-container": "#636565", "error": "#ffb4ab", "surface-overlay": "#2a2a2a", "inverse-primary": "#5d5f5f", "surface-dim": "#141313", "on-tertiary-fixed": "#1c1b1b", "surface-container-lowest": "#0f0e0e", "secondary": "#c7c6c6", "status-error": "#ff5f56", "status-verified": "#27c93f", "on-tertiary-container": "#656463", "primary-fixed-dim": "#c6c6c7", "secondary-fixed-dim": "#c7c6c6", "on-error": "#690005", "outline": "#8e9192", "surface-elevated": "#201f1f", "on-secondary": "#303031", "inverse-on-surface": "#323030", "background": "#141313", "outline-variant": "#444748", "surface-container-high": "#2b2a2a", "tertiary-fixed-dim": "#c8c6c5", "on-background": "#e6e1e1", "on-error-container": "#ffdad6"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"card-padding-sm": "1.25rem", "gutter-desktop": "2rem", "gutter-mobile": "1.25rem", "container-max": "75rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-lg": "2rem"}, "fontFamily": {"label-sm": ["Manrope"], "headline-sm": ["Manrope"], "display-xl": ["Noto Serif"], "body-sm": ["Manrope"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "label-lg": ["Manrope"], "headline-md": ["Noto Serif"], "display-xl-mobile": ["Noto Serif"], "headline-lg": ["Noto Serif"], "headline-lg-mobile": ["Noto Serif"], "micro-meta": ["Manrope"]}, "fontSize": {"label-sm": ["0.75rem", {"lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600"}], "headline-sm": ["1.25rem", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}], "display-xl": ["4.5rem", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}], "body-sm": ["0.875rem", {"lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400"}], "body-lg": ["1.125rem", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}], "body-md": ["1rem", {"lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400"}], "label-lg": ["0.875rem", {"lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600"}], "headline-md": ["2rem", {"lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400"}], "display-xl-mobile": ["2.5rem", {"lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400"}], "headline-lg": ["2.5rem", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}], "headline-lg-mobile": ["1.875rem", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400"}], "micro-meta": ["0.625rem", {"lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full"><div class="h-20 px-6 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-primary font-semibold">EstatePro</span><span class="font-micro-meta text-micro-meta text-on-surface-variant uppercase">Private Brokerage CRM</span></div></div></div><div class="px-5 pb-4"><a class="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-[0_4px_20px_rgba(255,255,255,0.08)]" data-path="create-property" href="#"><span class="material-symbols-outlined text-[18px]">add</span><span>New Listing</span></a></div><div class="px-6 py-2"><span class="font-micro-meta text-micro-meta uppercase text-outline tracking-wider">Portfolio Management</span></div><nav class="flex-1 px-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-label-lg font-bold rounded-xl"><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="overview-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Overview / Dashboard</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-properties" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span>My Properties</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="leads-crm-pipeline" href="#"><span class="material-symbols-outlined text-[20px]">filter_alt</span><span>Leads CRM Pipeline</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="appointments-calendar" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Appointments &amp; Calendar</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="client-messaging" href="#"><span class="material-symbols-outlined text-[20px]">mark_chat_unread</span><span>Client Messaging</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="commissions-financials" href="#"><span class="material-symbols-outlined text-[20px]">account_balance</span><span>Commissions &amp; Financials</span></a><a class="flex items-center gap-3 px-4 py-3 rounded-xl font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analytics" href="#"><span class="material-symbols-outlined text-[20px]">insights</span><span>Analytics</span></a></nav><div class="p-4 mt-auto"><div class="bg-surface-card rounded-xl p-4"><div class="flex items-center gap-3 mb-3"><span class="material-symbols-outlined text-chart-accent text-[20px]">verified</span><span class="font-label-sm text-label-sm text-on-surface uppercase">Private Reserve</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Ultra-HNW institutional vault access active.</p><div class="mt-3 pt-3 flex items-center justify-between"><a class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">tune</span><span>Preferences</span></a><span class="font-micro-meta text-micro-meta text-status-verified uppercase font-semibold">Tier 1 Node</span></div></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 w-full px-8 flex items-center justify-between gap-6"><div class="flex items-center gap-6"><img alt="Brand logo. - Primary color: #ffffff
+- Font: notoSerif
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface-container-low"><span class="material-symbols-outlined text-outline text-[18px]">account_tree</span><div class="flex flex-col text-left"><span class="font-micro-meta text-micro-meta uppercase text-outline">Active Mandate</span><span class="font-label-sm text-label-sm text-primary tracking-wide">Sotheby's Private Portfolio / Geneva &amp; Tokyo</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-4 text-outline text-[18px]">search</span><input class="w-full pl-11 pr-4 py-2 rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container transition-colors" placeholder="Search ultra-luxury estates, buyer manifests, Escrow IDs..." type="text"/></div></div><div class="flex items-center gap-5"><button aria-label="Notifications" class="relative p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-status-error"></span></button><button aria-label="Global Vault" class="p-2.5 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">lock</span></button><div class="h-8 w-[1px] bg-border-hairline/30"></div><div class="flex items-center gap-3"><div class="text-right hidden sm:flex sm:flex-col"><span class="font-label-sm text-label-sm text-primary font-semibold">Vance Sterling</span><span class="font-micro-meta text-micro-meta uppercase text-outline">Senior Private Advisor</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="flex-1 w-full pt-20 px-8 bg-surface"><div class="flex flex-col w-full pb-16 space-y-12">
+<!-- Investor Identity & Sovereign Allocation Ribbon -->
+<section class="w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8">
+<div class="flex flex-col space-y-2">
+<div class="flex items-center gap-3">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-status-verified font-micro-meta text-micro-meta tracking-widest uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified animate-pulse"></span>
+            Tier-1 Institutional Clearance
+          </span>
+<span class="font-micro-meta text-micro-meta uppercase text-outline tracking-widest">Client Ref: FO-8829-KYT</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">
+          Lord Sterling Finch
+        </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+          Finch Sovereign Holdings Ltd. • Geneva Multi-Family Office Mandate • Dedicated Advisor: Vance Sterling
+        </p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-lg text-label-lg transition-all flex items-center gap-2" id="btn-prequal" onclick="toggleModal('modal-liquidity')">
+<span class="material-symbols-outlined text-[18px] text-chart-accent">account_balance_wallet</span>
+<span>Capital Verification</span>
+</button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 shadow-md flex items-center gap-2" id="btn-gis" onclick="toggleModal('modal-cartography')">
+<span class="material-symbols-outlined text-[18px]">travel_explore</span>
+<span>Global Cartography</span>
+</button>
+</div>
+</div>
+<!-- Executive Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-20 h-20 bg-surface-container-highest/20 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-outline">Deployed &amp; Committed</span>
+<span class="material-symbols-outlined text-[16px] text-outline">account_balance</span>
+</div>
+<div class="mt-4">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light tracking-tight">$42.5M</span>
+<span class="font-micro-meta text-micro-meta text-status-verified flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +8.4% allocation capacity
+          </span>
+</div>
+</div>
+<div class="bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-outline">Active Bids in Review</span>
+<span class="material-symbols-outlined text-[16px] text-chart-accent">gavel</span>
+</div>
+<div class="mt-4">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light tracking-tight">03</span>
+<span class="font-micro-meta text-micro-meta text-outline mt-1 block">Aggregate: $81.2M</span>
+</div>
+</div>
+<div class="bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-outline">Curated Sovereign Vault</span>
+<span class="material-symbols-outlined text-[16px] text-outline">bookmark</span>
+</div>
+<div class="mt-4">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light tracking-tight">18</span>
+<span class="font-micro-meta text-micro-meta text-chart-accent mt-1 block">4 off-market secret pocket</span>
+</div>
+</div>
+<div class="bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-outline">Scheduled Viewings</span>
+<span class="material-symbols-outlined text-[16px] text-outline">calendar_today</span>
+</div>
+<div class="mt-4">
+<span class="font-display-xl-mobile text-display-xl-mobile text-primary font-light tracking-tight">02</span>
+<span class="font-micro-meta text-micro-meta text-status-rent mt-1 block">1 Rotary flight / 1 4K Stream</span>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1 bg-surface-card p-5 rounded-xl flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-micro-meta text-micro-meta uppercase tracking-wider text-outline">Escrow Facility Clearance</span>
+<span class="material-symbols-outlined text-[16px] text-status-verified">verified_user</span>
+</div>
+<div class="mt-4">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">Tier-1</span>
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+</div>
+<span class="font-micro-meta text-micro-meta text-outline mt-1 block">Pictet &amp; Cie • $100M Cap</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Portfolio Tab Bar -->
+<section class="w-full">
+<div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+<button class="tab-trigger px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg transition-all shrink-0" id="tab-btn-offers" onclick="switchTab('offers')">
+        Acquisitions &amp; Active Bids (3)
+      </button>
+<button class="tab-trigger px-5 py-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" id="tab-btn-saved" onclick="switchTab('saved')">
+        Saved Sovereign Estates (18)
+      </button>
+<button class="tab-trigger px-5 py-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" id="tab-btn-itinerary" onclick="switchTab('itinerary')">
+        VIP Private Itinerary
+      </button>
+<button class="tab-trigger px-5 py-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" id="tab-btn-dossiers" onclick="switchTab('dossiers')">
+        Encrypted Due Diligence
+      </button>
+<button class="tab-trigger px-5 py-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-all shrink-0" id="tab-btn-escrow" onclick="switchTab('escrow')">
+        Escrow &amp; Amortisation Engine
+      </button>
+</div>
+</section>
+<!-- TAB 1: ACQUISITIONS & OFFERS -->
+<section class="space-y-6" id="tab-content-offers">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-md text-headline-md text-primary font-light">Active Mandates &amp; In-Flight Bids</h2>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-outline font-micro-meta text-micro-meta uppercase">Confidential Execution</span>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Real-Time Syndicate Updates</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Primary Big Active Negotiation Card -->
+<div class="lg:col-span-2 bg-surface-card rounded-xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-status-pending/10 text-status-pending font-micro-meta text-micro-meta uppercase tracking-wider">
+                Seller Counter-Offer Pending
+              </span>
+<span class="font-micro-meta text-micro-meta text-outline">Offer Ref: #BID-2025-09</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-normal">The Obsidian Basalt Sanctuary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Higashiyama Ward, Kyoto, Japan • 14,200 sq ft • 2.4-Acre Private Forest</p>
+</div>
+<div class="text-left md:text-right">
+<span class="font-micro-meta text-micro-meta uppercase text-outline block">Our Submitted Bid</span>
+<span class="font-headline-md text-headline-md text-primary font-semibold">$33,500,000</span>
+<span class="font-micro-meta text-micro-meta text-outline block">Asking: $36,200,000 USD</span>
+</div>
+</div>
+<!-- Deal Milestones Progress -->
+<div class="my-6 p-4 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Offer Progression Telemetry</span>
+<span class="text-chart-accent">Stage 3 of 5 • 65% Probability to Close</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 65%;"></div>
+</div>
+<div class="grid grid-cols-4 gap-2 pt-2 text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-status-verified text-[16px]">check_circle</span>
+<span class="font-micro-meta text-micro-meta text-on-surface mt-1">Proof of Funds</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-status-verified text-[16px]">check_circle</span>
+<span class="font-micro-meta text-micro-meta text-on-surface mt-1">Formal Letter of Intent</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-status-pending text-[16px]">pending</span>
+<span class="font-micro-meta text-micro-meta text-status-pending mt-1">Counter Revision</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined text-outline text-[16px]">radio_button_unchecked</span>
+<span class="font-micro-meta text-micro-meta text-outline mt-1">Escrow Closing</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 pt-4 bg-surface-container-lowest/40 -mx-6 -mb-6 p-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-chart-accent text-[18px]">verified</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-primary">Seller Representative: Sovereign Trustee Ltd. (Tokyo)</p>
+<p class="font-micro-meta text-micro-meta text-outline">Response expiry: 28 hrs remaining</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-colors">
+              Revise Valuation
+            </button>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5">
+              Authorise Counter at $34.8M
+            </button>
+</div>
+</div>
+</div>
+<!-- Secondary Bid & Completed Deposit Card -->
+<div class="space-y-6">
+<!-- Deal 2 -->
+<div class="bg-surface-card rounded-xl p-5 shadow-sm space-y-4">
+<div class="flex items-start justify-between">
+<span class="px-2 py-0.5 rounded-full bg-status-rent/15 text-status-rent font-micro-meta text-micro-meta uppercase tracking-wider">
+              Deposit Cleared in Escrow
+            </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">$24,800,000</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-normal">Villa L'Azur</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cap d'Antibes, Côte d'Azur, France</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between text-outline font-micro-meta text-micro-meta">
+<span>Escrow Ref: #ES-9921-FR</span>
+<span class="text-status-verified flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Funds Held: $2,480,000 (10%)
+            </span>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Review Purchase Agreement Draft</span>
+</button>
+</div>
+<!-- Deal 3 -->
+<div class="bg-surface-card rounded-xl p-5 shadow-sm space-y-4">
+<div class="flex items-start justify-between">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-micro-meta text-micro-meta uppercase tracking-wider">
+              Title Search Phase
+            </span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">$22,900,000</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-normal">Belgravia Sovereign Penthouse</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chesham Place, London SW1, UK</p>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl flex items-center justify-between text-outline font-micro-meta text-micro-meta">
+<span>Solicitors: Macfarlanes LLP</span>
+<span class="text-chart-accent">Disclosures: 100% Unencumbered</span>
+</div>
+<button class="w-full py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Inspect Sovereign Land Registry</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 2: SAVED SOVEREIGN RESIDENCES (Bento/Card Grid) -->
+<section class="space-y-6" id="tab-content-saved">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-light">Saved Sovereign Estates</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">18 monitored properties • Automated capital yield tracking and confidential price variance monitoring</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+<span>Side-by-Side Matrix</span>
+</button>
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Compile Asset Deck</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Property Card 1 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-md flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Monolithic dark concrete and floor-to-ceiling glass luxury villa nestled against the forested hillside of Kyoto Japan at dusk, warm ambient interior light glowing through slatted cedar screens, reflective shallow basalt water pool in foreground, architectural photography in the style of high-end monographs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy-uTGvzbL-fGwJS5fqRUJAEyRo8x3WjG9pn10o7Ax7hVtoSBkwVcixsmGQhlPGoQ93qr_bMvqR0NI6SgGPA-z-J543BqV_12ZN7VYw3c6a3-VyeBC1Phni6MmQU8xzv_qa5MhEnP5BSxL8jqeAZzjYXomBm_psnSrquu0ovemLJFijUHoOkcrOIWXmg3BuwFB3U0ojsDXLagz3lRAsVSYLoUkO0s6ucCgTl1nRpYjRaee4H6jD2xGLg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta tracking-wider uppercase">
+                Private Off-Market
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-status-verified/20 backdrop-blur-md text-status-verified font-micro-meta text-micro-meta tracking-wider uppercase">
+                Audited
+              </span>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">$36,200,000</span>
+<span class="font-micro-meta text-micro-meta text-chart-accent uppercase tracking-wider">Projected Cap: 4.8%</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">The Obsidian Basalt Sanctuary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Higashiyama, Kyoto, Japan</p>
+</div>
+<!-- Specs line -->
+<div class="flex items-center justify-between py-2 text-on-secondary-container font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">bed</span>
+<span>6 Suites</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">bathtub</span>
+<span>8 Baths</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">square_foot</span>
+<span>14,200 sq ft</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>View Secret Dossier</span>
+</button>
+<button class="p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Request Tour">
+<span class="material-symbols-outlined text-[18px]">event</span>
+</button>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-md flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dramatic cliffside modern villa overlooking the Mediterranean Sea at Cap d'Antibes at twilight, cantilevered infinity pool meeting the horizon, minimalist white and charcoal limestone architecture, subdued luxury mood with twilight sky and calm cobalt water." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6UCGR2BeZkvuoO1zXbXzQyV6yifaFbbOwc6zuuYCKQ8SQFRBat1sM08rtZDeWOM_ojlamYAQP1EPJ__YOlLA4GKzVhvDFMLyXlIyzE5JJsNquh5GGNl-ecCFKUzeGwXdC4ughrzLcBAQ8SVZimD3bRUQlmuVt2JJmUPgHTXG2n6rAlQR_DtxJ_LMlEVmFY3XJl-Ewynq6ASacCsqwHjQfzgbFhjfb9j2-HqMK1NS53bY8HnxpDb4GIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta tracking-wider uppercase">
+                Under Contract
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-status-rent/20 backdrop-blur-md text-status-rent font-micro-meta text-micro-meta tracking-wider uppercase">
+                Holding 1st Right
+              </span>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">€22,500,000</span>
+<span class="font-micro-meta text-micro-meta text-status-rent uppercase tracking-wider">Zero Transfer Tax</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">Villa L'Azur</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cap d'Antibes, Côte d'Azur, France</p>
+</div>
+<!-- Specs line -->
+<div class="flex items-center justify-between py-2 text-on-secondary-container font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">bed</span>
+<span>8 Suites</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">directions_boat</span>
+<span>Private Berth</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">square_foot</span>
+<span>11,800 sq ft</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>View Escrow Telemetry</span>
+</button>
+<button class="p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Request Tour">
+<span class="material-symbols-outlined text-[18px]">event</span>
+</button>
+</div>
+</div>
+<!-- Property Card 3 -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-md flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Sophisticated double-height luxury penthouse interior in Belgravia London overlooking historic brick townhomes through dramatic black-steel framed mullioned windows, dark smoked oak herringbone floors, bronze sculptures, soft museum lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFII_F-vwilAjlCyOB-K9ZmZWyWVCCvQ_gVPfOKG9-kGyorgXrg8dgt7tNd7zNzM9LjbXx3e8j8rhq8U5HKEbttEPRS5mhuzT4nmcjfMI7miR2MGt0kEKtL7z3wfyh0u3lb9qy11mPvzdtI1kQqOFsZ0cbveJOMiB7ooML5rbGPvqD_ZOMMHFEka0u9uGx_GZKEHfu9qexTX3UnjVHLkSvJNXnwlqjrMlZPFvxIgipTlBE-Fj0Hsyzrg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-card via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary font-micro-meta text-micro-meta tracking-wider uppercase">
+                Listed 48h Ago
+              </span>
+<span class="px-2.5 py-1 rounded-full bg-status-verified/20 backdrop-blur-md text-status-verified font-micro-meta text-micro-meta tracking-wider uppercase">
+                Freehold
+              </span>
+</div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-lowest/80 backdrop-blur-md text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">£18,000,000</span>
+<span class="font-micro-meta text-micro-meta text-chart-accent uppercase tracking-wider">Yield Est: 5.1%</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal">The Belgravia Pavilion</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Chesham Place, London SW1X</p>
+</div>
+<!-- Specs line -->
+<div class="flex items-center justify-between py-2 text-on-secondary-container font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">bed</span>
+<span>4 Suites</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">local_parking</span>
+<span>3 Bays</span>
+</div>
+<span class="text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline">square_foot</span>
+<span>6,450 sq ft</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-5 pt-0 flex items-center gap-2">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>View Title Deeds</span>
+</button>
+<button class="p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="Request Tour">
+<span class="material-symbols-outlined text-[18px]">event</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 3: VIP PRIVATE ITINERARY & CONCIERGE -->
+<section class="space-y-6" id="tab-content-itinerary">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-light">VIP Concierge &amp; Private Viewing Log</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Physical security arrangements, rotary transport, and confidential live architect walkthroughs</p>
+</div>
+<button class="px-4 py-2 rounded-xl bg-surface-container text-primary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+<span>Contact Private Concierge</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Tour 1: Kyoto Helicopter Arrival -->
+<div class="bg-surface-card rounded-xl p-6 shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-micro-meta text-micro-meta uppercase tracking-wider">
+              Physical Inspection • Private Flight
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal pt-1">Kyoto Estate Rotary Arrival</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Destination: The Obsidian Basalt Sanctuary (Higashiyama)</p>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">14 NOV</span>
+<span class="font-micro-meta text-micro-meta text-outline block">14:00 JST</span>
+</div>
+</div>
+<div class="my-6 p-4 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-chart-accent text-[20px]">flight_takeoff</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary">Kansai International (RJBB) → Higashiyama Helipad</p>
+<p class="font-micro-meta text-micro-meta text-outline">Airbus ACH130 • Tail: JA-880E • Discreet Diplomatic Handling</p>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-status-verified text-[20px]">security</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary">On-Ground Escort: Century Black Label Armored Transport</p>
+<p class="font-micro-meta text-micro-meta text-outline">Accompanied by Principal Architect Kenjiro Takahashi &amp; Vance Sterling</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-micro-meta text-micro-meta text-status-verified flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+            Flight Plan Approved • Airspace Cleared
+          </span>
+<button class="px-4 py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm transition-colors">
+            Download Security Manifest
+          </button>
+</div>
+</div>
+<!-- Tour 2: Virtual 4K Encrypted Stream -->
+<div class="bg-surface-card rounded-xl p-6 shadow-md relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="px-2 py-0.5 rounded-full bg-chart-accent/15 text-chart-accent font-micro-meta text-micro-meta uppercase tracking-wider">
+              Encrypted Telepresence 4K
+            </span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-normal pt-1">Cap d'Antibes Engineering Audit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live Walkthrough • Villa L'Azur Seawall &amp; Geotechnical Integrity</p>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-semibold">18 NOV</span>
+<span class="font-micro-meta text-micro-meta text-outline block">10:30 CET</span>
+</div>
+</div>
+<div class="my-6 p-4 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-chart-accent text-[20px]">videocam</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary">End-to-End Quantum Encrypted Video Pipeline</p>
+<p class="font-micro-meta text-micro-meta text-outline">Marine structural engineers live on-site with LiDAR sensor suite</p>
+</div>
+</div>
+<div class="h-[1px] bg-surface-container-highest"></div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-[20px]">vpn_key</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary">Passkey Token: #PK-9918-AZUR</p>
+<p class="font-micro-meta text-micro-meta text-outline">Single-use authentication key issued to Lord Sterling Finch</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-micro-meta text-micro-meta text-outline flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-pending"></span>
+            Awaiting Stream Activation
+          </span>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm transition-transform hover:-translate-y-0.5">
+            Test Secure Feed
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 4: ENCRYPTED DUE DILIGENCE & DOSSIERS -->
+<section class="space-y-6" id="tab-content-dossiers">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-light">Encrypted Dossiers &amp; Forensic Deeds</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biometrically gated institutional documentation and unredacted sovereign registries</p>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase text-status-verified flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>
+        Vault Sync: Up to date
+      </span>
+</div>
+<div class="bg-surface-card rounded-xl p-6 shadow-md">
+<div class="space-y-4">
+<!-- Document Row 1 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">folder_zip</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Kyoto Basalt Sanctuary - Complete Geotechnical &amp; Title Pack</h4>
+<p class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">PDF • 148 MB • SHA-256 Verified • Notarised in Tokyo District Court</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-surface-lowest text-status-verified font-micro-meta text-micro-meta uppercase">Signature Verified</span>
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm flex items-center gap-1.5 hover:opacity-90">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Decrypted Download</span>
+</button>
+</div>
+</div>
+<!-- Document Row 2 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-chart-accent text-[20px]">account_balance</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Cap d'Antibes Maritime Perimeter Survey &amp; Seawall Rights</h4>
+<p class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">PDF • 42 MB • Bureau Veritas Marine Certified</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-surface-lowest text-status-verified font-micro-meta text-micro-meta uppercase">Unencumbered</span>
+<button class="px-4 py-2 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-bright">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Online</span>
+</button>
+</div>
+</div>
+<!-- Document Row 3 -->
+<div class="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors gap-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-pending text-[20px]">gavel</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-primary">Belgravia Penthouse Leasehold Enfranchisement Valuation</h4>
+<p class="font-micro-meta text-micro-meta text-outline uppercase tracking-wider">PDF • 19 MB • Knight Frank Prime Central London Appraisal</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="px-3 py-1 rounded-full bg-surface-lowest text-status-pending font-micro-meta text-micro-meta uppercase">Under Counsel Review</span>
+<button class="px-4 py-2 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1.5 hover:bg-surface-bright">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Online</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 5: ESCROW & AMORTISATION ENGINE -->
+<section class="space-y-6" id="tab-content-escrow">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-light">Sovereign Financing &amp; Escrow Engine</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lombard lending facility simulator, multi-currency yields, and Swiss custody covenants</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Calculator Inputs -->
+<div class="lg:col-span-2 bg-surface-card rounded-xl p-6 shadow-md space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Purchase Consideration</label>
+<div class="relative">
+<span class="absolute left-4 top-3 text-outline font-label-lg text-label-lg">$</span>
+<input class="w-full pl-8 pr-4 py-2.5 rounded-xl bg-surface-container-low text-primary font-label-lg text-label-lg focus:outline-none focus:bg-surface-container" id="calc-price" oninput="recomputeFinancing()" type="text" value="33,500,000"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lombard Facility LTV (% Ratio)</label>
+<div class="relative">
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg cursor-pointer" id="calc-ltv-slider" max="65" min="10" oninput="updateLtvValue(this.value)" type="range" value="40"/>
+<div class="flex justify-between font-micro-meta text-micro-meta text-outline mt-1">
+<span>10% Conservative</span>
+<span class="text-primary font-semibold" id="ltv-display">40% LTV</span>
+<span>65% Max Private Bank</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+<div class="p-4 rounded-xl bg-surface-container-low space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Equity Requirement</span>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold" id="calc-equity">$20,100,000</p>
+<span class="font-micro-meta text-micro-meta text-outline">Liquid reserves</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Facility Advanced</span>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold" id="calc-loan">$13,400,000</p>
+<span class="font-micro-meta text-micro-meta text-chart-accent">SOFR + 1.15% margin</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low space-y-1">
+<span class="font-micro-meta text-micro-meta uppercase text-outline">Annual Financing Carry</span>
+<p class="font-headline-sm text-headline-sm text-primary font-semibold" id="calc-carry">$683,400</p>
+<span class="font-micro-meta text-micro-meta text-outline">Tax deductible</span>
+</div>
+</div>
+<!-- Escrow Milestones -->
+<div class="space-y-3 pt-4">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Escrow Distribution Breakdown</h4>
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-primary h-full" style="width: 10%;" title="Initial Deposit: 10%"></div>
+<div class="bg-chart-accent h-full" style="width: 25%;" title="Title Clear: 25%"></div>
+<div class="bg-surface-container-highest h-full" style="width: 65%;" title="Final Conveyance: 65%"></div>
+</div>
+<div class="flex items-center justify-between font-micro-meta text-micro-meta text-outline">
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-primary"></span> 10% Initial Deposit Held</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-chart-accent"></span> 25% Title Searches</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-surface-container-highest"></span> 65% Final Conveyance</span>
+</div>
+</div>
+</div>
+<!-- Private Banker Contact Module -->
+<div class="bg-surface-card rounded-xl p-6 shadow-md flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Banque Pictet &amp; Cie</h4>
+<p class="font-micro-meta text-micro-meta text-outline">Geneva Headquarters • Private Banking Division</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Assigned Structurer:</span>
+<span class="text-primary font-medium">Marc-Antoine de Saussure</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Pre-Approved Liquidity:</span>
+<span class="text-status-verified font-medium">$100,000,000</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Lombard Asset Base:</span>
+<span class="text-on-surface">AAA Sovereign Debt</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Funds can be locked and wired via Pictet multi-currency SWIFT within 120 minutes of formal execution.
+          </p>
+</div>
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:-translate-y-0.5 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Request Facility Drawdown Letter</span>
+</button>
+</div>
+</div>
+</section>
+<!-- MODAL 1: LIQUIDITY PRE-QUALIFICATION -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4" id="modal-liquidity">
+<div class="bg-surface-card rounded-xl max-w-lg w-full p-6 shadow-2xl space-y-6 relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-status-verified/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-status-verified text-[18px]">lock</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sovereign Proof of Funds</h3>
+<p class="font-micro-meta text-micro-meta text-outline">Bank-Grade Verification Token</p>
+</div>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-outline hover:text-primary" onclick="toggleModal('modal-liquidity')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 rounded-xl bg-surface-container-low space-y-2">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Certifying Institution</span>
+<span class="text-primary font-medium">Pictet Private Wealth Geneva</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Verified Unencumbered Capital</span>
+<span class="text-status-verified font-medium">$125,000,000 USD Equiv.</span>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-outline">Token Expiration</span>
+<span class="text-on-surface">31 December 2025</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          This digital certificate automatically attests sovereign liquid standing to listing principals without disclosing specific brokerage account numbers.
+        </p>
+</div>
+<div class="flex items-center justify-end gap-3 pt-4">
+<button class="px-4 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" onclick="toggleModal('modal-liquidity')">
+          Dismiss
+        </button>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm hover:-translate-y-0.5 transition-transform flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span>Dispatch to Seller Agent</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MODAL 2: CARTOGRAPHIC ANALYSIS OVERLAY -->
+<div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-lg hidden items-center justify-center p-6" id="modal-cartography">
+<div class="bg-surface-card rounded-xl max-w-5xl w-full h-[80vh] p-6 shadow-2xl flex flex-col space-y-4 relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-chart-accent text-[24px]">public</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sovereign GIS &amp; Global Microclimate Mapping</h3>
+<p class="font-micro-meta text-micro-meta text-outline">Real-Time Radar • Flight Corridors • Topographical Elevation</p>
+</div>
+</div>
+<button class="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-outline hover:text-primary" onclick="toggleModal('modal-cartography')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Map Display Container -->
+<div class="flex-1 w-full rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" data-location="Kyoto, Japan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkVip38OZjMJcqlKgHhxp1bDu_UTOwH9NtoSW9oubXhrx7liRvJh_nocIYqZ2-pzWlWbbLyGrbk-6c5XYDhF_JBxyPCBc7nAvoza1kD8EmaWQdz3btP6Ekuco3r25McLDpiyrV0tZ2Yy-9JLNpA-kdudwg2oRK6Wk-OMldrYtbgDcn7e1TlVCHmPJSmti0JDOeQ9uxsfqBhan6RY0ZiMwaQd-mDNPbUyck-jinTw66maRb0vJqU4Ix1w')"></div>
+<div class="absolute top-4 left-4 p-4 rounded-xl bg-surface-lowest/90 backdrop-blur-md max-w-xs space-y-2">
+<span class="font-micro-meta text-micro-meta uppercase text-chart-accent">Target Coordinate Selected</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Higashiyama, Kyoto</h4>
+<p class="font-micro-meta text-micro-meta text-outline leading-tight">Elevation: 220m • Noise Quotient: 18dB (Ultra-Quiet) • Helipad: 4.2 km</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-4 text-outline font-micro-meta text-micro-meta uppercase">
+<span>Lat: 34.9949° N</span>
+<span>Lon: 135.7850° E</span>
+<span class="text-status-verified">Geotech Survey: Stable Granite</span>
+</div>
+<button class="px-5 py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm" onclick="toggleModal('modal-cartography')">
+          Return to Portal
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchTab(targetId) {
+    const tabs = ['offers', 'saved', 'itinerary', 'dossiers', 'escrow'];
+    tabs.forEach(tab => {
+      const contentEl = document.getElementById('tab-content-' + tab);
+      const btnEl = document.getElementById('tab-btn-' + tab);
+      if (contentEl && btnEl) {
+        if (tab === targetId) {
+          contentEl.classList.remove('hidden');
+          btnEl.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          btnEl.classList.add('bg-primary', 'text-on-primary');
+        } else {
+          contentEl.classList.add('hidden');
+          btnEl.classList.add('bg-surface-container', 'text-on-surface-variant');
+          btnEl.classList.remove('bg-primary', 'text-on-primary');
+        }
+      }
+    });
+  }
+
+  function toggleModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      } else {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    }
+  }
+
+  function updateLtvValue(val) {
+    const display = document.getElementById('ltv-display');
+    if (display) display.innerText = val + '% LTV';
+    recomputeFinancing();
+  }
+
+  function recomputeFinancing() {
+    const priceInput = document.getElementById('calc-price');
+    const ltvSlider = document.getElementById('calc-ltv-slider');
+    if (!priceInput || !ltvSlider) return;
+
+    let cleanPrice = parseFloat(priceInput.value.replace(/,/g, ''));
+    if (isNaN(cleanPrice) || cleanPrice <= 0) cleanPrice = 33500000;
+
+    const ltv = parseFloat(ltvSlider.value) / 100;
+    const loan = cleanPrice * ltv;
+    const equity = cleanPrice - loan;
+    const carry = loan * 0.051; // 5.1% illustrative sovereign borrowing rate
+
+    const equityEl = document.getElementById('calc-equity');
+    const loanEl = document.getElementById('calc-loan');
+    const carryEl = document.getElementById('calc-carry');
+
+    if (equityEl) equityEl.innerText = '$' + Math.round(equity).toLocaleString();
+    if (loanEl) loanEl.innerText = '$' + Math.round(loan).toLocaleString();
+    if (carryEl) carryEl.innerText = '$' + Math.round(carry).toLocaleString();
+  }
+
+  // Initial state: Start on Offers Tab
+  document.addEventListener('DOMContentLoaded', function() {
+    switchTab('offers');
+  });
+</script></main></div></body></html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#e5e2e1", "secondary": "#c7c6c6", "inverse-primary": "#5d5f5f", "secondary-fixed": "#e3e2e2", "tertiary-fixed-dim": "#c8c6c5", "surface-tint": "#c6c6c7", "surface-lowest": "#0a0a0a", "status-sale": "#ffffff", "primary": "#ffffff", "tertiary": "#ffffff", "primary-container": "#e2e2e2", "on-tertiary-container": "#656463", "surface-elevated": "#201f1f", "on-error": "#690005", "primary-fixed-dim": "#c6c6c7", "surface-variant": "#363434", "on-tertiary-fixed": "#1c1b1b", "surface-container-high": "#2b2a2a", "border-subtle": "rgba(255, 255, 255, 0.08)", "on-secondary-fixed-variant": "#464747", "on-surface-variant": "#c4c7c8", "error-container": "#93000a", "on-surface": "#e6e1e1", "status-rent": "#98c379", "error": "#ffb4ab", "on-primary": "#2f3131", "inverse-surface": "#e6e1e1", "on-error-container": "#ffdad6", "surface-base": "#141313", "status-verified": "#27c93f", "on-background": "#e6e1e1", "surface": "#141313", "on-secondary-container": "#b6b5b5", "surface-container-lowest": "#0f0e0e", "surface-container": "#201f1f", "inverse-on-surface": "#323030", "surface-overlay": "#2a2a2a", "border-hairline": "#444748", "on-secondary": "#303031", "on-tertiary-fixed-variant": "#474746", "on-secondary-fixed": "#1b1c1c", "surface-container-highest": "#363434", "background": "#141313", "on-primary-fixed-variant": "#454747", "status-error": "#ff5f56", "primary-fixed": "#e2e2e2", "outline-variant": "#444748", "on-primary-fixed": "#1a1c1c", "surface-dim": "#141313", "secondary-container": "#464747", "status-pending": "#ffbd2e", "secondary-fixed-dim": "#c7c6c6", "chart-accent": "#61afef", "surface-container-low": "#1c1b1b", "surface-card": "#1c1b1b", "on-tertiary": "#313030", "surface-bright": "#3a3939", "outline": "#8e9192", "tertiary-fixed": "#e5e2e1", "on-primary-container": "#636565" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-desktop": "2rem", "container-max": "75rem", "card-padding-lg": "2rem", "gutter-mobile": "1.25rem", "section-gap": "7.5rem", "base": "0.5rem", "card-padding-sm": "1.25rem" }, "fontFamily": { "display-xl-mobile": [ "Noto Serif" ], "label-lg": [ "Manrope" ], "micro-meta": [ "Manrope" ], "display-xl": [ "Noto Serif" ], "headline-lg": [ "Noto Serif" ], "headline-md": [ "Noto Serif" ], "headline-lg-mobile": [ "Noto Serif" ], "label-sm": [ "Manrope" ], "body-md": [ "Manrope" ], "body-sm": [ "Manrope" ], "body-lg": [ "Manrope" ], "headline-sm": [ "Manrope" ] }, "fontSize": { "display-xl-mobile": [ "2.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "label-lg": [ "0.875rem", { "lineHeight": "1.4", "letterSpacing": "0.04em", "fontWeight": "600" } ], "micro-meta": [ "0.625rem", { "lineHeight": "1.3", "letterSpacing": "0.15em", "fontWeight": "600" } ], "display-xl": [ "4.5rem", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lg": [ "2.5rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md": [ "2rem", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.875rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-sm": [ "0.75rem", { "lineHeight": "1.4", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "1rem", { "lineHeight": "1.6", "letterSpacing": "normal", "fontWeight": "400" } ], "body-sm": [ "0.875rem", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-sm": [ "1.25rem", { "lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500" } ] } } } }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><a class="font-headline-sm text-headline-sm tracking-tight text-primary uppercase" data-path="explore" href="#">EstatePro</a><span class="hidden xl:inline-block font-micro-meta text-micro-meta uppercase text-secondary tracking-widest pl-2">Private Reserve</span></div><nav class="hidden lg:flex items-center gap-6 xl:gap-8" data-active-classes="text-primary font-bold"><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="buy" href="#">Buy</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="rent" href="#">Rent</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="commercial" href="#">Commercial</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="developments" href="#">Developments</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="agents" href="#">Agents</a><a class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="mortgage" href="#">Mortgage</a></nav><div class="flex items-center gap-3 sm:gap-4"><div class="hidden md:flex items-center gap-2 font-label-sm text-label-sm text-secondary"><span class="hover:text-primary transition-colors cursor-pointer">USD $</span><span class="text-outline">|</span><span class="hover:text-primary transition-colors cursor-pointer">EN</span></div><button aria-label="Saved Properties" class="relative p-2 text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">favorite</span><span class="absolute top-1.5 right-1 w-4 h-4 rounded-full bg-surface-container-high text-[9px] font-bold text-primary flex items-center justify-center">3</span></button><a class="hidden sm:inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-transparent hover:bg-surface-elevated text-secondary-fixed hover:text-primary transition-all" data-path="list-property" href="#">List Property</a><a class="inline-flex items-center font-label-sm text-label-sm uppercase tracking-wider px-4 py-2 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors" data-path="portal-access" href="#">Sign In</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Macro Top Status Ribbon / Executive Ticker -->
+<div class="w-full bg-surface-container-lowest py-2.5 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3 overflow-x-auto whitespace-nowrap py-0.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-surface-container-high text-primary font-micro-meta text-micro-meta tracking-widest uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-status-verified animate-pulse"></span>
+          Q1 2025 Monograph Issued
+        </span>
+<span class="text-outline text-xs">/</span>
+<span class="font-micro-meta text-micro-meta text-secondary uppercase tracking-widest flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-chart-accent">dataset</span>
+          FINMA &amp; BIS Macro Feeds Active
+        </span>
+<span class="text-outline text-xs">/</span>
+<span class="font-micro-meta text-micro-meta text-on-surface-variant font-mono uppercase tracking-wider">
+          SHA-256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4
+        </span>
+</div>
+<div class="flex items-center gap-4 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[15px] text-status-verified">verified_user</span>
+          Sovereign Clearance Tier-1
+        </span>
+<span class="text-outline">|</span>
+<span class="font-mono text-xs text-on-surface-variant">UTC 14:02:19</span>
+</div>
+</div>
+</div>
+<!-- Hero & Executive Telemetry Header -->
+<section class="relative w-full bg-surface-base py-16 px-gutter-mobile lg:px-gutter-desktop overflow-hidden">
+<!-- Subtle architectural ambient gradient mesh -->
+<div class="absolute -top-32 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-0 left-1/4 w-[30rem] h-48 bg-chart-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" data-path="explore" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" data-path="explore" href="#">Macro Intelligence</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-medium">Sovereign Research Desk</span>
+</nav>
+<!-- Headline + Deck -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+<div class="lg:col-span-8 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-secondary font-micro-meta text-micro-meta uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Institutional Macro Research • Dossier Series #19
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-tight">
+            Global Prime Real Estate Market Intelligence &amp; Sovereign Capital Monograph
+          </h1>
+<p class="font-headline-md text-headline-md italic text-secondary font-light max-w-3xl leading-snug">
+            Quarterly Macro Vectors, Capital Flow Stratification, and Yield Compression Indices Across Tier-1 Sovereign Enclaves.
+          </p>
+</div>
+<!-- Quick Actions Panel -->
+<div class="lg:col-span-4 flex flex-col gap-3 justify-end">
+<button class="w-full inline-flex items-center justify-between px-5 py-3.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-all group shadow-lg shadow-black/40" type="button">
+<span class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px]">download</span>
+              Download Monograph (Q1-2025 PDF)
+            </span>
+<span class="text-xs font-mono opacity-70">84 pgs</span>
+</button>
+<div class="grid grid-cols-2 gap-2.5">
+<button class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded bg-surface-container hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Stress Test
+            </button>
+<button class="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded bg-surface-container hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+              Institutional Feed
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Capital Indicators & Macro Ticker Strip -->
+<section class="w-full bg-surface-container-lowest py-10 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Metric 1 -->
+<div class="p-6 rounded bg-surface-card shadow-md flex flex-col justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Cross-Border Ultra-Prime</span>
+<span class="flex items-center text-xs font-mono text-status-verified font-medium">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>+14.2%
+            </span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">$48.2B <span class="text-headline-sm font-label-sm text-secondary">USD</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 flex items-center justify-between">
+<span>Primary Corridor:</span>
+<span class="text-primary font-medium">Geneva → Tokyo</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 px-2.5 py-1.5 rounded">
+<span>Rolling 90D Vol</span>
+<span class="text-primary font-medium">$16.1B Settled</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-6 rounded bg-surface-card shadow-md flex flex-col justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Weighted Sovereign Yield</span>
+<span class="flex items-center text-xs font-mono text-status-rent font-medium">
+<span class="material-symbols-outlined text-[14px]">trending_down</span>-18 bps
+            </span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">5.92% <span class="text-headline-sm font-label-sm text-secondary">Net</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 flex items-center justify-between">
+<span>Compression Core:</span>
+<span class="text-primary font-medium">Alpine Freeholds</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 px-2.5 py-1.5 rounded">
+<span>Inflation Hedge Delta</span>
+<span class="text-primary font-medium">+240 bps real</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-6 rounded bg-surface-card shadow-md flex flex-col justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Safe-Haven Capital Velocity</span>
+<span class="flex items-center text-xs font-mono text-chart-accent font-medium">
+<span class="material-symbols-outlined text-[14px]">bolt</span>Fast-Track
+            </span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">28 <span class="text-headline-sm font-label-sm text-secondary">Days</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 flex items-center justify-between">
+<span>SPV Settlement Speed:</span>
+<span class="text-primary font-medium">DIFC / BVI Vaults</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 px-2.5 py-1.5 rounded">
+<span>Direct Title Conveyance</span>
+<span class="text-primary font-medium">74 Days avg</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="p-6 rounded bg-surface-card shadow-md flex flex-col justify-between hover:bg-surface-container transition-colors group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Trophy Scarcity Score</span>
+<span class="flex items-center text-xs font-mono text-status-pending font-medium">
+<span class="material-symbols-outlined text-[14px]">lock</span>Peak Scarcity
+            </span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight font-light">98.4 <span class="text-headline-sm font-label-sm text-secondary">/ 100</span></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 flex items-center justify-between">
+<span>Constrained Zones:</span>
+<span class="text-primary font-medium">Lake Como • Kyoto</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 px-2.5 py-1.5 rounded">
+<span>Global Pipeline Deficit</span>
+<span class="text-primary font-medium">-34% YoY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Capital Flow Corridors & Liquidity Stratification -->
+<section class="w-full bg-surface py-20 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto space-y-8">
+<!-- Section Header with Filters -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Spatial Financial Geography</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+            Global Capital Flow Corridors &amp; Liquidity Stratification
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Real-time cross-border family office capital migrations tracked via institutional escrow and sovereign conveyance filings.
+          </p>
+</div>
+<!-- Corridors Pill Filter -->
+<div class="flex items-center gap-1.5 overflow-x-auto p-1.5 bg-surface-container-low rounded-full self-start md:self-auto">
+<button class="px-4 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors shadow-sm">All Corridors</button>
+<button class="px-4 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Zurich • Geneva</button>
+<button class="px-4 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Kyoto • Tokyo</button>
+<button class="px-4 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">London Mayfair</button>
+<button class="px-4 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Riviera</button>
+<button class="px-4 py-1.5 rounded-full hover:bg-surface-container text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">DIFC • UAE</button>
+</div>
+</div>
+<!-- Corridor Cards Grid & Interactive Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Macro Flow Visualizer (2 Cols) -->
+<div class="lg:col-span-2 bg-surface-card rounded-xl p-8 shadow-xl flex flex-col justify-between space-y-6">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Cross-Border Telemetry</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Sovereign Net Capital Allocations (Q1 2025)</h3>
+</div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-chart-accent bg-surface-container px-3 py-1 rounded">
+              Live Inflow Vectors
+            </span>
+</div>
+<!-- Stylized SVG Flow Chart -->
+<div class="w-full bg-surface-container-lowest p-6 rounded-lg">
+<svg class="w-full h-48" fill="none" viewbox="0 0 700 190" xmlns="http://www.w3.org/2000/svg">
+<!-- Defs for gradients -->
+<defs>
+<lineargradient id="vectorGrad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#61afef" stop-opacity="0.9"></stop>
+</lineargradient>
+<lineargradient id="vectorGrad2" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#c7c6c6" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#27c93f" stop-opacity="0.8"></stop>
+</lineargradient>
+<lineargradient id="vectorGrad3" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="#e5e2e1" stop-opacity="0.9"></stop>
+</lineargradient>
+</defs>
+<!-- Node Points Left (Origins) -->
+<circle cx="50" cy="35" fill="#ffffff" r="5"></circle>
+<text fill="#e6e1e1" font-family="Manrope" font-size="11" font-weight="600" x="65" y="39">Zurich &amp; Geneva Private Banks</text>
+<text fill="#8e9192" font-family="Manrope" font-size="9" x="65" y="52">$1.42B Allocated</text>
+<circle cx="50" cy="95" fill="#c7c6c6" r="5"></circle>
+<text fill="#e6e1e1" font-family="Manrope" font-size="11" font-weight="600" x="65" y="99">London Single Family Offices</text>
+<text fill="#8e9192" font-family="Manrope" font-size="9" x="65" y="112">€890M Liquid Outflow</text>
+<circle cx="50" cy="155" fill="#ffffff" r="5"></circle>
+<text fill="#e6e1e1" font-family="Manrope" font-size="11" font-weight="600" x="65" y="159">GCC Sovereign Wealth Funds</text>
+<text fill="#8e9192" font-family="Manrope" font-size="9" x="65" y="172">$2.15B Mandate</text>
+<!-- Flow Curves -->
+<path d="M 230 35 C 380 35, 420 40, 520 40" stroke="url(#vectorGrad1)" stroke-dasharray="4 2" stroke-linecap="round" stroke-width="3"></path>
+<path d="M 215 95 C 360 95, 410 100, 520 100" stroke="url(#vectorGrad2)" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M 230 155 C 360 155, 400 160, 520 160" stroke="url(#vectorGrad3)" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Inter-corridor cross-connects -->
+<path d="M 230 35 C 360 35, 400 160, 520 160" opacity="0.4" stroke="#444748" stroke-dasharray="2 3" stroke-width="1"></path>
+<path d="M 230 155 C 380 155, 420 40, 520 40" opacity="0.4" stroke="#444748" stroke-dasharray="2 3" stroke-width="1"></path>
+<!-- Node Points Right (Destinations) -->
+<circle cx="525" cy="40" fill="#61afef" r="6"></circle>
+<text fill="#ffffff" font-family="Manrope" font-size="11" font-weight="600" x="540" y="38">Kyoto Forest &amp; Tokyo Towers</text>
+<text fill="#61afef" font-family="Manrope" font-size="9" x="540" y="52">JPY Hedge • Yield +6.2%</text>
+<circle cx="525" cy="100" fill="#27c93f" r="6"></circle>
+<text fill="#ffffff" font-family="Manrope" font-size="11" font-weight="600" x="540" y="98">Cap d'Antibes Waterfronts</text>
+<text fill="#27c93f" font-family="Manrope" font-size="9" x="540" y="112">Monaco Buffer • 0% Transfer</text>
+<circle cx="525" cy="160" fill="#e5e2e1" r="6"></circle>
+<text fill="#ffffff" font-family="Manrope" font-size="11" font-weight="600" x="540" y="158">Swiss Alpine Valais Sanctuaries</text>
+<text fill="#8e9192" font-family="Manrope" font-size="9" x="540" y="172">Lex Koller Exempted SPVs</text>
+</svg>
+</div>
+<!-- Telemetry Table Breakdown -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="text-secondary font-label-sm text-label-sm uppercase tracking-wider bg-surface-container/50">
+<th class="py-2.5 px-4 rounded-l">Corridor Vector</th>
+<th class="py-2.5 px-3">Capital Volume</th>
+<th class="py-2.5 px-3">Friction Index</th>
+<th class="py-2.5 px-3">FX Parity Yield</th>
+<th class="py-2.5 px-4 rounded-r text-right">Regulatory Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5">
+<tr class="hover:bg-surface-elevated/60 transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-chart-accent"></span>
+                    Zurich → Kyoto Forests
+                  </td>
+<td class="py-3 px-3 font-mono text-primary">$1.42B USD</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-micro-meta text-micro-meta text-status-verified uppercase">Low Friction</span>
+</td>
+<td class="py-3 px-3 font-mono text-status-rent">+312 bps</td>
+<td class="py-3 px-4 text-right text-xs text-secondary">Freehold Acquisition Open</td>
+</tr>
+<tr class="hover:bg-surface-elevated/60 transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+                    London → French Riviera
+                  </td>
+<td class="py-3 px-3 font-mono text-primary">€890M EUR</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-micro-meta text-micro-meta text-status-pending uppercase">Moderate SPV</span>
+</td>
+<td class="py-3 px-3 font-mono text-status-rent">+180 bps</td>
+<td class="py-3 px-4 text-right text-xs text-secondary">Double Tax Treaty v3.1</td>
+</tr>
+<tr class="hover:bg-surface-elevated/60 transition-colors">
+<td class="py-3 px-4 font-medium text-primary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                    GCC DIFC → Swiss Valais
+                  </td>
+<td class="py-3 px-3 font-mono text-primary">$2.15B USD</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded bg-surface-container font-micro-meta text-micro-meta text-status-verified uppercase">Institutional Desk</span>
+</td>
+<td class="py-3 px-3 font-mono text-status-rent">+425 bps</td>
+<td class="py-3 px-4 text-right text-xs text-secondary">Commercial Lex Koller Exemption</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Corridor Analysis & Risk Radar Sidebar -->
+<div class="bg-surface-card rounded-xl p-8 shadow-xl flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Jurisdictional Risk Radar</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">radar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sovereign Friction &amp; Shielding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+              Composite index scoring wealth shielding, geopolitical isolation, and physical perimeter verifiability.
+            </p>
+</div>
+<!-- Progress / Scored Indicators -->
+<div class="space-y-4">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="text-primary">Swiss Cantonal Autonomy (Zug / Schwyz)</span>
+<span class="font-mono text-status-verified">99.2 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 99.2%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="text-primary">Japan Rural Freehold Security (Kansai)</span>
+<span class="font-mono text-chart-accent">96.4 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-chart-accent h-full rounded-full" style="width: 96.4%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="text-primary">Monaco Port Principality Ring</span>
+<span class="font-mono text-primary">94.8 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 94.8%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1.5">
+<span class="text-primary">Dubai DIFC Private Client Escrow</span>
+<span class="font-mono text-status-rent">91.0 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-status-rent h-full rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+<!-- Bottom Alert Box -->
+<div class="p-4 rounded bg-surface-elevated flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">policy</span>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block">Lex Koller Special Alert</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">
+                Cantonal quota revisions taking effect Q3 2025 will cap non-resident residential SPV transfers in Valais by 14%.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quarterly Monograph Featured Dossier (Large Editorial Feature) -->
+<section class="w-full bg-surface-container-lowest py-24 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="relative bg-surface-card rounded-2xl overflow-hidden shadow-2xl p-8 lg:p-14">
+<!-- Monograph Inner Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Monograph Dossier Cover Visual -->
+<div class="lg:col-span-5 relative group">
+<div class="relative aspect-[3/4] w-full rounded-lg overflow-hidden bg-surface-elevated shadow-2xl">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Editorial monograph publication cover for EstatePro luxury real estate, featuring minimalist architectural blueprint schematics of an ultra-modern concrete and cedar sanctuary surrounded by misty mountain pines in dark obsidian and slate tones, sophisticated editorial typography and Swiss minimalist layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVBQMnjiM6EUOWP4PZGcdI1SpNJOcwSkPNgyXZwPpQEKSLPRoiwO-92UZIsoV97wdwi7b06KVEelfQ3iaGIevxaitKEHm0GCACfHGRnrp8Wgc60V0stl9znZ0QfmbTw6uGiMEGRM4pzlCunQ0d6w3zBqclarMplwQ2tYqNCEbYtUajMjJMq3u73jxZO81SAZuLUZRekSDVQXicE1qnOKSkOaN84LQHzIA8VN6UIAUCogFAvY3ODOaODw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-lowest via-surface-lowest/40 to-transparent"></div>
+<!-- Floating Dossier Badge -->
+<div class="absolute top-6 left-6 flex flex-col gap-1">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest px-3 py-1 rounded bg-surface-lowest/80 text-primary backdrop-blur">
+                  EstatePro Dossier No. 19
+                </span>
+<span class="font-micro-meta text-micro-meta tracking-widest text-secondary font-mono px-3">
+                  ISBN 978-0-99812-4
+                </span>
+</div>
+<!-- Cover Abstract Meta -->
+<div class="absolute bottom-6 left-6 right-6 space-y-2">
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Lead Monograph Study</div>
+<h4 class="font-headline-sm text-headline-sm text-primary leading-tight">
+                  The Re-Emergence of Architectural Seclusion: Autonomous Compounds &amp; Sub-Alpine Bastions
+                </h4>
+<div class="flex items-center justify-between text-xs text-on-surface-variant font-mono pt-2">
+<span>84 Editorial Pages</span>
+<span>Chief Econometrician Review</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Monograph Editorial Details & Core Findings -->
+<div class="lg:col-span-7 space-y-8">
+<div class="space-y-3">
+<div class="flex items-center gap-2 font-micro-meta text-micro-meta uppercase tracking-widest text-chart-accent">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+                Executive Intelligence Abstract • Q1 2025 Edition
+              </div>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-tight">
+                Architectural Seclusion &amp; The Flight to Sovereign Freeholds
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                As fiscal surveillance intensifies across traditional cosmopolitan centers, Tier-1 sovereign wealth has decisively pivoted toward unassailable, autonomous land parcels. This dossier examines the pricing power, engineering infrastructure, and legal instruments powering this transition across 14 sovereign jurisdictions.
+              </p>
+</div>
+<!-- Key Findings Callout Grid -->
+<div class="space-y-3">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-status-verified">query_stats</span>
+                Key Monograph Findings
+              </div>
+<div class="p-4 rounded bg-surface-container hover:bg-surface-elevated transition-colors flex items-start gap-4">
+<span class="font-mono text-primary font-bold text-sm bg-surface-card px-2.5 py-1 rounded shrink-0">01</span>
+<div>
+<h5 class="font-label-sm text-label-sm text-primary">Zero-Carbon Geothermal Autonomy Premium</h5>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                    Self-sustaining micro-grids and private geothermal wells now command an unyielding 22% sovereign valuation premium over connected estates.
+                  </p>
+</div>
+</div>
+<div class="p-4 rounded bg-surface-container hover:bg-surface-elevated transition-colors flex items-start gap-4">
+<span class="font-mono text-primary font-bold text-sm bg-surface-card px-2.5 py-1 rounded shrink-0">02</span>
+<div>
+<h5 class="font-label-sm text-label-sm text-primary">Multi-Jurisdictional Holding Conveyance Speed</h5>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                    Bilateral multi-tier SPV holding structures outperform direct physical conveyancing by 3.4x in time-to-settlement and tax neutrality.
+                  </p>
+</div>
+</div>
+<div class="p-4 rounded bg-surface-container hover:bg-surface-elevated transition-colors flex items-start gap-4">
+<span class="font-mono text-primary font-bold text-sm bg-surface-card px-2.5 py-1 rounded shrink-0">03</span>
+<div>
+<h5 class="font-label-sm text-label-sm text-primary">UNESCO-Adjacent Japanese Buffer Surge</h5>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                    Institutional acquisition demand for buffer forest estates in Nagano and Kyoto increased by 180% year-over-year, leading all APAC asset tiers.
+                  </p>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<button class="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                Inspect Executive Summary
+              </button>
+<button class="inline-flex items-center gap-2 px-6 py-3.5 rounded bg-surface-container hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_open</span>
+                Request Embargoed Data Feed
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asset Valuation & Yield Compression Benchmark Matrix -->
+<section class="w-full bg-surface py-20 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto space-y-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Empirical Valuation Analytics</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight mt-1">
+            Prime Asset Class Valuation &amp; Yield Benchmark
+          </h2>
+</div>
+<div class="flex items-center gap-2 font-mono text-xs text-secondary">
+<span class="w-2 h-2 rounded-full bg-status-verified"></span>
+          Normalized against 2020 Constant USD Baseline
+        </div>
+</div>
+<!-- Comparative Asset Class Matrix Table -->
+<div class="bg-surface-card rounded-xl overflow-hidden shadow-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-4 px-6">Asset Classification Archetype</th>
+<th class="py-4 px-4">Median Price / Sq.Ft</th>
+<th class="py-4 px-4">5-Yr Net Capital Gain</th>
+<th class="py-4 px-4">Net Yield (Cap Rate)</th>
+<th class="py-4 px-4">Resilience Rating</th>
+<th class="py-4 px-6 text-right">Liquidity Depth</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-elevated/80 transition-colors">
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">Architectural Sanctuaries</div>
+<div class="text-xs text-secondary mt-0.5">Kengo Kuma, Olson Kundig, Tadao Ando Engineered Estates</div>
+</td>
+<td class="py-5 px-4 font-mono text-primary font-medium text-base">$3,450 <span class="text-xs text-on-surface-variant font-sans">/ sq.ft</span></td>
+<td class="py-5 px-4">
+<span class="inline-flex items-center gap-1 font-mono text-status-verified font-medium text-base">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+41.8%
+                  </span>
+</td>
+<td class="py-5 px-4 font-mono text-primary">5.20% Net</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-semibold">99.1</span>
+<span class="px-2 py-0.5 rounded bg-status-verified/10 text-status-verified font-micro-meta text-micro-meta uppercase tracking-wider">Apex</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="font-mono text-xs text-secondary">$3.2B Active Depth</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-elevated/80 transition-colors">
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">Historic Belle Époque &amp; Coastal Bastions</div>
+<div class="text-xs text-secondary mt-0.5">Cap d'Antibes, Portofino, Saint-Jean-Cap-Ferrat Freeholds</div>
+</td>
+<td class="py-5 px-4 font-mono text-primary font-medium text-base">$2,890 <span class="text-xs text-on-surface-variant font-sans">/ sq.ft</span></td>
+<td class="py-5 px-4">
+<span class="inline-flex items-center gap-1 font-mono text-status-verified font-medium text-base">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+28.4%
+                  </span>
+</td>
+<td class="py-5 px-4 font-mono text-primary">4.15% Net</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-semibold">94.6</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-micro-meta text-micro-meta uppercase tracking-wider">Prime</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="font-mono text-xs text-secondary">$2.1B Active Depth</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-elevated/80 transition-colors">
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">Metropolitan Sovereign Penthouses</div>
+<div class="text-xs text-secondary mt-0.5">Mayfair, Upper East Side, Roppongi Hills, Zurich Enge</div>
+</td>
+<td class="py-5 px-4 font-mono text-primary font-medium text-base">$4,120 <span class="text-xs text-on-surface-variant font-sans">/ sq.ft</span></td>
+<td class="py-5 px-4">
+<span class="inline-flex items-center gap-1 font-mono text-status-verified font-medium text-base">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+33.2%
+                  </span>
+</td>
+<td class="py-5 px-4 font-mono text-primary">6.45% Net</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-semibold">96.0</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-micro-meta text-micro-meta uppercase tracking-wider">Prime</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="font-mono text-xs text-secondary">$5.8B Active Depth</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-elevated/80 transition-colors">
+<td class="py-5 px-6">
+<div class="font-headline-sm text-headline-sm text-primary">Private Archipelagos &amp; Autonomous Citadels</div>
+<div class="text-xs text-secondary mt-0.5">Bahamian Exumas, Cyclades Private Outposts, Hebrides Freeholds</div>
+</td>
+<td class="py-5 px-4 font-mono text-primary font-medium text-base">$1,980 <span class="text-xs text-on-surface-variant font-sans">/ sq.ft</span></td>
+<td class="py-5 px-4">
+<span class="inline-flex items-center gap-1 font-mono text-status-verified font-medium text-base">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>+52.0%
+                  </span>
+</td>
+<td class="py-5 px-4 font-mono text-primary">3.90% Net</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-primary font-semibold">98.7</span>
+<span class="px-2 py-0.5 rounded bg-status-verified/10 text-status-verified font-micro-meta text-micro-meta uppercase tracking-wider">Apex</span>
+</div>
+</td>
+<td class="py-5 px-6 text-right">
+<span class="font-mono text-xs text-secondary">$1.4B Active Depth</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-surface-container flex flex-wrap items-center justify-between text-xs text-secondary font-mono gap-4">
+<span>*Resilience Rating models 2008 &amp; 2020 liquidity shock drawdowns versus physical asset recovery horizons.</span>
+<a class="text-primary hover:underline flex items-center gap-1" href="#">
+            Download Raw Telemetry CSV
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Commentary & Sovereign Advisory Council -->
+<section class="w-full bg-surface-container-lowest py-20 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto space-y-16">
+<!-- Managing Partner Quotation Callout -->
+<div class="relative bg-surface-card rounded-xl p-10 lg:p-14 overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-5 text-primary">
+<span class="material-symbols-outlined text-[240px]">format_quote</span>
+</div>
+<div class="relative z-10 max-w-3xl space-y-6">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Managing Partner Perspective</span>
+<blockquote class="font-headline-md text-headline-md text-primary leading-snug italic font-light">
+            “Capital preservation in the 2025–2030 cycle is no longer defined by liquid paper yield, but by unencumbered physical sovereignty and irreplaceable architectural provenance.”
+          </blockquote>
+<div class="flex items-center gap-4 pt-2">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-primary">
+              VS
+            </div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary">Vance Sterling</div>
+<div class="font-body-sm text-body-sm text-secondary">Senior Managing Partner, Sovereign Strategy • EstatePro Global</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Advisory Council Profiles -->
+<div class="space-y-8">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Sovereign Research Directorate</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Research Committee &amp; Lead Fellows</h3>
+</div>
+<span class="text-xs font-mono text-secondary">Geneva • London • Tokyo</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Fellow 1 -->
+<div class="p-6 rounded bg-surface-card flex flex-col justify-between space-y-6 hover:bg-surface-container transition-colors">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-mono text-sm">
+                  HL
+                </div>
+<div>
+<div class="font-label-lg text-label-lg text-primary">Dr. Henriette Laurent</div>
+<div class="font-body-sm text-body-sm text-secondary text-xs">Chief Econometrician • Geneva</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs leading-relaxed">
+                Former Senior Policy Director at the Swiss Financial Market Supervisory Authority (FINMA); specializes in real asset collateralization and cantonal fiscal borders.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 p-2 rounded">
+<span>Monographs Authored</span>
+<span class="text-primary font-medium">12 Papers</span>
+</div>
+</div>
+<!-- Fellow 2 -->
+<div class="p-6 rounded bg-surface-card flex flex-col justify-between space-y-6 hover:bg-surface-container transition-colors">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-mono text-sm">
+                  AS
+                </div>
+<div>
+<div class="font-label-lg text-label-lg text-primary">Alistair St. John</div>
+<div class="font-body-sm text-body-sm text-secondary text-xs">Heritage Valuation Fellow • London</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs leading-relaxed">
+                Specialist in architectural appraisal with 25 years advising private trusts, sovereign endowments, and aristocratic landed estates across Western Europe.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 p-2 rounded">
+<span>Assets Evaluated</span>
+<span class="text-primary font-medium">€18.4B Cumulative</span>
+</div>
+</div>
+<!-- Fellow 3 -->
+<div class="p-6 rounded bg-surface-card flex flex-col justify-between space-y-6 hover:bg-surface-container transition-colors">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-mono text-sm">
+                  KT
+                </div>
+<div>
+<div class="font-label-lg text-label-lg text-primary">Kenji Takahashi</div>
+<div class="font-body-sm text-body-sm text-secondary text-xs">Geospatial Analytics Lead • Tokyo</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs leading-relaxed">
+                Pioneered satellite photogrammetry and micro-topographical climate risk indexing for trophy land acquisitions throughout the Japanese archipelago and Oceania.
+              </p>
+</div>
+<div class="pt-4 flex items-center justify-between text-xs text-secondary font-mono bg-surface-container-high/40 p-2 rounded">
+<span>Satellite Models</span>
+<span class="text-primary font-medium">4,200 Enclaves</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Subscription & API Access Tiers -->
+<section class="w-full bg-surface py-20 px-gutter-mobile lg:px-gutter-desktop">
+<div class="max-w-container-max mx-auto space-y-12">
+<div class="text-center max-w-2xl mx-auto space-y-3">
+<span class="font-micro-meta text-micro-meta uppercase tracking-widest text-secondary">Controlled Institutional Access</span>
+<h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+          Subscribe to Monograph Dispatches &amp; Cadastral API Feeds
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Confidential briefings and programmatic real-time cadastral telemetry tailored for family offices, sovereign funds, and institutional underwriters.
+        </p>
+</div>
+<!-- Two Access Tiers + Sign-Up Form -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Tier 1 Card -->
+<div class="lg:col-span-4 p-8 rounded-xl bg-surface-card flex flex-col justify-between space-y-6 shadow-xl">
+<div class="space-y-4">
+<div class="inline-flex items-center px-3 py-1 rounded bg-surface-container font-micro-meta text-micro-meta uppercase tracking-widest text-primary">
+              Private Clients • Tier A
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Sovereign Dispatch</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complimentary quarterly monographs and confidential macroeconomic advisory memos delivered directly to principals and trustees.
+            </p>
+<ul class="space-y-3 font-body-sm text-body-sm text-secondary pt-2">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                Quarterly 84-page Hardcover Monograph
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                Monthly Macro Corridors Briefing
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                Invitations to Private Zurich &amp; London Salons
+              </li>
+</ul>
+</div>
+<div class="pt-6 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Verified Principals &amp; Single Family Offices Only
+          </div>
+</div>
+<!-- Tier 2 Card -->
+<div class="lg:col-span-4 p-8 rounded-xl bg-surface-card flex flex-col justify-between space-y-6 shadow-xl">
+<div class="space-y-4">
+<div class="inline-flex items-center px-3 py-1 rounded bg-primary text-on-primary font-micro-meta text-micro-meta uppercase tracking-widest font-semibold">
+              Institutional API • Tier B
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Real-Time Cadastral API Feed</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              High-frequency GIS cadastral data, off-market SPV valuation models, and automated sovereign yield compression telemetry.
+            </p>
+<ul class="space-y-3 font-body-sm text-body-sm text-secondary pt-2">
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                REST &amp; GraphQL Low-Latency Feeds
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                Cantonal &amp; Municipal Cadastre Registry Sync
+              </li>
+<li class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[16px] text-status-verified">check_circle</span>
+                Custom Portfolio Scenario Stress Testing
+              </li>
+</ul>
+</div>
+<div class="pt-6 font-micro-meta text-micro-meta uppercase tracking-widest text-on-surface-variant">
+            Licensed Enterprise Access • Annual SLA
+          </div>
+</div>
+<!-- Tier Clearance Request Form -->
+<div class="lg:col-span-4 p-8 rounded-xl bg-surface-elevated flex flex-col justify-between shadow-2xl">
+<div class="space-y-6">
+<div>
+<div class="font-micro-meta text-micro-meta uppercase tracking-widest text-chart-accent">Security Clearance Application</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Request Research Clearance</h3>
+</div>
+<form class="space-y-4" onsubmit="event.preventDefault(); document.getElementById('clearanceSuccess').classList.remove('hidden');">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1.5">Institutional Email</label>
+<input class="w-full px-4 py-3 rounded bg-surface-card text-primary font-body-sm text-body-sm placeholder-on-surface-variant focus:outline-none focus:bg-surface-container transition-colors" placeholder="principal@familyoffice.ch" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-1.5">Entity Classification</label>
+<select class="w-full px-4 py-3 rounded bg-surface-card text-primary font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors">
+<option>Single Family Office ($500M+ AUM)</option>
+<option>Multi-Family Office / Private Trust</option>
+<option>Sovereign Wealth Asset Manager</option>
+<option>Institutional Real Estate Fund Desk</option>
+</select>
+</div>
+<div class="flex items-start gap-2.5 pt-2">
+<input class="mt-1 rounded bg-surface-card text-primary" id="ndaCheck" required="" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant text-xs leading-tight cursor-pointer" for="ndaCheck">
+                  I agree to the Discretion &amp; Non-Disclosure Protocol and confirm active regulatory representation.
+                </label>
+</div>
+<button class="w-full py-3.5 px-6 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold hover:bg-primary-container transition-colors mt-2" type="submit">
+                Request Clearance &amp; Monograph Access
+              </button>
+</form>
+<div class="hidden p-3 rounded bg-status-verified/10 text-status-verified font-body-sm text-body-sm text-xs flex items-center gap-2" id="clearanceSuccess">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              Clearance request logged. Our Geneva compliance desk will transmit encrypted credentials within 2 business hours.
+            </div>
+</div>
+<div class="pt-4 text-xs font-mono text-on-surface-variant text-center">
+            Encrypted with TLS 1.3 • SOC2 Type II Certified
+          </div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-container-max mx-auto px-gutter-mobile lg:px-gutter-desktop py-section-gap"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12"><div class="lg:col-span-2 flex flex-col justify-between"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="EstatePro Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U4ap2Z_aSLAj9mhp52P3rP-iy7jrHGzL3zLujieOJxqdYCw9ANd4uDRF_bPrJowm7_wNDkvy6rgvErShPsURsWCGOYoMByyialkRPhyW87uSwROAjSB9VjUnMw8QEifEcc9PGKjwVz_aefiZgslwvaaLFm30Ozl4jYh9vC0U10lVISJ4gcxZNzRZLG-lPXNgK2Vghbhz8-1FXwJwdfUN--ybY_XO_GT0fP7maoxY1Mc-VfJd3orNsVDpEC"/><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-tight">EstatePro</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Architectural residences, master developments, and institutional telemetry for ultra-prime real estate holdings globally.</p></div><div class="mt-8"><div class="font-micro-meta text-micro-meta uppercase text-secondary tracking-widest">Curated Portfolio Network</div><p class="font-body-sm text-body-sm text-on-surface-variant mt-1">London • New York • Zurich • Tokyo • Dubai</p></div></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Explore</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="buy" href="#">Penthouses &amp; Mansions</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Architectural Landmarks</a></li><li><a class="hover:text-primary transition-colors" data-path="commercial" href="#">Commercial Capital</a></li><li><a class="hover:text-primary transition-colors" data-path="rent" href="#">Private Leases</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Curated Collections</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Solutions</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="agents" href="#">Premier Broker Suite</a></li><li><a class="hover:text-primary transition-colors" data-path="overview" href="#">Asset Management SaaS</a></li><li><a class="hover:text-primary transition-colors" data-path="list-property" href="#">Private Seller Vault</a></li><li><a class="hover:text-primary transition-colors" data-path="mortgage" href="#">Institutional Financing</a></li><li><a class="hover:text-primary transition-colors" data-path="developments" href="#">Developer Syndication</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Trust &amp; Legal</div><ul class="space-y-2.5 font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Discretion Protocol</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Escrow &amp; Compliance</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Terms of Confidentiality</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Regulatory Filings</a></li><li><a class="hover:text-primary transition-colors" data-path="explore" href="#">Security Infrastructure</a></li></ul></div><div class="space-y-4"><div class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Intelligence</div><p class="font-body-sm text-body-sm text-on-surface-variant">Receive the quarterly confidential monograph on global prime assets.</p><div class="flex flex-col gap-2 pt-2"><input class="w-full px-3 py-2.5 rounded bg-surface-container-low font-body-sm text-body-sm text-primary placeholder-on-surface-variant focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Institutional email address" type="email"/><button class="w-full py-2.5 rounded bg-surface-container-high hover:bg-surface-bright text-primary font-label-sm text-label-sm uppercase tracking-wider transition-colors">Subscribe</button></div></div></div><div class="mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-secondary"><p>© 2025 EstatePro Luxury Real Estate SaaS. All rights reserved.</p><div class="flex items-center gap-6 font-micro-meta text-micro-meta tracking-widest uppercase"><span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-status-verified"></span>GIS Telemetry Live</span><span>SOC2 Certified</span><span>ISO 27001</span></div></div></div></footer></body></html>
