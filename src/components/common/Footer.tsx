@@ -90,6 +90,16 @@ export default function Footer() {
                   Market Monographs
                 </Link>
               </li>
+              <li>
+                <Link href="/agencies" className="hover:text-primary transition-colors">
+                  Accredited Sovereign Agencies
+                </Link>
+              </li>
+              <li>
+                <Link href="/subscriptions" className="hover:text-primary transition-colors">
+                  Institutional Node Tiers
+                </Link>
+              </li>
             </ul>
           </div>
 

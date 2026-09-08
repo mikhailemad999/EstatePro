@@ -11,8 +11,10 @@ export default function AgentSidebar() {
 
   const links = [
     { label: "Overview / Dashboard", href: "/agent/dashboard", icon: "dashboard" },
+    { label: "Encrypted Messages", href: "/agent/messages", icon: "forum" },
     { label: "My Properties", href: "/agent/properties", icon: "apartment" },
     { label: "Leads CRM Pipeline", href: "/agent/leads", icon: "filter_alt" },
+    { label: "Mandate Analytics", href: "/agent/analytics", icon: "analytics" },
     { label: "Appointments & VIP Viewings", href: "/dashboard/appointments", icon: "calendar_month" },
     { label: "Mortgage Applications", href: "/mortgage-calculator", icon: "account_balance" },
     { label: "Public Directory", href: "/agents", icon: "badge" },

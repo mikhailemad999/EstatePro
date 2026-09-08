@@ -9,6 +9,7 @@ export default function BuyerSidebar() {
 
   const links = [
     { label: "Investor Overview", href: "/dashboard", icon: "dashboard" },
+    { label: "Encrypted Inquiries", href: "/dashboard/messages", icon: "chat" },
     { label: "Saved Estates & Watchlist", href: "/dashboard/saved", icon: "favorite" },
     { label: "Scheduled VIP Viewings", href: "/dashboard/appointments", icon: "calendar_month" },
     { label: "Escrow Closing Room", href: "/escrow/solis-sanctuary", icon: "lock" },

@@ -96,6 +96,30 @@ An ultra-prime, institutional-grade luxury real estate marketplace and asset man
 
 ---
 
+### 12. Institutional Membership & Node Entitlement Tiers
+![Subscriptions Page](./public/screenshots/subscriptions_page_1788911521271.png)
+*Three institutional membership tiers (Private Advisor Node, Sovereign Member Firm, Global Syndicate Enterprise) with annual/monthly wire toggles and accreditation modal.*
+
+---
+
+### 13. Encrypted Mandate Communication Protocol (256-Bit E2EE)
+![Dashboard Messages](./public/screenshots/dashboard_messages_1788911709268.png)
+*Direct end-to-end encrypted inquiry channel between vetted private principals and lead advisory partners with thread history.*
+
+---
+
+### 14. Mandate Telemetry & Regional Demographics
+![Agent Analytics](./public/screenshots/agent_analytics_1788911745713.png)
+*Private advisory telemetry dashboard displaying $201M pipeline value, vetted monograph engagement, and regional buyer origin breakdown (Switzerland 38%, US 27%, UK 19%, APAC 16%).*
+
+---
+
+### 15. Institutional Agency Dossier & Accredited Partners
+![Agency Dossier](./public/screenshots/agency_dossier_1788911825678.png)
+*Accredited firm profile for Sotheby's Sovereign Capital Partner ($840M volume) featuring leadership advisors and curated landmark listings.*
+
+---
+
 ## 🏛️ Comprehensive Directory of Routes & Portals
 
 ### 1. Public Marketplace & Search
@@ -109,6 +133,7 @@ An ultra-prime, institutional-grade luxury real estate marketplace and asset man
 | **Estate Monograph Detail** | [`/property/[slug]`](http://localhost:3000/property/palais-de-la-rive-waterfront-estate) | Full architectural monograph: 8-metric technical specifications grid, high-res gallery, FINMA/SEC title certification, mortgage estimator, and VIP viewing modal. |
 | **Comparison Matrix** | [`/compare`](http://localhost:3000/compare) | Sticky side-by-side comparison matrix evaluating architectural specs, unit pricing, carrying charges, and legal status across shortlisted estates. |
 | **Private Mortgage Engine** | [`/mortgage-calculator`](http://localhost:3000/mortgage-calculator) | Real-time debt modeling with acquisition sliders, monthly breakdown (P&I, taxes, insurance), 10-year equity growth schedule, and pre-approval lead filing. |
+| **Institutional Subscriptions** | [`/subscriptions`](http://localhost:3000/subscriptions) | Node accreditation tiers: Private Advisor ($1,500/mo), Sovereign Firm ($4,800/mo), and Global Syndicate ($12,500/mo). |
 
 ### 2. Specialized Services & Directories
 | Route | URL | Description |
@@ -118,6 +143,7 @@ An ultra-prime, institutional-grade luxury real estate marketplace and asset man
 | **Sovereign Brokers** | [`/agents`](http://localhost:3000/agents) | Roster of licensed private advisors, experience ratings, active mandate books, and direct encrypted inquiries. |
 | **Advisor Profile** | [`/agents/[slug]`](http://localhost:3000/agents/kenjiro-takahashi) | Comprehensive advisor bio, transaction track record, active portfolio, and booking modal. |
 | **Brokerage Agencies** | [`/agencies`](http://localhost:3000/agencies) | Directory of accredited institutional brokerages and private reserve partner firms. |
+| **Agency Dossier Detail** | [`/agencies/[slug]`](http://localhost:3000/agencies/sothebys-sovereign-capital) | Firm portfolio overview, leadership team, FINMA compliance verification, and assigned mandates. |
 | **Research Monographs** | [`/reports`](http://localhost:3000/reports) | Quarterly publications analyzing super-prime residential valuations, global wealth migrations, and prime yields. |
 | **Monograph Detail** | [`/reports/[slug]`](http://localhost:3000/reports/sovereign-wealth-migration-index-2026) | Full editorial report with Executive Summary callout, deep narrative analysis, and client-side PDF export button. |
 | **VIP Aviation Concierge** | [`/vip-viewing`](http://localhost:3000/vip-viewing) | Private aviation flight scheduler with FBO arrival ports, AgustaWestland AW109 helicopter transit, and diplomatic discretion guarantees. |
@@ -127,10 +153,13 @@ An ultra-prime, institutional-grade luxury real estate marketplace and asset man
 | Portal | URL | Target Role | Key Features |
 |---|---|---|---|
 | **Agent Command Dashboard** | [`/agent/dashboard`](http://localhost:3000/agent/dashboard) | `AGENT` | Mandate volume telemetry, quick KPI widgets, and active listings list. |
+| **Agent Inquiries & Chat** | [`/agent/messages`](http://localhost:3000/agent/messages) | `AGENT` | E2EE confidential chat feed with prospective buyers and principals. |
 | **Lead Pipeline Kanban** | [`/agent/leads`](http://localhost:3000/agent/leads) | `AGENT` | 7-stage interactive Kanban board with drag/advance buttons and "Capture Private Lead" modal. |
+| **Mandate Telemetry** | [`/agent/analytics`](http://localhost:3000/agent/analytics) | `AGENT` | Detailed analytics on monograph views, closing velocity, and regional demographics. |
 | **Listing Inventory** | [`/agent/properties`](http://localhost:3000/agent/properties) | `AGENT` | Inventory table of agent's assigned and published mandates with edit links. |
 | **Listing Wizard** | [`/agent/properties/create`](http://localhost:3000/agent/properties/create) | `AGENT` | 6-step wizard: Typology, Geo-Location, Pricing, Architectural Specs, Media, and Compliance Review. |
 | **Buyer Sovereign Vault** | [`/dashboard`](http://localhost:3000/dashboard) | `BUYER` | Portfolio overview, acquisition pipeline, and quick actions. |
+| **Buyer Inquiries** | [`/dashboard/messages`](http://localhost:3000/dashboard/messages) | `BUYER` | Encrypted direct liaison with Senior Private Advisors and mandate desks. |
 | **Saved Collections** | [`/dashboard/saved`](http://localhost:3000/dashboard/saved) | `BUYER` | Shortlisted trophy estates saved via heart buttons on cards or detail pages. |
 | **Viewing Itineraries** | [`/dashboard/appointments`](http://localhost:3000/dashboard/appointments) | `BUYER` | Scheduled property viewings and VIP aviation flight bookings. |
 | **Overseer Executive Telemetry** | [`/admin`](http://localhost:3000/admin) | `SUPER_ADMIN` | Platform GMV analytics, cluster node health, and audit trail overview. |

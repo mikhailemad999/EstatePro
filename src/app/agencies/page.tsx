@@ -81,7 +81,7 @@ export default async function AgenciesPage() {
                 </div>
 
                 <Link
-                  href="/agents"
+                  href={`/agencies/${agency.slug}`}
                   className="w-full py-2.5 rounded-lg bg-primary text-on-primary text-xs font-semibold uppercase tracking-wider block text-center hover:bg-primary-container transition-all shadow"
                 >
                   Inspect Agency Portfolio &amp; Advisors
