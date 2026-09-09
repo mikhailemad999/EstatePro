@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { PropertyCardData } from "@/types";
 import { formatCurrency, formatArea } from "@/lib/utils";
@@ -32,14 +32,21 @@ export default function PropertyCard({ property, layout = "grid" }: PropertyCard
     toggleFavorite(property.id);
   };
 
+  const [imgSrc, setImgSrc] = useState(
+    property.heroImage || "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+  );
+
   return (
     <div className="group rounded-xl bg-surface-card border border-border-subtle hover:border-outline-variant overflow-hidden transition-all duration-300 hover:shadow-2xl flex flex-col justify-between relative">
       <Link href={`/property/${property.slug}`} className="block">
         {/* Media Container */}
         <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
           <img
-            src={property.heroImage || "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"}
+            src={imgSrc}
             alt={property.title}
+            onError={() => {
+              setImgSrc("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80");
+            }}
             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
             loading="lazy"
           />
