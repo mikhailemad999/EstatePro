@@ -100,6 +100,16 @@ export default function Footer() {
                   Institutional Node Tiers
                 </Link>
               </li>
+              <li>
+                <Link href="/blog" className="hover:text-primary transition-colors">
+                  Insights & Articles
+                </Link>
+              </li>
+              <li>
+                <Link href="/pricing" className="hover:text-primary transition-colors">
+                  Pricing Plans
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -152,9 +162,9 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-outline font-light">
           <p>© {new Date().getFullYear()} EstatePro Sovereign Capital SA. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="hover:text-primary transition-colors cursor-pointer">Security Vault</span>
-            <span className="hover:text-primary transition-colors cursor-pointer">Privacy Charter</span>
-            <span className="hover:text-primary transition-colors cursor-pointer">Regulatory Disclosures</span>
+            <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/faq" className="hover:text-primary transition-colors">FAQ</Link>
           </div>
         </div>
       </div>
