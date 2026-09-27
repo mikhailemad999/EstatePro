@@ -110,6 +110,21 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
+                <Link href="/about" className="hover:text-primary transition-colors">
+                  Sovereign Heritage &amp; Desks
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-primary transition-colors">
+                  Private Client Concierge
+                </Link>
+              </li>
+              <li>
+                <Link href="/map" className="hover:text-primary transition-colors">
+                  Geospatial Map Search
+                </Link>
+              </li>
+              <li>
                 <Link href="/dashboard" className="hover:text-primary transition-colors">
                   Private Investor Portal
                 </Link>

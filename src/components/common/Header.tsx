@@ -19,6 +19,7 @@ export default function Header() {
     { label: "Rent", href: "/properties?listingType=FOR_RENT" },
     { label: "Commercial", href: "/properties?propertyType=Commercial" },
     { label: "Developments", href: "/developments" },
+    { label: "Map", href: "/map" },
     { label: "Agents", href: "/agents" },
     { label: "Mortgage", href: "/mortgage-calculator" },
     { label: "Reports", href: "/reports" },

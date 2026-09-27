@@ -10,10 +10,13 @@ export default function BuyerSidebar() {
   const links = [
     { label: "Investor Overview", href: "/dashboard", icon: "dashboard" },
     { label: "Encrypted Inquiries", href: "/dashboard/messages", icon: "chat" },
-    { label: "Saved Estates & Watchlist", href: "/dashboard/saved", icon: "favorite" },
-    { label: "Scheduled VIP Viewings", href: "/dashboard/appointments", icon: "calendar_month" },
+    { label: "Saved Estates", href: "/dashboard/saved", icon: "favorite" },
+    { label: "Saved Search Alerts", href: "/dashboard/searches", icon: "notifications_active" },
+    { label: "Acquisition Mandates", href: "/dashboard/inquiries", icon: "assignment" },
+    { label: "VIP Viewings", href: "/dashboard/appointments", icon: "calendar_month" },
+    { label: "Notification Feed", href: "/dashboard/notifications", icon: "mark_email_unread" },
     { label: "Escrow Closing Room", href: "/escrow/solis-sanctuary", icon: "lock" },
-    { label: "Browse Marketplace", href: "/properties", icon: "travel_explore" },
+    { label: "Geospatial Map", href: "/map", icon: "map" },
   ];
 
   return (
