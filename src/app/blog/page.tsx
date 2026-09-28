@@ -27,7 +27,7 @@ const featuredArticle = {
   date: '2025-03-15',
   readTime: '12 min read',
   views: 24580,
-  image: '/images/blog-hero.jpg',
+  image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85',
 };
 
 const articles = [
@@ -40,6 +40,7 @@ const articles = [
     date: '2025-03-10',
     readTime: '8 min read',
     views: 18200,
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=85',
   },
   {
     slug: 'smart-home-technology-luxury',
@@ -50,6 +51,7 @@ const articles = [
     date: '2025-03-05',
     readTime: '10 min read',
     views: 15340,
+    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85',
   },
   {
     slug: 'understanding-escrow-process',
@@ -60,6 +62,7 @@ const articles = [
     date: '2025-02-28',
     readTime: '7 min read',
     views: 12100,
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=85',
   },
   {
     slug: 'biophilic-design-luxury-homes',
@@ -70,6 +73,7 @@ const articles = [
     date: '2025-02-20',
     readTime: '9 min read',
     views: 10850,
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85',
   },
   {
     slug: 'property-tax-optimization',
@@ -80,6 +84,7 @@ const articles = [
     date: '2025-02-15',
     readTime: '11 min read',
     views: 9200,
+    image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1000&q=85',
   },
   {
     slug: 'minimalist-luxury-interiors',
@@ -90,6 +95,7 @@ const articles = [
     date: '2025-02-10',
     readTime: '6 min read',
     views: 8700,
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',
   },
 ];
 
@@ -149,11 +155,13 @@ export default function BlogPage() {
           <Link href={`/blog/${featuredArticle.slug}`}>
             <div className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 to-transparent overflow-hidden hover:border-amber-500/30 transition-all duration-500">
               <div className="grid md:grid-cols-2 gap-0">
-                <div className="aspect-[16/10] md:aspect-auto bg-gradient-to-br from-amber-900/30 to-amber-800/10 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <TrendingUp className="w-16 h-16 text-amber-500/40 mx-auto mb-4" />
-                    <span className="text-amber-400/60 text-sm">Featured Cover Image</span>
-                  </div>
+                <div className="aspect-[16/10] md:aspect-auto relative min-h-[300px] overflow-hidden bg-zinc-900">
+                  <img
+                    src={featuredArticle.image}
+                    alt={featuredArticle.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent md:hidden" />
                 </div>
                 <div className="p-8 md:p-12 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-4">
@@ -188,23 +196,30 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article) => (
               <Link key={article.slug} href={`/blog/${article.slug}`}>
-                <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-amber-500/30 transition-all duration-300 overflow-hidden">
-                  <div className="aspect-[16/9] bg-gradient-to-br from-zinc-800/50 to-zinc-900/50 flex items-center justify-center">
-                    <BookOpen className="w-10 h-10 text-zinc-700" />
+                <article className="group h-full rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-amber-500/30 transition-all duration-300 overflow-hidden flex flex-col">
+                  <div className="aspect-[16/10] relative overflow-hidden bg-zinc-900">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                    <span className="absolute bottom-3 left-3 px-2.5 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-amber-400 border border-white/10 text-xs font-medium">
+                      {article.category}
+                    </span>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="px-2.5 py-0.5 rounded-full bg-white/5 text-zinc-400 text-xs">{article.category}</span>
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors line-clamp-2">
+                        {article.title}
+                      </h3>
+                      <p className="text-zinc-400 text-sm mb-4 line-clamp-2 leading-relaxed">{article.excerpt}</p>
                     </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-amber-400 transition-colors line-clamp-2">
-                      {article.title}
-                    </h3>
-                    <p className="text-zinc-500 text-sm mb-4 line-clamp-2">{article.excerpt}</p>
-                    <div className="flex items-center justify-between text-xs text-zinc-600">
-                      <span>{article.author.name}</span>
+                    <div className="flex items-center justify-between text-xs text-zinc-500 pt-3 border-t border-white/5">
+                      <span className="text-zinc-400 font-medium">{article.author.name}</span>
                       <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {article.readTime}</span>
-                        <span className="flex items-center gap-1"><Eye className="w-3 h-3" /> {article.views.toLocaleString()}</span>
+                        <span className="flex items-center gap-1"><Clock className="w-3 h-3 text-amber-500/70" /> {article.readTime}</span>
+                        <span className="flex items-center gap-1"><Eye className="w-3 h-3 text-amber-500/70" /> {article.views.toLocaleString()}</span>
                       </div>
                     </div>
                   </div>
