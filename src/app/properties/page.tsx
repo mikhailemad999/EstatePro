@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { prisma } from "@/lib/prisma";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
@@ -42,7 +42,16 @@ export default async function PropertiesPage() {
     <div className="min-h-screen bg-surface flex flex-col">
       <Header />
       <main className="flex-1 pt-20">
-        <PropertiesSearchClient initialProperties={formattedProperties} />
+        <Suspense
+          fallback={
+            <div className="max-w-7xl mx-auto px-4 py-16 text-center space-y-4">
+              <div className="animate-spin w-8 h-8 border-2 border-primary border-t-transparent rounded-full mx-auto" />
+              <p className="text-xs font-mono text-secondary">Synchronizing Sovereign Market Listings...</p>
+            </div>
+          }
+        >
+          <PropertiesSearchClient initialProperties={formattedProperties} />
+        </Suspense>
       </main>
       <Footer />
     </div>
