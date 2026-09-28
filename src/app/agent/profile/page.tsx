@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { User, Mail, Phone, MapPin, Camera, Save, Star, Home, Award, Shield, Globe, Briefcase, Calendar } from 'lucide-react';
+import AgentSidebar from "@/components/dashboards/AgentSidebar";
+import RoleSwitcher from "@/components/common/RoleSwitcher";
 
 export const metadata: Metadata = {
   title: 'My Profile | Agent Dashboard | EstatePro',
@@ -8,11 +11,28 @@ export const metadata: Metadata = {
 
 export default function AgentProfilePage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="px-6 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Agent Profile</h1>
-          <p className="text-zinc-500 mb-8">Manage your public-facing profile and credentials</p>
+    <div className="min-h-screen bg-surface flex">
+      <AgentSidebar />
+      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
+        <header className="h-20 bg-surface/80 backdrop-blur-xl border-b border-border-subtle px-6 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-40">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="md:hidden text-primary font-bold font-serif text-lg">
+              EP
+            </Link>
+            <div className="flex items-center gap-2 text-xs font-mono text-outline">
+              <span>BROKER CREDENTIALS</span>
+              <span>•</span>
+              <span className="text-status-verified font-bold">SOVEREIGN AGENT PROFILE</span>
+            </div>
+          </div>
+          <RoleSwitcher />
+        </header>
+
+        <main className="flex-1 p-6 sm:p-8 space-y-6 max-w-5xl">
+          <div className="space-y-1.5 pb-2">
+            <h1 className="font-serif text-3xl font-bold text-white mb-1">Agent Profile &amp; Credentials</h1>
+            <p className="text-xs text-secondary font-light">Manage your public listing bio, FINMA/SEC clearance badges, and transaction credentials</p>
+          </div>
 
           {/* Cover & Avatar */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden mb-6">
@@ -130,11 +150,11 @@ export default function AgentProfilePage() {
             </div>
           </div>
 
-          <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold hover:from-amber-400 hover:to-amber-500 transition-all">
+          <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-on-primary font-semibold text-xs uppercase tracking-wider hover:bg-primary-container transition-all shadow-md">
             <Save className="w-4 h-4" /> Save Profile
           </button>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   );
 }

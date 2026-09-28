@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { ScrollText, Shield, Scale, Eye, Lock, AlertTriangle, Globe, FileText } from 'lucide-react';
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: 'Terms of Service | EstatePro',
@@ -59,8 +61,10 @@ const sections = [
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="relative py-24 px-6 overflow-hidden">
+    <div className="min-h-screen bg-surface flex flex-col">
+      <Header />
+      <main className="flex-1 pt-20">
+        <section className="relative py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto relative">
           <div className="flex items-center gap-3 mb-6">
@@ -87,6 +91,8 @@ export default function TermsPage() {
           ))}
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }

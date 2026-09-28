@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { HelpCircle, ChevronDown, Search, MessageSquare, Phone, Mail, BookOpen, Shield, Home, CreditCard, Scale, Globe } from 'lucide-react';
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | EstatePro',
@@ -39,9 +41,11 @@ const faqs = [
 
 export default function FAQPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      {/* Hero */}
-      <section className="relative py-24 px-6 overflow-hidden">
+    <div className="min-h-screen bg-surface flex flex-col">
+      <Header />
+      <main className="flex-1 pt-20">
+        {/* Hero */}
+        <section className="relative py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto relative text-center">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 border border-emerald-500/20 flex items-center justify-center mx-auto mb-6">
@@ -118,6 +122,8 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }

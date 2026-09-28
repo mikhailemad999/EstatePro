@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, Eye, Share2, Bookmark, ThumbsUp, MessageSquare, Tag, ChevronRight } from 'lucide-react';
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: 'Article | EstatePro Blog',
@@ -54,9 +56,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   const article = articleData[slug] || { ...fallbackArticle, title: slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) };
 
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      {/* Breadcrumb */}
-      <div className="px-6 pt-8">
+    <div className="min-h-screen bg-surface flex flex-col">
+      <Header />
+      <main className="flex-1 pt-24">
+        {/* Breadcrumb */}
+        <div className="px-4 sm:px-6 pt-4">
         <div className="max-w-4xl mx-auto flex items-center gap-2 text-sm text-zinc-500">
           <Link href="/blog" className="hover:text-amber-400 transition-colors flex items-center gap-1">
             <ArrowLeft className="w-4 h-4" /> Blog
@@ -163,6 +167,8 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }

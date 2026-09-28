@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { CheckSquare, Clock, AlertCircle, Plus, Filter, Calendar, User, Home, Flag, MoreVertical } from 'lucide-react';
+import AgentSidebar from "@/components/dashboards/AgentSidebar";
+import RoleSwitcher from "@/components/common/RoleSwitcher";
 
 export const metadata: Metadata = {
   title: 'Tasks | Agent Dashboard | EstatePro',
@@ -35,20 +38,35 @@ export default function AgentTasksPage() {
   const doneCount = tasks.filter(t => t.status === 'completed').length;
 
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
+    <div className="min-h-screen bg-surface flex">
+      <AgentSidebar />
+      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
+        <header className="h-20 bg-surface/80 backdrop-blur-xl border-b border-border-subtle px-6 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-40">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="md:hidden text-primary font-bold font-serif text-lg">
+              EP
+            </Link>
+            <div className="flex items-center gap-2 text-xs font-mono text-outline">
+              <span>WORKFLOW PIPELINE</span>
+              <span>•</span>
+              <span className="text-primary font-bold">MANDATE TASKS ({tasks.length})</span>
+            </div>
+          </div>
+          <RoleSwitcher />
+        </header>
+
+        <main className="flex-1 p-6 sm:p-8 space-y-8 max-w-7xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">Tasks</h1>
-              <p className="text-zinc-500">{tasks.length} tasks · {todoCount} pending</p>
+              <h1 className="font-serif text-3xl font-bold text-white mb-1">Mandate Action Board</h1>
+              <p className="text-xs text-secondary font-light">Prioritize closing operations, client follow-ups, and inspection tasks</p>
             </div>
             <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-sm hover:border-amber-500/30 transition-all">
+              <button className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-xs hover:border-primary/30 transition-all">
                 <Filter className="w-4 h-4" /> Filter
               </button>
-              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-black text-sm font-medium">
-                <Plus className="w-4 h-4" /> Add Task
+              <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-primary text-on-primary text-xs uppercase font-semibold">
+                <Plus className="w-4 h-4" /> New Task
               </button>
             </div>
           </div>
@@ -109,8 +127,8 @@ export default function AgentTasksPage() {
               );
             })}
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   );
 }

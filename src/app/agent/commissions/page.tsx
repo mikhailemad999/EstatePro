@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { DollarSign, TrendingUp, Calendar, Home, ArrowUpRight, ArrowDownRight, Filter, Download, CheckCircle2, Clock, AlertCircle } from 'lucide-react';
+import AgentSidebar from "@/components/dashboards/AgentSidebar";
+import RoleSwitcher from "@/components/common/RoleSwitcher";
 
 export const metadata: Metadata = {
   title: 'Commissions | Agent Dashboard | EstatePro',
@@ -30,20 +33,32 @@ export default function AgentCommissionsPage() {
   const avgCommission = transactions.reduce((s, t) => s + t.commission, 0) / transactions.length;
 
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="px-6 py-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
+    <div className="min-h-screen bg-surface flex">
+      <AgentSidebar />
+      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
+        <header className="h-20 bg-surface/80 backdrop-blur-xl border-b border-border-subtle px-6 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-40">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="md:hidden text-primary font-bold font-serif text-lg">
+              EP
+            </Link>
+            <div className="flex items-center gap-2 text-xs font-mono text-outline">
+              <span>SETTLEMENT TELEMETRY</span>
+              <span>•</span>
+              <span className="text-status-verified font-bold">COMMISSION ACCRUALS</span>
+            </div>
+          </div>
+          <RoleSwitcher />
+        </header>
+
+        <main className="flex-1 p-6 sm:p-8 space-y-8 max-w-7xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">Commissions</h1>
-              <p className="text-zinc-500">Track earnings, payouts, and transaction history</p>
+              <h1 className="font-serif text-3xl font-bold text-white mb-1">Commission Telemetry</h1>
+              <p className="text-xs text-secondary font-light">Track your gross earned fees, escrow distributions, and transaction volume</p>
             </div>
             <div className="flex items-center gap-3">
-              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-sm hover:border-amber-500/30 transition-all">
-                <Filter className="w-4 h-4" /> Filter
-              </button>
-              <button className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-sm hover:border-amber-500/30 transition-all">
-                <Download className="w-4 h-4" /> Export
+              <button className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-xs hover:border-primary/30 transition-all">
+                <Download className="w-4 h-4" /> Export CSV
               </button>
             </div>
           </div>
@@ -126,8 +141,8 @@ export default function AgentCommissionsPage() {
               </table>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   );
 }

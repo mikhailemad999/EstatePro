@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { FileText, Clock, CheckCircle2, XCircle, AlertCircle, Home, DollarSign, Calendar, ArrowRight, Filter } from 'lucide-react';
+import BuyerSidebar from "@/components/dashboards/BuyerSidebar";
+import RoleSwitcher from "@/components/common/RoleSwitcher";
 
 export const metadata: Metadata = {
   title: 'My Applications | Buyer Dashboard | EstatePro',
@@ -71,15 +74,34 @@ const statusConfig: Record<string, { label: string; color: string; icon: typeof 
 
 export default function ApplicationsPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="px-6 py-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h1 className="text-3xl font-bold text-white mb-2">My Applications</h1>
-              <p className="text-zinc-500">Track your purchase, rental, and mortgage applications</p>
+    <div className="min-h-screen bg-surface flex">
+      <BuyerSidebar />
+      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
+        <header className="h-20 bg-surface/80 backdrop-blur-xl border-b border-border-subtle px-6 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-40">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="md:hidden text-primary font-bold font-serif text-lg">
+              EP
+            </Link>
+            <div className="flex items-center gap-2 text-xs font-mono text-outline">
+              <span>MANDATE DOSSIERS</span>
+              <span>•</span>
+              <span className="text-primary font-bold">ACTIVE APPLICATIONS ({applications.length})</span>
             </div>
-            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-sm hover:border-amber-500/30 transition-all">
+          </div>
+          <RoleSwitcher />
+        </header>
+
+        <main className="flex-1 p-6 sm:p-8 space-y-6 max-w-7xl">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h1 className="font-serif text-3xl text-primary font-normal">
+                My Mandate Applications
+              </h1>
+              <p className="text-xs text-secondary font-light">
+                Track your sovereign purchase dossiers, escrow pre-qualifications, and verification stages.
+              </p>
+            </div>
+            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-zinc-400 text-sm hover:border-amber-500/30 transition-all self-start sm:self-auto">
               <Filter className="w-4 h-4" /> Filter
             </button>
           </div>
@@ -165,8 +187,8 @@ export default function ApplicationsPage() {
               );
             })}
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   );
 }

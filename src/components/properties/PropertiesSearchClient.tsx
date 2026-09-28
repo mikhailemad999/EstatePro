@@ -238,7 +238,7 @@ export default function PropertiesSearchClient({
             </div>
 
             {/* Right Column: Sticky Interactive Map */}
-            <div className="lg:col-span-5 h-[600px] lg:h-[800px] sticky top-24">
+            <div className="lg:col-span-5 h-[380px] sm:h-[480px] lg:h-[800px] rounded-xl overflow-hidden sticky top-24">
               <InteractiveMap
                 properties={filteredProperties}
                 selectedPropertyId={selectedPropertyId}

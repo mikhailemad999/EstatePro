@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { BookOpen, Calendar, Clock, ArrowRight, Search, Tag, TrendingUp, Eye } from 'lucide-react';
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: 'Market Insights & Articles | EstatePro',
@@ -93,9 +95,11 @@ const articles = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      {/* Hero Section */}
-      <section className="relative py-24 px-6 overflow-hidden">
+    <div className="min-h-screen bg-surface flex flex-col">
+      <Header />
+      <main className="flex-1 pt-20">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-amber-500/5 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto relative">
           <div className="flex items-center gap-3 mb-6">
@@ -217,6 +221,8 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }

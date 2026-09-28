@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { User, Mail, Phone, MapPin, Shield, Camera, Bell, Key, Globe, CreditCard, Save, LogOut } from 'lucide-react';
+import BuyerSidebar from "@/components/dashboards/BuyerSidebar";
+import RoleSwitcher from "@/components/common/RoleSwitcher";
 
 export const metadata: Metadata = {
   title: 'My Profile | Buyer Dashboard | EstatePro',
@@ -8,11 +11,28 @@ export const metadata: Metadata = {
 
 export default function ProfilePage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      <section className="px-6 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">My Profile</h1>
-          <p className="text-zinc-500 mb-8">Manage your personal information and preferences</p>
+    <div className="min-h-screen bg-surface flex">
+      <BuyerSidebar />
+      <div className="flex-1 md:pl-72 flex flex-col min-w-0">
+        <header className="h-20 bg-surface/80 backdrop-blur-xl border-b border-border-subtle px-6 sm:px-8 flex items-center justify-between gap-4 sticky top-0 z-40">
+          <div className="flex items-center gap-4">
+            <Link href="/" className="md:hidden text-primary font-bold font-serif text-lg">
+              EP
+            </Link>
+            <div className="flex items-center gap-2 text-xs font-mono text-outline">
+              <span>INVESTOR SECURITY CREDENTIALS</span>
+              <span>•</span>
+              <span className="text-status-verified font-bold">SOVEREIGN PROFILE</span>
+            </div>
+          </div>
+          <RoleSwitcher />
+        </header>
+
+        <main className="flex-1 p-6 sm:p-8 space-y-6 max-w-5xl">
+          <div className="space-y-1.5 pb-2">
+            <h1 className="font-serif text-3xl text-primary font-normal">My Sovereign Profile</h1>
+            <p className="text-xs text-secondary font-light">Manage your family office clearance, credentials, and notification preferences</p>
+          </div>
 
           {/* Profile Header */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-8 mb-6">
@@ -174,8 +194,8 @@ export default function ProfilePage() {
               <LogOut className="w-4 h-4" /> Sign Out
             </button>
           </div>
-        </div>
-      </section>
-    </main>
+        </main>
+      </div>
+    </div>
   );
 }

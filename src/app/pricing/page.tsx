@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Check, Crown, Zap, Building2, ArrowRight, Star, Shield, BarChart3, Users, Headphones } from 'lucide-react';
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 export const metadata: Metadata = {
   title: 'Pricing & Plans | EstatePro',
@@ -91,9 +93,11 @@ const features = [
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0f]">
-      {/* Hero */}
-      <section className="relative py-24 px-6 overflow-hidden">
+    <div className="min-h-screen bg-surface flex flex-col">
+      <Header />
+      <main className="flex-1 pt-20">
+        {/* Hero */}
+        <section className="relative py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-violet-500/5 via-transparent to-transparent" />
         <div className="max-w-5xl mx-auto relative text-center">
           <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 to-violet-500/20 text-amber-400 text-sm font-medium mb-6 border border-white/10">
@@ -182,6 +186,8 @@ export default function PricingPage() {
           </Link>
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </div>
   );
 }
