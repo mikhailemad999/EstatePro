@@ -39,3 +39,33 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
 }
+
+export async function GET(req: NextRequest) {
+  try {
+    const { searchParams } = new URL(req.url);
+    const status = searchParams.get("status");
+
+    const where: any = {};
+    if (status) {
+      where.status = status;
+    }
+
+    const items = await prisma.property.findMany({
+      where,
+      include: {
+        agent: {
+          include: {
+            user: true,
+            agency: true,
+          },
+        },
+      },
+      orderBy: { createdAt: "desc" },
+    });
+
+    return NextResponse.json({ success: true, count: items.length, data: items });
+  } catch (error: any) {
+    console.error("GET /api/admin/approvals error:", error);
+    return NextResponse.json({ success: false, error: error.message }, { status: 500 });
+  }
+}
