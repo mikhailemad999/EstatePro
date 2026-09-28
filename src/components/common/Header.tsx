@@ -1,15 +1,40 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEstateStore } from "@/store/useEstateStore";
 import { useAuthStore } from "@/store/useAuthStore";
 import RoleSwitcher from "./RoleSwitcher";
 import CurrencySwitcher from "./CurrencySwitcher";
 
-export default function Header() {
+function HeaderFallback() {
+  return (
+    <header className="fixed top-0 w-full z-50 h-20 bg-surface-lowest/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.4)]">
+      <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-3 sm:gap-4">
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-on-primary font-serif font-bold text-lg">
+              EP
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif tracking-tight text-primary uppercase font-medium text-lg leading-tight">
+                EstatePro
+              </span>
+              <span className="font-sans text-[8px] sm:text-[9px] uppercase tracking-[0.25em] text-secondary/80 -mt-0.5">
+                Private Reserve
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function HeaderContent() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const { favorites, compareList } = useEstateStore();
   const { user } = useAuthStore();
@@ -70,6 +95,65 @@ export default function Header() {
     { label: "Client FAQ", href: "/faq", icon: "quiz" },
   ];
 
+  // Accurate link active state discriminator
+  const isLinkActive = (href: string) => {
+    const [linkPath, linkQuery] = href.split("?");
+
+    if (linkPath === "/") {
+      return pathname === "/";
+    }
+
+    if (pathname !== linkPath && !pathname.startsWith(linkPath + "/")) {
+      return false;
+    }
+
+    // When on /properties route, precisely determine which sub-portfolio is active
+    if (pathname === "/properties") {
+      const currentListingType = searchParams.get("listingType");
+      const currentPropertyType = searchParams.get("propertyType");
+
+      if (linkQuery) {
+        const linkParams = new URLSearchParams(linkQuery);
+        const linkListingType = linkParams.get("listingType");
+        const linkPropertyType = linkParams.get("propertyType");
+
+        // Commercial link matching
+        if (
+          linkPropertyType?.toLowerCase() === "commercial" ||
+          linkListingType?.toLowerCase().includes("commercial")
+        ) {
+          return (
+            currentPropertyType?.toLowerCase() === "commercial" ||
+            currentListingType?.toLowerCase().includes("commercial") === true
+          );
+        }
+
+        // Buy link matching
+        if (linkListingType === "FOR_SALE") {
+          if (
+            currentPropertyType?.toLowerCase() === "commercial" ||
+            currentListingType?.toLowerCase().includes("commercial")
+          ) {
+            return false;
+          }
+          return currentListingType === "FOR_SALE" || (!currentListingType && !currentPropertyType);
+        }
+
+        // Rent link matching
+        if (linkListingType === "FOR_RENT") {
+          return currentListingType === "FOR_RENT";
+        }
+
+        return false;
+      }
+
+      // If a /properties link has no query param
+      return !currentListingType && !currentPropertyType;
+    }
+
+    return true;
+  };
+
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -125,7 +209,7 @@ export default function Header() {
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
             {primaryNavLinks.map((link) => {
-              const active = pathname.startsWith(link.href.split("?")[0]) && link.href !== "/";
+              const active = isLinkActive(link.href);
               return (
                 <Link
                   key={link.label}
@@ -346,7 +430,7 @@ export default function Header() {
               </span>
               <div className="grid grid-cols-2 gap-2">
                 {primaryNavLinks.map((link) => {
-                  const active = pathname.startsWith(link.href.split("?")[0]) && link.href !== "/";
+                  const active = isLinkActive(link.href);
                   return (
                     <Link
                       key={link.label}
@@ -433,6 +517,14 @@ export default function Header() {
         </div>
       )}
     </>
+  );
+}
+
+export default function Header() {
+  return (
+    <Suspense fallback={<HeaderFallback />}>
+      <HeaderContent />
+    </Suspense>
   );
 }
 

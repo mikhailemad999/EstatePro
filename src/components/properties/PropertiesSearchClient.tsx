@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { PropertyCardData } from "@/types";
 import PropertyCard from "@/components/common/PropertyCard";
 import InteractiveMap from "@/components/common/InteractiveMap";
@@ -27,6 +27,30 @@ export default function PropertiesSearchClient({
   const [selectedPropertyId, setSelectedPropertyId] = useState<string | null>(null);
   const [viewMode, setViewMode] = useState<"split" | "grid" | "map">("split");
   const [minBeds, setMinBeds] = useState(0);
+
+  // Sync state when searchParams changes (e.g. clicking Buy, Rent, Commercial in navbar)
+  useEffect(() => {
+    const q = searchParams.get("query") || "";
+    const rawTyp = searchParams.get("propertyType") || searchParams.get("typology");
+    const rawListing = searchParams.get("listingType");
+    const loc = searchParams.get("location") || "All Markets";
+
+    setSearchQuery(q);
+    setSelectedLocation(loc);
+
+    if (rawTyp) {
+      if (rawTyp.toLowerCase() === "commercial") {
+        setSelectedTypology("Commercial");
+        setSelectedListingType(rawListing || "ALL");
+      } else {
+        setSelectedTypology(rawTyp);
+        setSelectedListingType(rawListing || "ALL");
+      }
+    } else {
+      setSelectedTypology("All Typologies");
+      setSelectedListingType(rawListing || "ALL");
+    }
+  }, [searchParams]);
 
   // Filter and sort properties
   const filteredProperties = useMemo(() => {
@@ -106,10 +130,17 @@ export default function PropertiesSearchClient({
             {/* Typology Filter */}
             <select
               value={selectedTypology}
-              onChange={(e) => setSelectedTypology(e.target.value)}
+              onChange={(e) => {
+                const val = e.target.value;
+                setSelectedTypology(val);
+                if (val === "Commercial" && selectedListingType !== "COMMERCIAL_SALE") {
+                  setSelectedListingType("ALL");
+                }
+              }}
               className="px-3 py-2 rounded-lg bg-surface-container text-xs text-primary focus:outline-none cursor-pointer border border-white/5"
             >
               <option value="All Typologies">All Typologies</option>
+              <option value="Commercial">Commercial</option>
               <option value="Brutalist Villa">Brutalist Villa</option>
               <option value="Penthouse & Duplex">Penthouse &amp; Duplex</option>
               <option value="Waterfront Compound">Waterfront Compound</option>
@@ -121,7 +152,15 @@ export default function PropertiesSearchClient({
             {/* Listing Type Filter */}
             <select
               value={selectedListingType}
-              onChange={(e) => setSelectedListingType(e.target.value)}
+              onChange={(e) => {
+                const val = e.target.value;
+                setSelectedListingType(val);
+                if (val === "COMMERCIAL_SALE") {
+                  setSelectedTypology("Commercial");
+                } else if (selectedTypology === "Commercial" && (val === "FOR_SALE" || val === "FOR_RENT")) {
+                  setSelectedTypology("All Typologies");
+                }
+              }}
               className="px-3 py-2 rounded-lg bg-surface-container text-xs text-primary focus:outline-none cursor-pointer border border-white/5"
             >
               <option value="ALL">Buy &amp; Rent</option>
